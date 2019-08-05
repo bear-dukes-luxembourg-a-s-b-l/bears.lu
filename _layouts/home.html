@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section id="events" style="padding-bottom:4em">
+    <h1 class="ui header">Our next events</h1>
+    <p>From time to time we organise some events. Just a casual one or a party, there's different kind of them. We aggregate also other bears events just to let you know about what happen or not around.</p>
+    <div class="ui list" style="margin-bottom:1em;">
+      <div class="item">
+        <i class="info circle icon"></i>
+        <div class="content">If the following list is blank, there's no events planned yet.</div>
+      </div>
+      <div class="item">
+        <i class="icon calendar"></i>
+        <div class="content">You can add our calendar to your phone or laptop <a href="https://airtable.com/shrVx2fQZGsjm5COn/iCal?timeZone=Europe%2FLuxembourg&userLocale=fr" title="Get the subscribtion link">using this link</a></div>
+      </div>
+    </div>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shrzdDB0ctF0eMYko?backgroundColor=pink&layout=card" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+</section>
+
+{{content}}
+
+    {% if site.social.facebook %}
+    <a class="ui facebook button" href="{{site.social.facebook}}" title="Visit our Facebook Fan Page">
+        <i class="facebook icon"></i>
+        Our Facebook Page
+    </a>
+    {% endif %}
+    {% if site.social.facebookgroup %}
+    <a class="ui facebook button" href="{{site.social.facebookgroup}}" title="Visit our Facebook Fan Page">
+        <i class="lock icon"></i>
+        Our Facebook Private Group
+    </a>
+    {% endif %}
