@@ -12,12 +12,15 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 **Friday 18th**
 
 -   18h - Welcome drink. The perfect time to get your week-end bracelet in exchange of your pre-sales.
--   22h - Mr. Bear Election night
+-   22h - Candidates presentation night
 
 **Saturday 19th**
 
 -   Afternoon - Cultural Activity / City tour
+-   21h - Mr. Bear Election night
+    -   <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class="ui basic mini button"><i class="map pin red icon"></i>The Room</a>
 -   23h -  [Woof Luxembourg](https://woofmenonly.com) Party
+    -   <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class="ui basic mini button"><i class="map pin red icon"></i>The Room</a> <a href="https://www.facebook.com/events/497677773974918/" class="ui basic mini button"><i class="facebook blue icon"></i> Event</a>
 
 **Sunday 20th**
 
