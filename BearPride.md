@@ -116,3 +116,13 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
     <img src="uploads/2019/07/28/bearwww.png" alt="BearWWW" class="ui middle aligned image">
 </div>
 <small>[Sponsoring T&C](https://docs.google.com/document/d/e/2PACX-1vRiHgdxO-wmB5S4NaAdCm4oLEZPC95LRDyx2kJgEE3jtC9QR11ku3sn3SXS03O47ErFz2byoaw7F3ky/pub)</small>
+
+## Where to find ...
+
+So, for the new ones as the bears who already know our lovely capital city, here's a map where we gather the venues of the evens, bars & restaurants we love, cool shops, nice art & culture venues and some usefull grocery shops and hotels in the city.
+
+Don't miss our special partnership with Melia Luxembourg Hotel!
+
+<i class="info circle blue icon"></i>click on the drawer symbol (1st icon on the title bar of the map) to show the menu with the categories.
+
+<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Y5-12S01_kVDaGj8hVwH4rOFlIORfDgS" width="760" height="480" style="border:none"></iframe>
