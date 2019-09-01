@@ -112,8 +112,8 @@ Want to be the next Mr Bear Luxembourg ?
 ## Sponsoring
 
 <div class="ui medium rounded images">
-    <img src="uploads/2019/07/28/Proudbear Extend@3x.png" alt="Proudbear" class="ui image">
-    <img src="uploads/2019/07/28/El Hombre Extended@3x.png" alt="El Hombre Bear Bar Paris" class="ui image">
+    <a href="http://proudbears.com" title="Bear Wear Shop"><img src="uploads/2019/07/28/Proudbear Extend@3x.png" alt="Proudbear" class="ui image"></a>
+    <a href="https://www.facebook.com/ElHombreBar/" title="Bear Bar à Paris"><img src="uploads/2019/07/28/El Hombre Extended@3x.png" alt="El Hombre Bear Bar Paris" class="ui image"></a>
 </div>
 
 We are always looking for sponsors and offering a wide range of compensation. You can checkout the [Sponsoring documentation](https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub) to know everything about the metrics of the events, the differents sponsoring opportunities ...
@@ -121,15 +121,15 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 #### Communication sponsors
 
 <div class="ui mini images">
-    <img src="uploads/2019/07/28/MachoSauna.jpg" alt="Macho Sauna" class="ui image">
-    <img src="uploads/2019/07/28/XLSauna@3x.png" alt="XL sauna Saarbrucken" class="ui image">
-    <img src="uploads/2019/07/28/w-bear.png" alt="WBear" class="ui image">
-    <img src="uploads/2019/07/28/RedSaunaSquare@3x.png" alt="Red Sauna Uckange" class="ui image">
-    <img src="uploads/2019/07/28/la_mine_logo.png" alt="La Mine Fetish Bar Paris" class="ui image">
-    <img src="uploads/2019/07/28/IEM.png" alt="IEM fetish wear Paris" class="ui image">
-    <img src="uploads/2019/07/28/Dogklub.png" alt="DogKlub Fetish Wear Lyon" class="ui image">
-    <img src="uploads/2019/07/28/Brunos.png" alt="Brunos Berlin" class="ui middle aligned image">
-    <img src="uploads/2019/07/28/bearwww.png" alt="BearWWW" class="ui middle aligned image">
+    <a href="http://machosauna.be/" title="Sauna gay bear à Bruxelles"><img src="uploads/2019/07/28/MachoSauna.jpg" alt="Macho Sauna" class="ui image"></a>
+    <a href="http://xl-sauna.de" title="Sauna gay à Saarbrucken"><img src="uploads/2019/07/28/XLSauna@3x.png" alt="XL sauna Saarbrucken" class="ui image"></a>
+    <a href="https://wbear.lgbt/" title="Gay bear Instagram like"><img src="uploads/2019/07/28/w-bear.png" alt="WBear" class="ui image"></a>
+    <a href="http://redsauna.fr" title="Sauna Gay à Uckange"><img src="uploads/2019/07/28/RedSaunaSquare@3x.png" alt="Red Sauna Uckange" class="ui image"></a>
+    <a ref="https://www.bar-mine.fr/" title="Bar Fetish à Paris"><img src="uploads/2019/07/28/la_mine_logo.png" alt="La Mine Fetish Bar Paris" class="ui image"></a>
+    <a href="http://iem.fr" title="Sex shop et vestiaire Fetish à Paris"><img src="uploads/2019/07/28/IEM.png" alt="IEM fetish wear Paris" class="ui image"></a>
+    <a href="http://dogklub.com" title="Sex shop et vestiaire Fetish à Lyon"><img src="uploads/2019/07/28/Dogklub.png" alt="DogKlub Fetish Wear Lyon" class="ui image"></a>
+    <a href="http://brunos.de" title="Sex shop et vestairei gay à Berlin et Cologne"><img src="uploads/2019/07/28/Brunos.png" alt="Brunos Berlin" class="ui middle aligned image"></a>
+    <a href="https://www.bearwww.com/" title="Rencontre bear"><img src="uploads/2019/07/28/bearwww.png" alt="BearWWW" class="ui middle aligned image"></a>
 </div>
 <small>[Sponsoring T&C](https://docs.google.com/document/d/e/2PACX-1vRiHgdxO-wmB5S4NaAdCm4oLEZPC95LRDyx2kJgEE3jtC9QR11ku3sn3SXS03O47ErFz2byoaw7F3ky/pub)</small>
 
