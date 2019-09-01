@@ -21,69 +21,90 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Welcome Drink</div>
-            <div class="meta">6pm</div>
+            <div class="meta">6pm <i class="small building icon"></i> To be defined</div>
             <div class="description">The perfect time to get your week-end bracelet in exchange of your pre-sales.</div>
         </div>
-        <div class="extra content"></div>
     </div>
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Candidates presentation night</div>
-            <div class="meta">10pm</div>
+            <div class="meta">10pm <i class="small building icon"></i> To be defined</div>
             <div class="description"></div>
         </div>
-        <div class="extra content"></div>
+        <div class="extra content">
+            <div class="ui two buttons">
+                <a href="" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
+                <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> Tickets</a>
+            </div>
+        </div>
     </div>
 </div>
 <div class="column">
     <h3>Saturday 19th</h3>
     <div class="ui fluid card">
         <div class="content">
-            <div class="header">Bounding Together activity</div>
-            <div class="meta">4pm</div>
-            <div class="description"></div>
+            <div class="header">LaserGame</div>
+            <div class="meta">2pm <a href="https://goo.gl/maps/UKzK9Ph7LvqVDefe6" class=""><i class="small building icon"></i> Laser Game Evolution</a> <i class="euro icon"></i>10-22</div>
+            <div class="description">
+            <p>If you're more into fun games, we are suggesting to join other bears and go for a Lasergame all together. Everyone is paying for his own.</p>
+            <p>1 round 10&euro; · 2 rounds 17&euro; · 3 rounds 22&euro;</p>
+            <p>Please RSVP so we can accomodate the venue for you <i class="level down alternate icon"></i></p>
+            </div>
         </div>
-        <div class="extra content"></div>
+        <div class="extra content">
+            <div class="ui two buttons">
+                <a href="https://www.facebook.com/events/2166587553451649/" class="ui button"><i class="facebook blue icon"></i> Event</a>
+                <a href="https://thibault.typeform.com/to/WH2Btp" class="ui button">RSVP</a>
+            </div>
+        </div>
     </div>
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Mr. Bear Election night</div>
-            <div class="meta">9pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a></div>
-            <div class="description"></div>
+            <div class="meta">9pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a> <i class="euro icon"></i> incl.</div>
+            <div class="description">This year, the election will take place at the venue of the Woof men-only party. Come starting at 9 to enjoy the music, the guys and vote to crown the new Mr Bear.</div>
         </div>
         <div class="extra content">
         <div class="ui two buttons">
             <a href="https://www.facebook.com/events/497677773974918/" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
-            <a href="" class="ui disabled button"><i class="ticket alternate icon"></i> tickets</a>
+            <a href="https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
         </div>
         </div>
     </div>
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Woof Luxembourg Party</div>
-            <div class="meta">11pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a></div>
-            <div class="description"></div>
+            <div class="meta">11pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a> <i class="euro icon"></i>15</div>
+            <div class="description">
+                <h5 class="ui grey heading">💪🏼 DADDi Europe x Woof Luxembourg 💪🏼</h5>
+<p>For the Bear Pride Luxembourg 2019, we are inviting DADDi® Europe to come in Luxembourg for our men-only party.</p>
+<p>Then, with 2 new performers : Paco & Igor for a sexy show, and with the help of Hugo Jarocki & Dj José Sanchez, we'll gonna make you dance, cruse, drink, meet new people and have a great night with us.</p>
+            </div>
         </div>
         <div class="extra content">
             <div class="ui two buttons">
-                <a href="https://www.facebook.com/events/497677773974918/" class="ui a button"><i class="facebook blue icon"></i> Event</a>
-                <a href="" class="ui disabled button"><i class="ticket alternate icon"></i> tickets</a>
+                <a href="https://www.facebook.com/events/497677773974918/" class="ui button"><i class="facebook blue icon"></i> Event</a>
+                <a href="https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
             </div>
         </div>
     </div>
 
 </div>
 <div class="column">
-<h3>Sunday 20th</h3>
-<div class="ui fluid card">
-    <div class="content">
-        <div class="header">City Tour</div>
-        <div class="meta">1pm</div>
-        <div class="description"></div>
+    <h3>Sunday 20th</h3>
+    <div class="ui fluid card">
+        <div class="content">
+            <div class="header">City Tour (To be confirmed)</div>
+            <div class="meta">1pm</div>
+            <div class="description"><i class="warning red icon"></i>We are still waiting answers from partners for this activities.</div>
+        </div>
+        <div class="extra content">
+            <div class="ui two buttons">
+                <a href="" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
+                <a href="#" class="ui disabled button">RSVP</a>
+            </div>
+        </div>
     </div>
-    <div class="extra content">
-    </div>
-</div>
 </div>
 </div>
 
