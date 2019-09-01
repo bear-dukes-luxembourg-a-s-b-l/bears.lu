@@ -5,7 +5,7 @@
     <body>
         {% include header.html %}
 
-        <main class="ui text container" style="padding:5em 0">
+        <main class="ui {% if page.layout == 'home' %}text{%endif%} container" style="padding:5em 0">
             {{content}}
         </main>
 
