@@ -6,7 +6,7 @@ subtitle: 18-20 Oct.
 
 This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembourg City. We are still looking to secure the several venues but we can give you already the schedule.
 
-<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a> <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> Entire weekend pass (with discount) coming soon</a>
 
 ## Schedule
 
