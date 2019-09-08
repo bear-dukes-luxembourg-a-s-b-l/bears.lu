@@ -28,8 +28,8 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
         </div>
         <div class="extra content">
             <div class="ui two buttons">
-                <a href="" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
-                <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> Tickets</a>
+                <a href="https://www.facebook.com/events/357291828163605/" class="ui  button"><i class="facebook blue icon"></i> Event</a>
+                <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
             </div>
         </div>
     </div>
