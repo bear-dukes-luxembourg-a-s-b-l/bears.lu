@@ -16,19 +16,19 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Welcome Drink</div>
-            <div class="meta">6pm <i class="small building icon"></i> To be defined</div>
-            <div class="description">The perfect time to get your week-end bracelet in exchange of your pre-sales.</div>
+            <div class="meta">6pm <i class="small building icon"></i> Bar Rouge</div>
+            <div class="description">The perfect time to get your week-end bracelet in exchange of your entire weekend ticket pre-sales.</div>
         </div>
     </div>
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Candidates presentation night</div>
-            <div class="meta">10pm <i class="small building icon"></i> To be defined</div>
-            <div class="description"></div>
+            <div class="meta">10pm <a href="https://goo.gl/maps/DHDNxchegTpxjKCcA" class=""><i class="small building icon"></i> Bar Rouge</a> <i class="euro icon"></i>5</div>
+            <div class="description">LET'Z have fun on only POP MUSIC and get to know more the Mr bear Luxembourg contestants. You'll get a shooter offered by the venue.</div>
         </div>
         <div class="extra content">
             <div class="ui two buttons">
-                <a href="https://www.facebook.com/events/357291828163605/" class="ui  button"><i class="facebook blue icon"></i> Event</a>
+                <a href="https://www.facebook.com/events/690314754818611/" class="ui  button"><i class="facebook blue icon"></i> Event</a>
                 <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
             </div>
         </div>
@@ -69,7 +69,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
     <div class="ui fluid card">
         <div class="content">
             <div class="header">Woof Luxembourg Party</div>
-            <div class="meta">11pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a> <i class="euro icon"></i>15</div>
+            <div class="meta">11pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a> <i class="euro icon"></i>13-18</div>
             <div class="description">
                 <h5 class="ui grey heading">💪🏼 DADDi Europe x Woof Luxembourg 💪🏼</h5>
 <p>For the Bear Pride Luxembourg 2019, we are inviting DADDi® Europe to come in Luxembourg for our men-only party.</p>
