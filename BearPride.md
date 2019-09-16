@@ -6,21 +6,21 @@ subtitle: 18-20 Oct.
 
 This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembourg City. We are still looking to secure the several venues but we can give you already the schedule.
 
-<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a> <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> Entire weekend pass (with discount) coming soon</a>
+<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a> <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a>
 
 ## Schedule
 
 <div class="ui three column grid">
 <div class="column">
 <h3>Friday 18th</h3>
-    <div class="ui fluid card">
+    <div class="ui raised fluid card">
         <div class="content">
             <div class="header">Welcome Drink</div>
             <div class="meta">6pm <i class="small building icon"></i> Bar Rouge</div>
             <div class="description">The perfect time to get your week-end bracelet in exchange of your entire weekend ticket pre-sales.</div>
         </div>
     </div>
-    <div class="ui fluid card">
+    <div class="ui raised fluid card">
         <div class="content">
             <div class="header">Candidates presentation night</div>
             <div class="meta">10pm <a href="https://goo.gl/maps/DHDNxchegTpxjKCcA" class=""><i class="small building icon"></i> Bar Rouge</a> <i class="euro icon"></i>5</div>
@@ -36,7 +36,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 </div>
 <div class="column">
     <h3>Saturday 19th</h3>
-    <div class="ui fluid card">
+    <div class="ui raised fluid card">
         <div class="content">
             <div class="header">LaserGame</div>
             <div class="meta">2pm <a href="https://goo.gl/maps/UKzK9Ph7LvqVDefe6" class=""><i class="small building icon"></i> Laser Game Evolution</a> <i class="euro icon"></i>10-22</div>
@@ -53,7 +53,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
             </div>
         </div>
     </div>
-    <div class="ui fluid card">
+    <div class="ui raised fluid card">
         <div class="content">
             <div class="header">Mr. Bear Election night</div>
             <div class="meta">9pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a> <i class="euro icon"></i> incl.</div>
@@ -66,7 +66,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
         </div>
         </div>
     </div>
-    <div class="ui fluid card">
+    <div class="ui raised fluid card">
         <div class="content">
             <div class="header">Woof Luxembourg Party</div>
             <div class="meta">11pm <a href="https://goo.gl/maps/CqjByh2eEZFSYMgy8" class=""><i class="small building icon"></i> The Room</a> <i class="euro icon"></i>13-18</div>
@@ -87,7 +87,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 </div>
 <div class="column">
     <h3>Sunday 20th</h3>
-    <div class="ui fluid card">
+    <div class="ui raised fluid card">
         <div class="content">
             <div class="header">City Tour (To be confirmed)</div>
             <div class="meta">1pm</div>
