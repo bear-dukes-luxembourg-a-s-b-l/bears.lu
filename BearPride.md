@@ -132,7 +132,7 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 
 ### Silver sponsors
 
-<div class="ui small images">
+<div class="ui tiny images">
 {% for sponsor in site.data.sponsors.silver %}
             <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
