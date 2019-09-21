@@ -110,11 +110,11 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 
 ## Mr Bear Election
 
-<div class="ui message warning">The candidate application will end on Wednesday Sept. 18th.</div>
+<div class="ui message info">The application are closed. Discover the contestant soon here. </div>
 
-Want to be the next Mr Bear Luxembourg ?
+<!-- Want to be the next Mr Bear Luxembourg ?
 
-<a href="https://forms.gle/qgskYjs1WU13GUid8" class="ui brown button">Fill the application form online</a>
+<a href="https://forms.gle/qgskYjs1WU13GUid8" class="ui disabled brown button">Fill the application form online</a> -->
 
 ## Sponsoring
 
