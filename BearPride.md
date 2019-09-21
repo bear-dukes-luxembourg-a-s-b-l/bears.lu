@@ -124,6 +124,8 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 
 ### Gold Sponsors
 
+They are kindly sponsor the entire weekend.
+
 <div class="ui medium rounded images">
 {% for sponsor in site.data.sponsors.gold %}
             <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
@@ -132,6 +134,8 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 
 ### Silver sponsors
 
+They are offering prizes for the Mr. Bear Luxembourg candidates.
+
 <div class="ui tiny images">
 {% for sponsor in site.data.sponsors.silver %}
             <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
@@ -139,6 +143,8 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 </div>
 
 #### Communication sponsors
+
+They are helping us to raise awarness about our events.
 
 <div class="ui mini images">
 {% for sponsor in site.data.sponsors.media %}
