@@ -1,75 +1,80 @@
+---
 gold:
-    - name:  Proudbear
+    - name: Proudbear
       title: Bear Wear Shop
-      url:   http://proudbears.com
+      url: http://proudbears.com
       image: uploads/2019/07/28/Proudbear Extend@3x.png
-    - name:  El Hombre
+    - name: El Hombre
       title: Bear Bar à Paris
-      url:   https://www.facebook.com/ElHombreBar/
+      url: https://www.facebook.com/ElHombreBar/
       image: uploads/2019/07/28/El Hombre Extended@3x.png
 silver:
-    - name:  Leiwe Boy
+    - name: Leiwe Boy
       title: Garçon Grand-Ducal
-      url:   https://www.instagram.com/leiwe_boy/
+      url: https://www.instagram.com/leiwe_boy/
       image: uploads/2019/09/17/leiweboy.png
-    - name:  XL sauna Saarbrucken
+    - name: XL sauna Saarbrucken
       title: Sauna gay à Saarbrucken
-      url:   http://xl-sauna.de
+      url: http://xl-sauna.de
       image: uploads/2019/07/28/XLSauna@3x.png
-    - name:  Red Sauna Uckange
+    - name: Red Sauna Uckange
       title: Sauna Gay à Uckange
-      url:   http://redsauna.fr
+      url: http://redsauna.fr
       image: uploads/2019/07/28/RedSaunaSquare@3x.png
-    - name:  Les ours de Paris
+    - name: Les ours de Paris
       title: Nous ne sommes pas des Ours en peluche !
-      url:   https://www.lesoursdeparis.fr
+      url: https://www.lesoursdeparis.fr
       image: uploads/2019/09/17/oursdeparis.png
-    - name:  AUB Bear Wear
+    - name: AUB Bear Wear
       title: Stuff for Bears, Bearded Guys and their fans...
-      url:   https://www.aubbearwear.com
+      url: https://www.aubbearwear.com
       image: uploads/2019/09/17/aub.png
-    - name:  SuperFurry
+    - name: SuperFurry
       title: "Your #1 Stop Beard Care Shop"
-      url:   https://superfurry.nl
+      url: https://superfurry.nl
       image: uploads/2019/09/17/Superfurry@3x.png
-    - name:  BearWWW
+    - name: BearWWW
       title: "The gay bear app"
-      url:   https://www.bearwww.com
+      url: https://www.bearwww.com
+      image: uploads/2019/09/21/bearwww@3x.png
+    - name: BearWWW
+      title: "The gay bear app"
+      url: https://www.bearwww.com
       image: uploads/2019/09/21/bearwww@3x.png
 media:
-    - name:  Macho Sauna
+    - name: Macho Sauna
       title: Sauna gay bear à Bruxelles
-      url:   http://machosauna.be/
+      url: http://machosauna.be/
       image: uploads/2019/07/28/MachoSauna.jpg
-    - name:  XL sauna Saarbrucken
+    - name: XL sauna Saarbrucken
       title: Sauna gay à Saarbrucken
-      url:   http://xl-sauna.de
+      url: http://xl-sauna.de
       image: uploads/2019/07/28/XLSauna@3x.png
-    - name:  WBear
+    - name: WBear
       title: Gay bear Instagram like
-      url:   https://wbear.lgbt/
+      url: https://wbear.lgbt/
       image: uploads/2019/07/28/w-bear.png
-    - name:  Red Sauna Uckange
+    - name: Red Sauna Uckange
       title: Sauna Gay à Uckange
-      url:   http://redsauna.fr
+      url: http://redsauna.fr
       image: uploads/2019/07/28/RedSaunaSquare@3x.png
-    - name:  La Mine Fetish Bar Paris
+    - name: La Mine Fetish Bar Paris
       title: Bar Fetish à Paris
-      url:   https://www.bar-mine.fr/
+      url: https://www.bar-mine.fr/
       image: uploads/2019/07/28/la_mine_logo.png
-    - name:  IEM fetish wear Paris
+    - name: IEM fetish wear Paris
       title: Sex shop et vestiaire Fetish à Paris
-      url:   http://iem.fr
+      url: http://iem.fr
       image: uploads/2019/07/28/IEM.png
-    - name:  DogKlub Fetish Wear Lyon
+    - name: DogKlub Fetish Wear Lyon
       title: Sex shop et vestiaire Fetish à Lyon
-      url:   http://dogklub.com
+      url: http://dogklub.com
       image: uploads/2019/07/28/Dogklub.png
-    - name:  Brunos Berlin
+    - name: Brunos Berlin
       title: Sex shop et vestairei gay à Berlin et Cologne
-      url:   http://brunos.de
+      url: http://brunos.de
       image: uploads/2019/07/28/Brunos.png
-    - name:  BearWWW
+    - name: BearWWW
       title: Rencontre bear
-      url:   https://www.bearwww.com/
+      url: https://www.bearwww.com/
       image: uploads/2019/07/28/bearwww.png
