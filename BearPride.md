@@ -114,11 +114,36 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 </div>
 </div>
 
-## Mr Bear Election
+## Mr Bear Election Candidates
 
-<div class="ui message info">The application are closed. Discover the contestant soon here. </div>
+<div class="ui four columns grid">
+{%- for candidate in site.data.candidates -%}
+    <div class="column">
+        <div class="ui fluid card">
+            <div class="image">
+                <img src="{{candidate.photos[1]}}" alt="">
+            </div>
+            <div class="content">
+                <div class="header">{{candidate.firstname}}</div>
+                <div class="meta">{{candidate.dob | date: "%Y"}}</div>
+                <div class="description">{{candidate.about | markdownify}}</div>
+            </div>
+        </div>
+    </div>
 
-<!-- Want to be the next Mr Bear Luxembourg ?
+{%- endfor -%}
+
+</div>
+
+<div class="ui message info">
+  <div class="header">How to vote?</div>
+  <p>We don't have online voting because it's too easy to cheat. Every bear contest who tried to put one in place experimented it. So we just don't.<br>
+    Instead, you have to come and meet, in real life, face to face, the candidates. We think it's more interesting than just a like race over the internet. When you arrive at the party, you'll get a voting toket (a coin) which you'll be able to use to vote for your favorite candidate when the voting will be open. You'll have only one, no more, even if you "lose" it.</p>
+</div>
+
+<!-- <div class="ui message info">The application are closed. Discover the contestant soon here. </div>
+
+Want to be the next Mr Bear Luxembourg ?
 
 <a href="https://forms.gle/qgskYjs1WU13GUid8" class="ui disabled brown button">Fill the application form online</a> -->
 
