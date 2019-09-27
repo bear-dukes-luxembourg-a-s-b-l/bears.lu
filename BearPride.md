@@ -10,7 +10,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 
 ## Schedule
 
-<div class="ui three column grid">
+<div class="ui stackable three column grid">
 <div class="column">
 <h3>Friday 18th</h3>
     {% for event in site.data.events.vendredi %}
@@ -116,7 +116,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
 
 ## Mr Bear Election Candidates
 
-<div class="ui four columns grid">
+<div class="ui stackable four columns grid">
 {%- for candidate in site.data.candidates -%}
     <div class="column">
         <div class="ui fluid card">
