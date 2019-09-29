@@ -108,7 +108,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
     {% endfor %}
     <div class="ui message">
     <div class="header">Saunas</div>
-    <p>Some of our partners will organise events on this Sunday during the bear pride. Stay tuned for more infos.</p>
+    <p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
     </div>
 
 </div>
