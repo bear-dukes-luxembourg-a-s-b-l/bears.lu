@@ -51,7 +51,8 @@ samedi:
         party. Come starting at 9 to enjoy the music, the guys and vote to crown
        the new Mr Bear.
       facebook:
-      ticket_url: "https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019?ref=website"
+      ticket_url: >-
+        https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019?ref=website"
       rsvp_url:
     - title: Woof Luxembourg Men-only Party
       time: 11pm
@@ -70,22 +71,23 @@ samedi:
        help of Hugo Jarocki & Dj José Sanchez, we'll gonna make you dance,
        cruse, drink, meet new people and have a great night with us.
       facebook: "https://www.facebook.com/events/497677773974918/"
-      ticket_url: "https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019?ref=website"
+      ticket_url: >-
+        https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019?ref=website
       rsvp_url:
 dimanche:
     - title: Bear Brunch
-      time: 10:30am
+      time: 11am
       place: Bounewegerstuff
       place_url: "https://goo.gl/maps/2wXKvhPEuy7t19YS7"
-      price: "6-18"
+      price: "6-20"
       description: >
        Come and enjoy a brunch after a short sleep and a long party night. From
-        10:30 to midday you can enjoy a vast choice of brunch, including
+        11 to 2pm you can enjoy a vast choice of brunch, including
        vegetarian option, from 6 to 19€. The brunch is included into our
         weekend packs.
-      facebook:
+      facebook: https://www.facebook.com/events/1579950112147780/
       ticket_url:
-      rsvp_url:
+      rsvp_url: https://thibault.typeform.com/to/A6T0hO
     - title: City Tour (To be confirmed)
       time: 1pm
       place:
