@@ -36,8 +36,7 @@ samedi:
        1 round 10€ · 2 rounds 17€ · 3 rounds 22€
 
 
-       Please RSVP so we can accomodate the venue for you
-       <i class="level down alternate icon"></i>
+       <i class="hourglass end yellow icon"></i>Time's up for RSVP. Sorry.
       facebook: "https://www.facebook.com/events/2166587553451649/"
       ticket_url:
       rsvp_url: "https://thibault.typeform.com/to/WH2Btp"
@@ -83,8 +82,9 @@ dimanche:
       description: >
        Come and enjoy a brunch after a short sleep and a long party night. From
         11 to 2pm you can enjoy a vast choice of brunch, including
-       vegetarian option, from 6 to 19€. The brunch is included into our
-        weekend packs.
+       vegetarian option, from 6 to 19€.
+
+        <i class="hourglass end yellow icon"></i>Time's up for RSVP. Sorry.
       facebook: https://www.facebook.com/events/1579950112147780/
       ticket_url:
       rsvp_url: https://thibault.typeform.com/to/A6T0hO
