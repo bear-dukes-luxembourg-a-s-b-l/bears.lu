@@ -42,20 +42,20 @@ samedi:
       ticket_url:
       rsvp_url: "https://thibault.typeform.com/to/WH2Btp"
     - title: Mr. Bear Election night
-      time:
+      time: 10pm
       place: The Room
       place_url: "https://goo.gl/maps/CqjByh2eEZFSYMgy8"
       price: incl.
       description: >
        This year, the election will take place at the venue of the Woof men-only
-        party. Come starting at 9 to enjoy the music, the guys and vote to crown
-       the new Mr Bear.
+        party. Come starting at 10 to enjoy the music, the guys and vote to
+        crown the new Mr Bear.
       facebook:
       ticket_url: >-
         https://tickets.bears.lu/e/22/woof-17-bear-pride-luxembourg-2019?ref=website"
       rsvp_url:
     - title: Woof Luxembourg Men-only Party
-      time: 11pm
+      time: 11:59pm
       place: The Room
       place_url: "https://goo.gl/maps/CqjByh2eEZFSYMgy8"
       price: "13-18"
