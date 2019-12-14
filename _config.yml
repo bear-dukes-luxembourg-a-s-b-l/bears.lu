@@ -1,3 +1,4 @@
+---
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -6,9 +7,10 @@
 # feature for the data you need to update frequently.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'bundle exec jekyll serve'. If you change this file, please restart the server
+#  process.
 
-pride: true
+pride: false
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -18,8 +20,8 @@ title: "Bear Dukes Luxembourg - The first bear community in Luxembourg"
 email: contact@bears.lu
 description: >- # this means to ignore newlines until "baseurl:"
   We are the Luxembourgish bear community 🇱🇺:bear:.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://bears.lu" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
+url: "https://bears.lu"
 author: Bear Dukes Luxembourg a.s.b.l.
 
 social:
