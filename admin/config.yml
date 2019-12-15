@@ -6,6 +6,8 @@ backend:
   branch:      master # Branch to update (master by default)
 
 media_folder:  "assets/img/uploads" # Folder where user uploaded files should go
+site_url: https://bears.lu
+locale: fr
 
 # publish_mode: editorial_workflow # Enable drafts
 
@@ -13,6 +15,9 @@ collections:   # A list of collections the CMS should be able to edit
   # POSTS
   - name: "post"
     label: "Post"
+    description: "All your blogposts"
+    extension: markdown
+    format: frontmatter
     folder: "_posts"
     sort: "date:desc"
     create: true
@@ -25,16 +30,3 @@ collections:   # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Author", name: "author", widget: "string"}
-  - name: "page"
-    label: "Page"
-    folder: "/"
-    sort: "title:asc"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Permalink", name: "permalink", widget: "hidden"}
-      - {label: "Published", name: "published", widget: boolean, default:true}
-      - {label: "Section", name: "section", widget: "string", default: "{{name}}"}
-      - {label: "Body", name: "body", widget: "markdown"}
