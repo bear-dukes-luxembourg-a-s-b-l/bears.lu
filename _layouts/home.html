@@ -8,8 +8,26 @@ layout: default
     <a href="/bearpride" class="ui brown button">Checkout Bear Pride Page</a>
 </section>
 {%- endif -%}
+{% if site.posts %}
+<section id="news" class="ui divided items">
+  <h1 class="ui header"><i class="newspaper icon"></i>Latest news</h1>
+  {% for post in site.posts | limit: 4  %}
+  <div class="item">
+    <div class="content">
+      <a class="header" href="{{post.url}}"><small>{{post.date | date:"%d.%m.%Y"}}</small> {{post.title}}</a>
+      <div class="description">{{post.excerpt | strip_html | truncatewords: 20 }}</div>
+      <div class="extra">
+        <i class="user icon"></i><span class="author">{{post.author}}</span>
+        <i class="folder icon"></i><span class="category">{{post.categories | array_to_sentence_string}}</span>
+        <a class="ui right floated tiny basic primary button" href="{{post.url}}">Read more ...</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
 <section id="events">
-    <h1 class="ui header">Our next events</h1>
+    <h1 class="ui header"><i class="calendar icon"></i>Our next events</h1>
     <p>From time to time we organise some events. Just a casual one or a party, there's different kind of them. We aggregate also other bears events just to let you know about what happen or not around.</p>
     <div class="ui list" style="margin-bottom:1em;">
       <div class="item">

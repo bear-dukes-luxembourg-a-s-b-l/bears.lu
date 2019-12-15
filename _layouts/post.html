@@ -9,7 +9,7 @@ layout: default
       <div class="sub header">{{page.subtitle}}</div>
       {% endif %}
   </h1>
-  <p>Published by {{page.author}} on {{page.date | date_to_string}} in {% if page.category %} {{page.category | join:", "}}{% endif %}</p>
+  <p>Published by {{page.author}} on {{page.date | date_to_string}} in {% if page.categories %} {{page.categories |array_to_sentence_string}}{% endif %}</p>
   {{content}}
 
 </div>
