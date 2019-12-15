@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bear Pride Luxembourg
+title: Bear Pride Luxembourg 2019
 subtitle: 18-20 Oct.
 ---
 
