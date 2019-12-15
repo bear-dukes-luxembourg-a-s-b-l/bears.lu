@@ -4,6 +4,7 @@ title: "Lorem ipsum dolor sin amet"
 date: "2019-12-15 01:19:16 +0100"
 category: news
 splash: https://source.unsplash.com/1600x900/?nature
+author: Thibault M.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quidem unde iste odit atque nisi natus, amet, repellendus dolore, nobis aperiam aliquid consectetur error dicta totam consequatur similique illum quaerat minima animi numquam laboriosam laudantium repudiandae? Odit doloribus rerum veritatis soluta, doloremque quis eligendi dolorum quo impedit quod vel cumque autem harum asperiores. Reiciendis vitae amet sint porro impedit veniam, a quae dolorum repellendus repellat tempore temporibus id odit unde quam dicta in repudiandae, at, aut maxime quidem vel excepturi. Molestiae laudantium, cumque architecto! Aliquid, tenetur ipsa, sint sit amet quod aut et eum officia, fuga dolores sapiente iusto ex.

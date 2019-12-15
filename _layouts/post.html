@@ -9,7 +9,21 @@ layout: default
       <div class="sub header">{{page.subtitle}}</div>
       {% endif %}
   </h1>
-  <p>Published on {{page.date | date_to_string}} in {% if page.category %} {{page.category | join:", "}}{% endif %}</p>
+  <p>Published by {{page.author}} on {{page.date | date_to_string}} in {% if page.category %} {{page.category | join:", "}}{% endif %}</p>
   {{content}}
 
+</div>
+
+<div class="ui menu">
+  {% if page.previous %}
+  <a class="item" href="{{page.previous.url}}">
+    <i class="angle double left icon"></i>{{page.previous.title}}
+  </a>
+  {% endif %}
+  {% if page.next %}
+  <div class="right menu">
+    <a class="item" href="{{page.next.url}}">{{page.next.title}}<i class="angle double right icon"></i>
+    </a>
+  </div>
+  {% endif %}
 </div>
