@@ -11,26 +11,27 @@ media_folder:  "assets/img/uploads" # Folder where user uploaded files should go
 
 collections:   # A list of collections the CMS should be able to edit
   # POSTS
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder:    "_posts" # The path to the folder where the documents are stored
-    sort:      "date:desc" # Default is title:asc
-    create:    true # Allow users to create new documents in this collection
-    slug:      "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:    # The fields each document in this collection have
+  - name: "post"
+    label: "Post"
+    folder: "_posts"
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
       - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Categories", name: "categories", widget: "string", required: false}
-    # PAGES
-  - name:      "page"
-    label:     "Page"
-    folder:    "pages"
-    sort:      "title:asc"
-    create:    true
-    slug:      "{{slug}}"
+      - {label: "Splash Image", name: "splash", widget: "image", required: false, media_library:{config: {multiple: false}}}
+      - {label: "Author", name: "author", widget: "text"}
+  - name: "page"
+    label: "Page"
+    folder: "pages"
+    sort: "title:asc"
+    create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
