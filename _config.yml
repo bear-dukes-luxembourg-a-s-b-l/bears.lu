@@ -25,6 +25,9 @@ permalink: pretty
 url: "https://bears.lu"
 author: Bear Dukes Luxembourg a.s.b.l.
 
+paginate: 5
+paginate_path: "blog/:num"
+
 social:
     facebook: "https://www.facebook.com/luxembourgbears/"
     facebookgroup: "https://www.facebook.com/groups/beardukes/"
@@ -36,6 +39,7 @@ plugins:
     - jekyll-twitter-plugin
     - jekyll-youtube
     - jemoji
+    - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
