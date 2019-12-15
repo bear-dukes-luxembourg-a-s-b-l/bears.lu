@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="ui piled segment" style="margin-top:2em;">
+  {% if page.splash %}<img src="{{page.splash}}" alt="" class="ui image rounded">{% endif %}
+  <h1 class="ui header">
+      {{page.title}}
+      {% if page.subtitle %}
+      <div class="sub header">{{page.subtitle}}</div>
+      {% endif %}
+  </h1>
+  <p>Published on {{page.date | date_to_string}} in {% if page.category %} {{page.category | join:", "}}{% endif %}</p>
+  {{content}}
+
+</div>
