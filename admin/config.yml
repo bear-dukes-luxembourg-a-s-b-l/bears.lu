@@ -27,7 +27,7 @@ collections:   # A list of collections the CMS should be able to edit
       - {label: "Author", name: "author", widget: "string"}
   - name: "page"
     label: "Page"
-    folder: "pages"
+    folder: "/"
     sort: "title:asc"
     create: true
     slug: "{{slug}}"
