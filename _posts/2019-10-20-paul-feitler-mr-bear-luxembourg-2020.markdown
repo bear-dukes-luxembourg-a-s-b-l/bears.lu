@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Paul Feitler, Mr. Bear Luxembourg 2020"
-date: "2019-10-20 17:59:42 +0100"
-category: news
+title: 'Paul Feitler, Mr. Bear Luxembourg 2020'
+date: '2019-10-20 17:59:42 +0100'
+splash: /assets/img/uploads/paul-10.jpg
 author: Thibault M.
 ---
 
