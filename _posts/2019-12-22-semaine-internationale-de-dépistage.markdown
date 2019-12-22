@@ -5,6 +5,15 @@ date: '2019-12-01 22:45:41'
 categories: 'news, prevention'
 author: Thibault M.
 ---
+🤔 C'est quoi une pratique à risque? Nouvelle brochure de la Croix Rouge Luxembourg , disponible dans les soirées Fairytails, Banana et Woof Luxembourg.
+
+💦Liquide corporel + 🩸ouverture corporelle + ☝️contact = risque.
+Sucer? Lécher? Baiser? Sextoys, fisting et chemsex? Découvrez comment vous protéger.
+
+💡 Et n'oubliez pas, un dépistage tout les 6 mois pour connaitre votre status (et pas que sérologique 😉)
+
+---
+
 **Ton risque VIH date de moins de 72h?** Rends-toi au plus vite au [Centre Hospitalier de Luxembourg](http://chl.lu) pour le traitement d'urgence PeP (Post Exposition)! **N'attends pas. Le traitement est gratuit et anonyme.**
 
 🕐24h/24 7j/7  
