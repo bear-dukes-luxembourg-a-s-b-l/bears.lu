@@ -27,6 +27,7 @@ subtitle: Want to send us an email? Have an inquiry? Just fill the form below an
     <label for="message">Your message <i class="asterisk small red icon"></i></label>
     <textarea name="message" placeholder="Type your message here" required></textarea>
   </div>
+  <div data-netlify-recaptcha="true"></div>
   <p>The <i class="asterisk small red icon"></i>indicate a mandatory fields.</p>
   <button class="ui right blue labeled icon button" type="submit">Send <i class="paper plane icon"></i></button>
 </form>
