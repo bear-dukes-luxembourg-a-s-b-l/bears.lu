@@ -6,7 +6,7 @@ categories: 'news, prevention'
 author: Thibault M.
 ---
 
-🤔 C'est quoi une pratique à risque? Nouvelle brochure de la Croix Rouge Luxembourg , disponible dans les soirées Fairytails, Banana et Woof Luxembourg et [en téléchargement ici](assets/img/uploads/brochure.pdf)
+🤔 C'est quoi une pratique à risque? Nouvelle brochure de la Croix Rouge Luxembourg , disponible dans les soirées Fairytails, Banana et Woof Luxembourg et [en téléchargement ici](/assets/img/uploads/brochure.pdf)
 
 💦Liquide corporel + 🩸ouverture corporelle + ☝️contact = risque.
 Sucer? Lécher? Baiser? Sextoys, fisting et chemsex? Découvrez comment vous protéger.
