@@ -8,37 +8,43 @@ layout: default
     <a href="/bearpride" class="ui brown button">Checkout Bear Pride Page</a>
 </section>
 {%- endif -%}
-{% if site.posts %}
-<section id="news" class="ui items">
-  <h1 class="ui header"><i class="newspaper icon"></i>Latest news</h1>
-  {% for post in site.posts | limit: 4  %}
-  <div class="item">
-    <a class="ui small image" href="{{post.url}}" title="Read more of {{post.title}}"><img src="{{post.splash | append: '?nf_resize=smartcrop&w=300&h=300'}}" alt=""></a>
-    <div class="content">
-      <a class="header" href="{{post.url}}"> {{post.title}}</a>
-      <div class="meta"><small>{{post.date | date:"%B %d, %Y"}} in {{post.categories | array_to_sentence_string}}</small></div>
-      <div class="description">{{post.excerpt | strip_html }}<br/><a href="{{post.url}}" title="Read more of {{post.title}}">Read More...</a></div>
-    </div>
+<div class="ui stackable grid">
+  <div class="eight wide column">
+    {% if site.posts %}
+    <section id="news" class="ui items">
+      <h1 class="ui header"><i class="newspaper icon"></i>Latest news</h1>
+      {% for post in site.posts limit:4  %}
+      <div class="item">
+        <a class="ui small image" href="{{post.url}}" title="Read more of {{post.title}}"><img src="{{post.splash | append: '?nf_resize=smartcrop&w=300&h=300'}}" alt=""></a>
+        <div class="content">
+          <a class="header" href="{{post.url}}"> {{post.title}}</a>
+          <div class="meta"><small>{{post.date | date:"%B %d, %Y"}} in {{post.categories | array_to_sentence_string}}</small></div>
+          <div class="description">{{post.excerpt | strip_html }}<br/><a href="{{post.url}}" title="Read more of {{post.title}}">Read More...</a></div>
+        </div>
+      </div>
+      {% endfor %}
+      <a class="fluid ui button" href="#">Read all news</a>
+    </section>
+    {% endif %}
   </div>
-  {% endfor %}
-</section>
-{% endif %}
-<div class="ui clearing divider"></div>
-<section id="events">
-    <h1 class="ui header"><i class="calendar icon"></i>Our next events</h1>
-    <p>From time to time we organise some events. Just a casual one or a party, there's different kind of them. We aggregate also other bears events just to let you know about what happen or not around.</p>
-    <div class="ui list" style="margin-bottom:1em;">
-      <div class="item">
-        <i class="info circle icon"></i>
-        <div class="content">If the following list is blank, there's no events planned yet.</div>
-      </div>
-      <div class="item">
-        <i class="icon calendar"></i>
-        <div class="content">You can add our calendar to your phone or laptop <a href="https://airtable.com/shrVx2fQZGsjm5COn/iCal?timeZone=Europe%2FLuxembourg&userLocale=fr" title="Get the subscribtion link">using this link</a></div>
-      </div>
-    </div>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shrzdDB0ctF0eMYko?backgroundColor=pink&layout=card" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</section>
+  <div class="eight wide column">
+    <section id="events">
+        <h1 class="ui header"><i class="calendar icon"></i>Our next events</h1>
+        <p>From time to time we organise some events. Just a casual one or a party, there's different kind of them. We aggregate also other bears events just to let you know about what happen or not around.</p>
+        <div class="ui list" style="margin-bottom:1em;">
+          <div class="item">
+            <i class="info circle icon"></i>
+            <div class="content">If the following list is blank, there's no events planned yet.</div>
+          </div>
+          <div class="item">
+            <i class="icon calendar"></i>
+            <div class="content">You can add our calendar to your phone or laptop <a href="https://airtable.com/shrVx2fQZGsjm5COn/iCal?timeZone=Europe%2FLuxembourg&userLocale=fr" title="Get the subscribtion link">using this link</a></div>
+          </div>
+        </div>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrzdDB0ctF0eMYko?backgroundColor=pink&layout=card" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    </section>
+  </div>
+</div>
 
 {{content}}
 
