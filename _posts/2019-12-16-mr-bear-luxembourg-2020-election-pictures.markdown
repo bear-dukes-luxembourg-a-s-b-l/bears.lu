@@ -2,6 +2,7 @@
 layout: post
 title: Mr. Bear Luxembourg 2020 Election pictures
 date: '2019-10-18 18:33:00'
+splash: /assets/img/uploads/img_2732.jpg
 categories: news
 author: Thibault M.
 ---
