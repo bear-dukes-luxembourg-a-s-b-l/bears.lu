@@ -2,6 +2,7 @@
 layout: post
 title: 'Survey: Bear Calendar'
 date: '2019-12-22 16:51:28'
+splash: /assets/img/uploads/manasvita-s-9q5vptie2ty-unsplash.jpg
 categories: survey
 author: Thibault M.
 ---
