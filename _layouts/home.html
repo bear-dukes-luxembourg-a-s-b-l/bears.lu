@@ -13,14 +13,11 @@ layout: default
   <h1 class="ui header"><i class="newspaper icon"></i>Latest news</h1>
   {% for post in site.posts | limit: 4  %}
   <div class="item">
-    <div class="ui small image"><img src="{{post.splash | append: '?nf_resize=smartcrop&w=300&h=300'}}" alt=""></div>
+    <a class="ui small image" href="{{post.url}}" title="Read more of {{post.title}}"><img src="{{post.splash | append: '?nf_resize=smartcrop&w=300&h=300'}}" alt=""></a>
     <div class="content">
       <a class="header" href="{{post.url}}"> {{post.title}}</a>
       <div class="meta"><small>{{post.date | date:"%B %d, %Y"}} in {{post.categories | array_to_sentence_string}}</small></div>
-      <div class="description">{{post.excerpt | strip_html }}</div>
-      <div class="extra">
-        <a class="ui right floated tiny basic primary button" href="{{post.url}}">Read more ...</a>
-      </div>
+      <div class="description">{{post.excerpt | strip_html }}<br/><a href="{{post.url}}" title="Read more of {{post.title}}">Read More...</a></div>
     </div>
   </div>
   {% endfor %}
