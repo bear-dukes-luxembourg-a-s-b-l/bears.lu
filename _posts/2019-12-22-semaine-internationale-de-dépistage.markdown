@@ -2,6 +2,7 @@
 layout: post
 title: Semaine Internationale de dépistage
 date: '2019-12-01 22:45:41'
+splash: /assets/img/uploads/img_20191207_114853.jpg
 categories: news prevention
 author: Thibault M.
 ---
