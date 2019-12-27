@@ -2,10 +2,11 @@
 layout: post
 title: 'Survey: Bear Calendar'
 date: '2019-12-22 16:51:28'
-splash: /assets/img/uploads/manasvita-s-9q5vptie2ty-unsplash.jpg
+image: /assets/img/uploads/manasvita-s-9q5vptie2ty-unsplash.jpg
 categories: survey
-author: Thibault M.
+author: clawfire
 ---
+
 Hello all of you 😃
 
 We have this little crazy idea to maybe create a calendar featuring bears and selling it. We are exploring and questioning a lot about how to do it, that's why today we are asking you, directly, your opinion.
