@@ -10,39 +10,64 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server
 #  process.
 
-pride: false #enable or disable the bear pride panel on homepage
+pride: false  # Enable or disable the bear pride panel on homepage
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Bear Dukes Luxembourg - The first bear community in Luxembourg"
-email: contact@bears.lu
+title: "Bear Dukes Luxembourg"
+tagline: "The first bear community in Luxembourg"
 description: >- # this means to ignore newlines until "baseurl:"
   We are the Luxembourgish bear community 🇱🇺:bear:.
-baseurl: "/"
-permalink: pretty
 url: "https://bears.lu"
 author: Bear Dukes Luxembourg a.s.b.l.
+twitter:
+  card: summarry
+# username:
+facebook:
+  publisher: 1385637221689399
+#  admins:
+#  app_id:
+logo: "/assets/Bear Dukes Luxembourg.png"
+social:
+  name: Thibault M.
+  links:
+    - https://twitter.com/clawdire
+    - https://github.com/clawfire
+    - https://keybase.io/thibault
+    - https://www.facebook.com/thibault.milan.1
+webmaster_verifications:
+  google: ""
+  bing: ""
+  alexa: ""
+  yandex: ""
+  baidu: ""
+lang: "en_US"
+
+permalink: pretty
+baseurl: "/"
+email: contact@bears.lu
 
 paginate: 5
 paginate_path: "blog/:num"
 
 social:
-    facebook: "https://www.facebook.com/luxembourgbears/"
-    facebookgroup: "https://www.facebook.com/groups/beardukes/"
+  facebook: "https://www.facebook.com/luxembourgbears/"
+  facebookgroup: "https://www.facebook.com/groups/beardukes/"
 # Build settings
 markdown: kramdown
 # theme: minima
 plugins:
-    - jekyll-feed
-    - jekyll-twitter-plugin
-    - jekyll-youtube
-    - jemoji
-    - jekyll-paginate
+  - jekyll-feed
+  - jekyll-twitter-plugin
+  - jekyll-youtube
+  - jemoji
+  - jekyll-paginate
+  - jekyll-seo-tag
 sass:
-    sass_dir: _sass
+  sass_dir: _sass
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
