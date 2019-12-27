@@ -10,7 +10,8 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server
 #  process.
 
-pride: false
+pride: false #enable or disable the bear pride panel on homepage
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -40,6 +41,8 @@ plugins:
     - jekyll-youtube
     - jemoji
     - jekyll-paginate
+sass:
+    sass_dir: _sass
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
