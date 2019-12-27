@@ -1,18 +1,17 @@
 ---
 layout: default
 ---
-<div class="ui piled segment" style="margin-top:2em;">
-  {% if page.splash %}<img src="{{page.splash}}" alt="" class="ui image rounded">{% endif %}
-  <h1 class="ui header">
-      {{page.title}}
-      {% if page.subtitle %}
-      <div class="sub header">{{page.subtitle}}</div>
-      {% endif %}
-  </h1>
-  <p>Published by {{page.author}} on {{page.date | date_to_string}} in {% if page.categories %} {{page.categories |array_to_sentence_string}}{% endif %}</p>
-  {{content}}
+<p class="meta">{% if page.categories %} {{page.categories |array_to_sentence_string}}{% endif %} &centerdot; {{page.date | date_to_string}}</p>
+<h1 class="ui center aligned header">
+    {{page.title}}
+    {% if page.subtitle %}
+    <div class="sub header">{{page.subtitle}}</div>
+    {% endif %}
+</h1>
 
-</div>
+{% if page.splash %}<img src="{{page.splash | append:'?nf_resize=smartcrop&w=1100&h=400'}}" alt="" class="ui image rounded">{% endif %}
+
+<div class="ui content piled segment">{{content}}</div>
 
 <div class="ui menu">
   {% if page.previous %}
