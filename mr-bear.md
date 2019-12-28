@@ -2,6 +2,7 @@
 layout: page
 title: Mr Bear
 subtitle: All the Mr Bears in luxembourg
+image: /assets/img/uploads/Funny-5.jpg
 ---
 
 Since 2015, Mister bears are elected in Luxembourg.  
