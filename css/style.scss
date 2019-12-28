@@ -19,6 +19,7 @@ $primaryColor   : $blue;
 $secondaryColor : $grey;
 
 @import "post";
+@import "page";
 
 body{
     background: url("{{'/assets/Bear Dukes Luxembourg - faded.png' | relative_url}}") no-repeat -150px -150px;
