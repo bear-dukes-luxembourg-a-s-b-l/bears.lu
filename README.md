@@ -1,11 +1,16 @@
 # bears.lu
+
 Luxembourgish Bears website
 
-![](http://img.shields.io/liberapay/goal/Bear_Dukes_Luxembourg.svg?logo=liberapay)
+![Liberpay](http://img.shields.io/liberapay/goal/Bear_Dukes_Luxembourg.svg?logo=liberapay)
+![GitHub](https://img.shields.io/github/license/bear-dukes-luxembourg-a-s-b-l/bears.lu)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fbears.lu)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/bear-dukes-luxembourg-a-s-b-l/bears.lu)
 
 ## Edit info about misters on the mister bear page
 
 Locate the `_data/mrbears.yaml` file and do the edits according the following schema
+
 ```yaml
 - year: 0000  # the title year (usually election year + 1)
   name: John  # the name
@@ -26,7 +31,9 @@ Locate the `_data/mrbears.yaml` file and do the edits according the following sc
 For activating the bear pride you have to change the `pride` value to `true` into the `_config.yml` file
 
 ### Candidates
+
 To edit the candidate list, locate the `_data/candidates.yaml` file and do the edits according the following schema
+
 ```yaml
 - name: xxx  # the last name
   firstname: yyy  # the firstname
@@ -43,8 +50,10 @@ To edit the candidate list, locate the `_data/candidates.yaml` file and do the e
 ```
 
 ### Sponsors
+
 To edit the sponsor list, locate the `_data/sponsors.yaml` file and do the edits according the following schema
 Beware of putting the sponsor into the right section regarding his sponsorship level
+
 ```yaml
 - name: XXX  # the name of the sponsors
   title: lorem ipsum dolor sit amet  # the sponsor headline
@@ -53,8 +62,10 @@ Beware of putting the sponsor into the right section regarding his sponsorship l
 ```
 
 ### Event list
+
 To edit the event list, locate the `_data/events.yaml` file and do the edits according the following schema
 Beware of putting the sponsor into the right section regarding the date
+
 ```yaml
 - title: Welcome Drink  # the title
   time: 6pm  # the starting time 
@@ -72,9 +83,11 @@ Beware of putting the sponsor into the right section regarding the date
 ```
 
 ## Sponsor
+
 We are looking to cover those recurrent fees: 
-- Domain name from [gandi.net](gandi.net) ± 40€ / years (.lu isn't cheap)
-- [Canva.com](canva.com) subscribtion for our artwork ±20€ / month (regarding the exchange rate + fees since it's billed in USD)
+
+-   Domain name from [gandi.net](gandi.net) ± 40€ / years (.lu isn't cheap)
+-   [Canva.com](canva.com) subscribtion for our artwork ±20€ / month (regarding the exchange rate + fees since it's billed in USD)
 
 If the cost can't be covered, [@clawfire](github.com/clawfire) will pay for it since he always did but there's like 0 garantees he'll keep doing it on the long run.
 If you want to sponsor us for that, you can use librapay by clicking the `donate` button right below
