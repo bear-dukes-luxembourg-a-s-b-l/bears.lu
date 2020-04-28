@@ -1,13 +1,18 @@
 ---
 label: Page
 hide_body: false
+display_field: title
 fields:
 - type: text
   name: layout
-  label: layout
+  label: Layout
+  hidden: true
+  default: page
 - type: text
   name: title
-  label: title
+  label: Page Title
+  config:
+    required: true
 - type: textarea
   name: subtitle
-  label: subtitle
+  label: Page Subtitle
