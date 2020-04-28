@@ -2,21 +2,30 @@
 label: Blog Post
 hide_body: false
 fields:
-- type: text
-  name: layout
+- name: layout
+  type: text
+  config:
+    required: false
   label: layout
+  hidden: true
+  default: post
 - type: text
   name: title
-  label: title
+  label: Post Title
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Publish Date
+  config:
+    required: true
+  default: now
 - type: file
   name: image
-  label: image
+  label: Splash Image
 - type: text
   name: categories
-  label: categories
+  label: Categories
 - type: text
   name: author
-  label: author
+  label: Author
