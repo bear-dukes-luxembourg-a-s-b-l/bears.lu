@@ -3,7 +3,7 @@ layout: post
 date: 2020-04-28 20:55:44 +0000
 title: 'Mr Bear Luxembourg #honeyimgood video'
 image: ''
-categories: news, videos
+categories: videos
 author: clawfire
 
 ---
