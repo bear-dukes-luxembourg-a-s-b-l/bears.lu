@@ -30,3 +30,5 @@ fields:
 - type: text
   name: author
   label: Author
+pages:
+- _posts/mr-bear-luxembourg-honeyimgood-videos.md
