@@ -7,7 +7,7 @@ categories: prevention
 author: clawfire
 
 ---
-Long story short, the Red Cross is sending for free autotest to keep on the testing during COVID-19. To get it you can phone call the 27 55 4500 between 2pm and 5pm during the week of send an email to hivberodung@croix-rouge.lu. You'll be in touch with a professional who'll explain how to use the autotest. 
+Long story short, the Red Cross is sending for free autotest to keep on the testing during COVID-19. To get it you can phone call 27 55 4500 between 2 pm and 5 pm during the week or send an email to hivberodung@croix-rouge.lu. You'll be in touch with a professional who'll explain how to use the autotest.
 
 ***
 
