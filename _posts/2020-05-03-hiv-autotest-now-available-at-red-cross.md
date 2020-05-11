@@ -2,7 +2,7 @@
 layout: post
 date: 2020-05-03T12:52:42.000+00:00
 title: 'HIV Autotest now available at Red Cross '
-image: "/uploads/2020/05/national-cancer-institute-zz_3tCcrk7o-unsplash.jpg"
+image: "/uploads/2020/05/11-united-nations-covid-19-response-DZL1pR-htwo-unsplash.jpg"
 categories: prevention
 author: clawfire
 
