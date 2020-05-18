@@ -7,4 +7,38 @@ $('.message .close')
         ;
     })
 ;
+
+$('#newsletter form')
+  .form({
+    on: 'submit',
+    fields: {
+      email: {
+        identifier  : 'email',
+        rules: [
+          {
+            type   : 'email',
+            prompt : 'Please enter a valid e-mail'
+          }
+        ]
+      }
+    }
+  });
+// $('#newsletter form .button')
+//   .api({
+//     action: 'subscribe newsletter',
+//     method: 'POST',
+//     serializeForm: true,
+//     beforeSend: function(settings){
+//       settings.data.status = 'subscribed';
+//       settings.data.interests = {"48d1fe5bb1": true};
+//       settings.data.marketing_permissions = [{
+//         "marketing_permission_id": "13f7b02389",
+//         "text": "E-mailing / Campagne email",
+//         "enabled": true
+//       }];
+//       console.log(settings.data);
+//       return settings;
+//     }
+//   })
+// ;
 </script>
