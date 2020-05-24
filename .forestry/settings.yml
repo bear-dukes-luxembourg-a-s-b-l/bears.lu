@@ -21,6 +21,10 @@ sections:
   label: Events
   match: "**/*"
 - type: document
+  path: _data/candidates.yml
+  label: Candidates
+  match: "**/*"
+- type: document
   path: _data/sponsors.yml
   label: Sponsors
   match: "**/*"
