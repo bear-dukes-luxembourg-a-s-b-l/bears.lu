@@ -14,6 +14,16 @@ sections:
   create: documents
   templates:
   - blog-post
+- type: heading
+  label: Bear Pride
+- type: document
+  path: _data/events.yml
+  label: Events
+  match: "**/*"
+- type: document
+  path: _data/sponsors.yml
+  label: Sponsors
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
