@@ -2,9 +2,14 @@
 layout: page
 title: News
 subtitle: All the news we posted so far.
-pagination: 
+pagination:
   enabled: true
   collection: posts
+menu:
+  header:
+    identifier: news
+    weight: 1
+
 ---
 <div class="ui divided items">
 {% for post in paginator.posts %}

@@ -2,9 +2,14 @@
 layout: page
 title: Mr Bear
 subtitle: All the Mr Bears in luxembourg
-image: /assets/img/uploads/Funny-5.jpg
----
+image: "/assets/img/uploads/Funny-5.jpg"
+menu:
+  header:
+    title: Mister Bear
+    identifier: mrbear
+    weight: 2
 
+---
 Since 2015, Mister bears are elected in Luxembourg.  
 The first and secont elections were held by [Rosa Lëtzebuerg](http://rosa-letzebuerg.lu/) alongside the [Gaymat](http://gaymat.lu) (the former name of our Pride).  
 Bear Dukes Luxembourg a.s.b.l. was created after by former misters to be able to handle the election and continue the tradition. We moved slighly the date of the election and aligned it with the Bear Pride Luxembourg we had started in 2016. Also, in year Y we are electing Mr. Bear Luxembourg Y+1, which is more understandable to integrate ourself in the international agenda.
