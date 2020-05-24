@@ -8,7 +8,7 @@ pagination:
 menu:
   header:
     identifier: news
-    weight: 1
+    weight: 2
 
 ---
 <div class="ui divided items">

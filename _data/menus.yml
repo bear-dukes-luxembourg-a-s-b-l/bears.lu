@@ -3,4 +3,4 @@ header:
 - url: "/#events"
   title: Events
   identifier: events
-  weight: 5
+  weight: 1
