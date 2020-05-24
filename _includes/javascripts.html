@@ -1,10 +1,26 @@
 <script type="text/javascript">
 $('.message .close')
-    .on('click', function() {
-        $(this)
-          .closest('.message')
-          .transition('fade')
-        ;
-    })
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
 ;
+
+$('#newsletter form')
+  .form({
+    on: 'submit',
+    fields: {
+      EMAIL: {
+        identifier  : 'email',
+        rules: [
+          {
+            type   : 'email',
+            prompt : 'Please enter a valid e-mail'
+          }
+        ]
+      }
+    }
+  });
 </script>
