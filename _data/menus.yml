@@ -1,0 +1,18 @@
+---
+header:
+  - url: "/#events"
+    title: "Events"
+    identifier: events
+  - url: "/BearPride"
+    title: "Bear Pride Luxembourg 2019"
+    identifier: bearpride
+  - url: "/contact"
+    title: "Contact Us"
+    identifier: contact
+  - url: "/mr-bear"
+    title: "Mister Bear"
+    identifier: mrbear
+  - url: "/news/index.html"
+    title: "News"
+    identifier: news
+---
