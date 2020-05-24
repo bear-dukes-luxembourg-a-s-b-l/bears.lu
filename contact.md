@@ -1,9 +1,15 @@
 ---
 layout: page
 title: Contact us
-subtitle: Want to send us an email? Have an inquiry? Just fill the form below and we'll get back to you as soon as possible.
----
+subtitle: Want to send us an email? Have an inquiry? Just fill the form below and
+  we'll get back to you as soon as possible.
+menu:
+  header:
+    title: Contact Us
+    identifier: contact
+    weight: 5
 
+---
 <form name="contact" method="POST" data-netlify="true" class="ui form" data-netlify-recaptcha="true">
   <div class="field">
     <label for="name">Your name <i class="asterisk small red icon"></i></label>
