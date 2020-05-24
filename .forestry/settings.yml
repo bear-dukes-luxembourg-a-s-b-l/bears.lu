@@ -19,15 +19,12 @@ sections:
 - type: document
   path: _data/events.yml
   label: Events
-  match: "**/*"
 - type: document
   path: _data/candidates.yml
   label: Candidates
-  match: "**/*"
 - type: document
   path: _data/sponsors.yml
   label: Sponsors
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
