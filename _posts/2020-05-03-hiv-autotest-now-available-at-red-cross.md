@@ -13,7 +13,7 @@ Long story short, the Red Cross is sending for free autotest to keep on the test
 
 _Luxembourg, 10 avril 2020 -_ **Suite à l’épidémie de COVID-19, le service HIV Berodung de la Croix-Rouge luxembourgeoise s’est vu contraint d’annuler toutes ses activités de dépistage jusqu’à nouvel ordre. Néanmoins, afin de maintenir un accès facilité au dépistage du VIH et que chacun puisse réaliser un dépistage VIH, le service HIV Berodung lance dès ce mardi 14 avril un service de commande et d’envoi d’autotest du VIH gratuit.**
 
-Pour bénéficier de ce service et recevoir un autotest, il suffit de téléphoner au service HIV Berodung au 27 55 – 4500 entre 14h et 17h ou d’envoyer un mail à l’adresse [hivberodung@croix-rouge.lu](mailto:hivberodung@croix-rouge.lu). La personne sera alors en contact avec un professionnel du service qui prendra ses coordonnées et répondra à toutes les questions relatives au fonctionnement de l’autotest.
+Pour bénéficier de ce service et recevoir un autotest, il suffit de téléphoner au service HIV Berodung au 27 55 – 4500 de 8h à 12h et de 14h à 17h ou d’envoyer un mail à l’adresse [hivberodung@croix-rouge.lu](mailto:hivberodung@croix-rouge.lu). La personne sera alors en contact avec un professionnel du service qui prendra ses coordonnées et répondra à toutes les questions relatives au fonctionnement de l’autotest.
 
 Pour plus d’information sur l’autotest : [www.aids.lu](http://www.aids.lu), Rubrique « Autotest ».
 
