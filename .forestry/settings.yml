@@ -15,6 +15,12 @@ sections:
   templates:
   - page
 - type: heading
+  label: Products
+- type: document
+  path: _data/products.yaml
+  label: Products list
+  match: "**/*"
+- type: heading
   label: Bear Pride
 - type: document
   path: _data/events.yaml
