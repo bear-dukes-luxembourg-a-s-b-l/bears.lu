@@ -4,49 +4,70 @@ hide_body: true
 fields:
 - type: field_group_list
   name: gold
-  label: gold
+  label: Gold
   fields:
   - type: text
     name: name
-    label: name
+    label: Sponsor Name
+    config:
+      required: true
   - type: text
     name: title
-    label: title
+    label: Title link attribute
+    default: Checkout the sponsor website
   - type: text
     name: url
-    label: url
+    label: Sponsor URL
+    config:
+      required: true
   - type: file
     name: image
-    label: image
+    label: Sponsor logo
+  config:
+    labelField: name
 - type: field_group_list
   name: silver
-  label: silver
+  label: Silver
   fields:
   - type: text
     name: name
-    label: name
+    label: Sponsor Name
+    config:
+      required: true
   - type: text
     name: title
-    label: title
+    label: Title link attribute
+    default: Checkout the sponsor website
   - type: text
     name: url
-    label: url
+    label: Sponsor URL
+    config:
+      required: true
   - type: file
     name: image
-    label: image
+    label: Sponsor logo
+  config:
+    labelField: name
 - type: field_group_list
   name: media
-  label: media
+  label: Media
   fields:
   - type: text
     name: name
-    label: name
+    label: Sponsor Name
+    config:
+      required: true
   - type: text
     name: title
-    label: title
+    label: Title link attribute
+    default: Checkout the sponsor website
   - type: text
     name: url
-    label: url
+    label: Sponsor URL
+    config:
+      required: true
   - type: file
     name: image
-    label: image
+    label: Sponsor logo
+  config:
+    labelField: name
