@@ -71,3 +71,5 @@ fields:
     label: Sponsor logo
   config:
     labelField: name
+pages:
+- _data/sponsors.yaml
