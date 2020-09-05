@@ -1,0 +1,26 @@
+---
+label: Candidates
+hide_body: true
+fields:
+- type: field_group_list
+  name: Candidates
+  label: Candidates
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: firstname
+    label: firstname
+  - type: datetime
+    name: dob
+    label: dob
+  - type: text
+    name: social
+    label: social
+  - type: textarea
+    name: about
+    label: about
+  - type: image_gallery
+    name: photos
+    label: photos
