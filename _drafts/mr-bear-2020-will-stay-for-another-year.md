@@ -2,7 +2,7 @@
 layout: post
 date: 2020-09-22 22:50:52 +0200
 title: Mr Bear 2020 will stay for another year
-image: ''
+image: "/uploads/2020/09/22-estee-janssens-zni0zgb3bkq-unsplash.jpg"
 categories: news
 author: ''
 
