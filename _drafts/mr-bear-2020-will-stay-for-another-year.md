@@ -13,6 +13,6 @@ Of course, he did very well online with digital drink, videos, and many other ac
 
 However, the administrative board feels it would be not acceptable to organize a big event in 2020 with a new election, not with the actual still ongoing pandemic. And feels also Paul could benefit from a little more time. It happened in the past, when Thibault, Mr. Bear Luxembourg 2016 got ± 6 more months when we re-aligned our election with the European agenda.
 
-You can [read the decision here ](https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub)if it's not loading below.
+You can [read the decision here ](https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub)if it's not loading below
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub?embedded=true"></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub?embedded=true" width="100"></iframe>
