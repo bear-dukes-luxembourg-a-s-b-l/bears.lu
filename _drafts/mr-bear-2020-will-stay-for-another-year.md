@@ -15,4 +15,4 @@ However, the administrative board feels it would be not acceptable to organize a
 
 You can [read the decision here ](https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub)if it's not loading below
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub?embedded=true" width="100"></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTVi53zjLk04DUisCcpayHbeaOcH95TcHrQnVaD3teXJDlU_2fQTz7cpZ1CM2VnvFU_NuF9qrBFh9xE/pub?embedded=true" width="100%"></iframe>
