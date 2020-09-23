@@ -7,7 +7,7 @@ menu:
   header:
     title: Contact Us
     identifier: contact
-    weight: 5
+    weight: 4
 
 ---
 <form name="contact" method="POST" data-netlify="true" class="ui form" data-netlify-recaptcha="true">
