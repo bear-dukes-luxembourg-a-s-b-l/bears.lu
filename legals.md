@@ -13,8 +13,9 @@ published: false
 ## Assemblées Générales
 
 * Assemblée Générale 2019
-  * Compte rendu de l'assemblée
-  * Rapport Moral de l'année 2019
+  * [Compte rendu de l'assemblée](https://docs.google.com/document/d/e/2PACX-1vTTSqSNXY4XECldeWyH-jjC2LRSFRVP1cbaWoAEbOTEWe1Km5vzslm_ydjRGnftSPNQgKp0tifksFuf/pub)
+  * [Rapport Moral de l'année 2019](https://docs.google.com/document/d/e/2PACX-1vSUJ3WKr1zdIDIP29VuJ3U4M7dY-zq-WVRZdJp6HDZ7C5BrKowoYUS5C__FFwtKdnq6EsSAbXvHM9__/pub)
+  * [Modification des statuts de l'association](https://docs.google.com/document/d/e/2PACX-1vTTSqSNXY4XECldeWyH-jjC2LRSFRVP1cbaWoAEbOTEWe1Km5vzslm_ydjRGnftSPNQgKp0tifksFuf/pub)
 * Assemblée Générale 2018
   * [Compte rendu de l'assemblée](https://docs.google.com/document/d/e/2PACX-1vQlN4E_bL7O0X93TKbP7CDh7Zwy_Qwib9G3EJUEMXboQVHGQKrcs4Bmsle3VK0ZbWA0OvDrmWVlunFf/pub)
   * [Rapport Moral de l'année 2018](https://docs.google.com/document/d/e/2PACX-1vTPLDYdG4CkIlfb9nUzQplQdsxMFitNrgM0-YOcKjYonSH5aukBfQ2zwLFrm8D1EvFA9T-8z4oXS_dC/pub)
