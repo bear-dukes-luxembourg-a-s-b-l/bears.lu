@@ -4,20 +4,20 @@ vendredi:
   time: 7pm
   place: Bar rouge
   place_url: https://goo.gl/maps/DHDNxchegTpxjKCcA
-  price: 
+  price: FREE
   description: ''
   facebook: 
-  ticket_url: 
+  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020?ref=site
   rsvp_url: 
 samedi:
 - title: Bear Pride Diner Spectable
   time: 6pm
   place: KnokkeOut Luxembourg
   place_url: https://goo.gl/maps/bsdYshfU4bfTfSaGA
-  price: 45€ for dinner
+  price: 45€ for dinner, 10€ for entry only
   description: ''
   facebook: https://www.facebook.com/events/778314932999822
-  ticket_url: ''
+  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020?ref=site
   rsvp_url: ''
 dimanche:
 - title: Bear Brunch
@@ -27,5 +27,5 @@ dimanche:
   price: ''
   description: ''
   facebook: ''
-  ticket_url: ''
+  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020?ref=site
   rsvp_url: ''
