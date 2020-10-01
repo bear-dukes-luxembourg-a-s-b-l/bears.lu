@@ -121,6 +121,7 @@ menu:
 </div>
 </div>
 
+{%- if site.data.candidates -%}
 ## Mr Bear Election Candidates
 
 <div class="ui stackable four columns grid">
@@ -141,6 +142,7 @@ menu:
 {%- endfor -%}
 
 </div>
+{%- endif -%}
 
 <div class="ui message info">
   <div class="header">How to vote?</div>
