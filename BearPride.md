@@ -10,7 +10,7 @@ menu:
 ---
 #COVID19 forced us to reinvent this event in something smaller, focus on local community and our direct neighbour instead of a true international event. But Luxembourg isn't already international after all?
 
-<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+<a href="https://www.facebook.com/events/1817803265022358" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
 <!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
 
 <div class="ui message warning">
