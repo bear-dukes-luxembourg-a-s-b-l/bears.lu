@@ -7,7 +7,7 @@ menu:
   header:
     title: Mister Bear
     identifier: mrbear
-    weight: 4
+    weight: 3
 
 ---
 Since 2015, Mister bears are elected in Luxembourg.  

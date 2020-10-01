@@ -1,0 +1,75 @@
+---
+label: Sponsors
+hide_body: true
+fields:
+- type: field_group_list
+  name: gold
+  label: Gold
+  fields:
+  - type: text
+    name: name
+    label: Sponsor Name
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Title link attribute
+    default: Checkout the sponsor website
+  - type: text
+    name: url
+    label: Sponsor URL
+    config:
+      required: true
+  - type: file
+    name: image
+    label: Sponsor logo
+  config:
+    labelField: name
+- type: field_group_list
+  name: silver
+  label: Silver
+  fields:
+  - type: text
+    name: name
+    label: Sponsor Name
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Title link attribute
+    default: Checkout the sponsor website
+  - type: text
+    name: url
+    label: Sponsor URL
+    config:
+      required: true
+  - type: file
+    name: image
+    label: Sponsor logo
+  config:
+    labelField: name
+- type: field_group_list
+  name: media
+  label: Media
+  fields:
+  - type: text
+    name: name
+    label: Sponsor Name
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Title link attribute
+    default: Checkout the sponsor website
+  - type: text
+    name: url
+    label: Sponsor URL
+    config:
+      required: true
+  - type: file
+    name: image
+    label: Sponsor logo
+  config:
+    labelField: name
+pages:
+- _data/sponsors.yaml

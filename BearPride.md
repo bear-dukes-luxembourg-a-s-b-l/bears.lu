@@ -1,22 +1,27 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2019
-subtitle: 18-20 Oct.
+title: Bear Pride Luxembourg 2020
+subtitle: 16-18 Oct.
 menu:
   header:
     identifier: bearpride
     weight: 3
 
 ---
-This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembourg City. We are still looking to secure the several venues but we can give you already the schedule.
+#COVID19 forced us to reinvent this event in something smaller, focus on local community and our direct neighbour instead of a true international event. But Luxembourg isn't already international after all?
 
-<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a> <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a>
+<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+<!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
+
+<div class="ui message warning">
+  <p>😷 Please be safe, don't come for hundreds of kilometers for us.<br/>We 🤎 you but we want you safe and following your government directive regarding the oncoming crisis.</p>
+</div>
 
 ## Schedule
 
 <div class="ui stackable three column grid">
 <div class="column">
-<h3>Friday 18th</h3>
+<h3>Friday 16th</h3>
     {% for event in site.data.events.vendredi %}
     <div class="ui raised fluid card">
         <div class="content">
@@ -51,7 +56,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
     </div>
 </div>
 <div class="column">
-    <h3>Saturday 19th</h3>
+    <h3>Saturday 17th</h3>
     {% for event in site.data.events.samedi %}
     <div class="ui raised fluid card">
         <div class="content">
@@ -79,10 +84,13 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
         {% endif %}
     </div>
     {% endfor %}
+    <div class="ui message info">
+      <p>Due to COVID19, <strong>there will be no election this year</strong>. You can <a href="/news/2020/09/22/mr-bear-2020-will-stay-for-another-year/" title="read the Bear Duke's statement">read the Bear Duke's statement on this here</a></p>
+    </div>
 
 </div>
 <div class="column">
-    <h3>Sunday 20th</h3>
+    <h3>Sunday 18th</h3>
     {% for event in site.data.events.dimanche %}
     <div class="ui raised fluid card">
         <div class="content">
@@ -110,14 +118,15 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
         {% endif %}
     </div>
     {% endfor %}
-    <div class="ui message">
+    <!-- <div class="ui message">
     <div class="header">Saunas</div>
     <p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
-    </div>
+    </div> -->
 
 </div>
 </div>
 
+{%- if site.data.candidates > 0 -%}
 ## Mr Bear Election Candidates
 
 <div class="ui stackable four columns grid">
@@ -144,6 +153,7 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
   <p>We don't have online voting because it's too easy to cheat. Every bear contest who tried to put one in place experimented it. So we just don't.<br>
     Instead, you have to come and meet, in real life, face to face, the candidates. We think it's more interesting than just a like race over the internet. When you arrive at the party, you'll get a voting toket (a coin) which you'll be able to use to vote for your favorite candidate when the voting will be open. You'll have only one, no more, even if you "lose" it.</p>
 </div>
+{%- endif -%}
 
 <!-- <div class="ui message info">The application are closed. Discover the contestant soon here. </div>
 
@@ -157,6 +167,7 @@ Want to be the next Mr Bear Luxembourg ?
 We are always looking for sponsors and offering a wide range of compensation. You can checkout the <a href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub" title="Sponsoring documentation">Sponsoring documentation</a> to know everything about the metrics of the events, the differents sponsoring opportunities ...
 </div>
 
+{%- if site.data.sponsors.gold > 0 -%}
 ### Gold Sponsors
 
 They are kindly sponsor the entire weekend.
@@ -166,7 +177,8 @@ They are kindly sponsor the entire weekend.
             <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
 </div>
-
+{%- endif -%}
+{%- if site.data.sponsors.silver > 0 -%}
 ### Silver sponsors
 
 They are offering prizes for the Mr. Bear Luxembourg candidates.
@@ -176,7 +188,8 @@ They are offering prizes for the Mr. Bear Luxembourg candidates.
             <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
 </div>
-
+{%- endif -%}
+{%- if site.data.sponsors.media > 0 -%}
 #### Communication sponsors
 
 They are helping us to raise awarness about our events.
@@ -187,6 +200,7 @@ They are helping us to raise awarness about our events.
 {% endfor %}
 
 </div>
+{%- endif -%}
 <small>[Sponsoring T&C](https://docs.google.com/document/d/e/2PACX-1vRiHgdxO-wmB5S4NaAdCm4oLEZPC95LRDyx2kJgEE3jtC9QR11ku3sn3SXS03O47ErFz2byoaw7F3ky/pub)</small>
 
 ## Where to find ...
