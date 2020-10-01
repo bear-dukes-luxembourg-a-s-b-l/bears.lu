@@ -1,14 +1,17 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2019
-subtitle: 18-20 Oct.
+title: Bear Pride Luxembourg 2020
+subtitle: 16-18 Oct.
 menu:
   header:
     identifier: bearpride
     weight: 3
 
 ---
-This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembourg City. We are still looking to secure the several venues but we can give you already the schedule.
+#COVID19 forced us to reinvent this event in something smaller, focus on local community and our direct neighbour instead of a true international event. But Luxembourg isn't already international after all?
+
+
+😷 Please be safe, don't come for hundreds of kilometers for us. We 🤎 you but we want you safe and following your government directive regarding the oncoming crisis.
 
 <a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a> <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a>
 
@@ -110,10 +113,10 @@ This year, the Luxembourg Bear Pride will be on October 18th - 20th in Luxembour
         {% endif %}
     </div>
     {% endfor %}
-    <div class="ui message">
+    <!-- <div class="ui message">
     <div class="header">Saunas</div>
     <p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
-    </div>
+    </div> -->
 
 </div>
 </div>
