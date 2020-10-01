@@ -15,15 +15,20 @@ sections:
   templates:
   - page
 - type: heading
+  label: Products
+- type: document
+  path: _data/products.yaml
+  label: Products list
+- type: heading
   label: Bear Pride
 - type: document
-  path: _data/events.yml
+  path: _data/events.yaml
   label: Events
 - type: document
-  path: _data/candidates.yml
+  path: _data/candidates.yaml
   label: Candidates
 - type: document
-  path: _data/sponsors.yml
+  path: _data/sponsors.yaml
   label: Sponsors
 upload_dir: uploads
 public_path: "/uploads"
