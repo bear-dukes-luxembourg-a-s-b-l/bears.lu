@@ -20,9 +20,12 @@ samedi:
   place: KnokkeOut Luxembourg
   place_url: https://goo.gl/maps/bsdYshfU4bfTfSaGA
   price: 45€ for dinner, 10€ for entry only
-  description: ''
+  description: "Come and enjoy seated dinning with an awesome show. <br> \U0001F37D
+    1 course + desserts, 45€ (incl. entry). Detailed menu will be published soon.
+    Want to come just for a drink? **Limited seating** will be available same day
+    with 10€ entry fee."
   facebook: https://www.facebook.com/events/778314932999822
-  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020?ref=site
+  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020
   rsvp_url: ''
 dimanche:
 - title: Bear Brunch
