@@ -19,6 +19,6 @@ Find the entire details of the bear pride on the [BEAR PRIDE](/bearpride) sectio
 
 The menu for the Diner spectacle is just below ⤵️
 
-<img src="/uploads/2020/10/05-red-and-white-bordered-valentine-s-day-food-and-drink-menu.png" class="ui image" alt="menu of the bearbecue"/>
+<img src="/uploads/2020/10/05-red-and-white-bordered-valentine-s-day-food-and-drink-menu.png" class="ui fluid image" alt="menu of the bearbecue"/>
 
 Any questions? [Reach us](mailto:woof@bears.lu) by email!
