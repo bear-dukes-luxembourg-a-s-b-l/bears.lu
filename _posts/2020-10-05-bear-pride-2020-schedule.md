@@ -2,7 +2,7 @@
 layout: post
 date: 2020-10-05 23:07:05 +0200
 title: Bear Pride 2020 - Schedule
-image: ''
+image: "/uploads/2020/10/05-bear-pride-2020.png"
 categories: news,pride,events
 author: thmil
 
