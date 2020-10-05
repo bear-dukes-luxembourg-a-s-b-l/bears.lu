@@ -1,6 +1,6 @@
 ---
 vendredi:
-- title: OctoBearFest
+- title: OctoBEARFest
   time: 7pm
   place: Bar rouge
   place_url: https://goo.gl/maps/DHDNxchegTpxjKCcA
@@ -19,18 +19,22 @@ samedi:
   time: 6pm
   place: KnokkeOut Luxembourg
   place_url: https://goo.gl/maps/bsdYshfU4bfTfSaGA
-  price: 45€ for dinner, 10€ for entry only
-  description: ''
+  price: 10 - 45€
+  description: "Come and enjoy seated dinning with an awesome show. <br> \U0001F37D
+    1 course + desserts, 45€ (incl. entry).<br> <a href=\"https://share.getcloudapp.com/P8uylrNR\">Detailed
+    menu here</a>. Want to come just for a drink? **Limited seating** will be available
+    same day with 10€ entry fee."
   facebook: https://www.facebook.com/events/778314932999822
-  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020?ref=site
+  ticket_url: https://tickets.out.lu/e/4/bear-pride-2020-diner-spectacle
   rsvp_url: ''
 dimanche:
 - title: Bear Brunch
   time: 10am
   place: ''
   place_url: ''
-  price: ''
-  description: ''
+  price: tbd
+  description: More informations coming soon. But the idea is to get together and
+    have one last meal before we go.
   facebook: ''
-  ticket_url: https://tickets.out.lu/e/4/bear-pride-luxembourg-2020?ref=site
-  rsvp_url: ''
+  ticket_url: ''
+  rsvp_url: https://thibault.typeform.com/to/aCoySXkI

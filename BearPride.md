@@ -10,7 +10,7 @@ menu:
 ---
 #COVID19 forced us to reinvent this event in something smaller, focus on local community and our direct neighbour instead of a true international event. But Luxembourg isn't already international after all?
 
-<a href="https://www.facebook.com/events/357291828163605/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+<a href="https://www.facebook.com/events/1817803265022358" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
 <!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
 
 <div class="ui message warning">
@@ -29,17 +29,18 @@ menu:
             <div class="meta">{{event.time}} {% if event.place %}<a href="{{event.place_url}}" title="{{event.place}}"><i class="small building icon"></i> {{event.place}}</a> {% endif %} {% if event.price %}<i class="euro icon"></i>{{event.price}}{% endif %}</div>
             <div class="description">{{event.description | markdownify}}</div>
         </div>
-        {% if event.facebook or  event.ticket_url or event.rsvp_url %}
+        {% if event.facebook or event.ticket_url or event.rsvp_url %}
         <div class="extra content">
             <div class="ui two buttons">
-                {% if event.facebook %}
+                {% if event.facebook != ''%}
+                {{ event.facebook | jsonify }}<
                 <a href="{{event.facebook}}" class="ui  button"><i class="facebook blue icon"></i> Event</a>
                 {% else %}
                 <a href="#" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
                 {% endif %}
-                {% if event.ticket_url %}
+                {% if event.ticket_url != ''%}
                 <a href="{{event.ticket_url}}" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
-                {% elsif event.rsvp_url %}
+                {% elsif event.rsvp_url != '' %}
                 <a href="{{event.rsvp_url}}" class="ui button">RSVP</a>
                 {% else %}
                 <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
@@ -67,14 +68,14 @@ menu:
         {% if event.facebook or  event.ticket_url or event.rsvp_url %}
         <div class="extra content">
             <div class="ui two buttons">
-                {% if event.facebook %}
+                {% if event.facebook != ''%}
                 <a href="{{event.facebook}}" class="ui  button"><i class="facebook blue icon"></i> Event</a>
                 {% else %}
                 <a href="#" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
                 {% endif %}
-                {% if event.ticket_url %}
+                {% if event.ticket_url != '' %}
                 <a href="{{event.ticket_url}}" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
-                {% elsif event.rsvp_url %}
+                {% elsif event.rsvp_url != '' %}
                 <a href="{{event.rsvp_url}}" class="ui button">RSVP</a>
                 {% else %}
                 <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
@@ -98,17 +99,17 @@ menu:
             <div class="meta">{{event.time}} {% if event.place %}<a href="{{event.place_url}}" title="{{event.place}}"><i class="small building icon"></i> {{event.place}}</a> {% endif %} {% if event.price %}<i class="euro icon"></i>{{event.price}}{% endif %}</div>
             <div class="description">{{event.description | markdownify}}</div>
         </div>
-        {% if event.facebook or  event.ticket_url or event.rsvp_url %}
+        {% if event.facebook or event.ticket_url or event.rsvp_url %}
         <div class="extra content">
             <div class="ui two buttons">
-                {% if event.facebook %}
+                {% if event.facebook != '' %}
                 <a href="{{event.facebook}}" class="ui  button"><i class="facebook blue icon"></i> Event</a>
                 {% else %}
                 <a href="#" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
                 {% endif %}
-                {% if event.ticket_url %}
+                {% if event.ticket_url != '' %}
                 <a href="{{event.ticket_url}}" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
-                {% elsif event.rsvp_url %}
+                {% elsif event.rsvp_url != '' %}
                 <a href="{{event.rsvp_url}}" class="ui button">RSVP</a>
                 {% else %}
                 <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
