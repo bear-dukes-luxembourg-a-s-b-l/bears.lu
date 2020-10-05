@@ -18,3 +18,5 @@ This year, we'll do then only smaller events:
 The menu for the Diner spectacle is just below ⤵️
 
 ![](/uploads/2020/10/05-red-and-white-bordered-valentine-s-day-food-and-drink-menu.png)
+
+Any questions? [Reach us](mailto:woof@bears.lu) by email!
