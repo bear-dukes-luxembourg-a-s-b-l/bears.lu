@@ -52,8 +52,8 @@ menu:
     {% endfor %}
     <div class="ui floating message">
         <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
-        <p>Our partner, <a href="http://melia.lu" title="See our partner">Melia Luxembourg</a>, offer you a <em>room for 2 with breakfast for 94€/night</em>. It's close to the city center, got their own tram station and is 10min from city center by public transportation.</p>
-        <p>Use the code <code>00326175XSP</code> when searching on their site to get our special discount.</p>
+        <p>Our partner, <a href="http://melia.lu" title="See our partner">Melia Luxembourg</a>, offer you a <em>room for 2 without breakfast for 90€/night</em>. It's close to the city center, got their own tram station and is 10min from city center by public transportation.</p>
+        <p>Use the code <a href="https://airtable.com/shrhhsIN0QdxTbVw3">this form</a> to make your booking and they'll get back to you ASAP.</p>
     </div>
 </div>
 <div class="column">
