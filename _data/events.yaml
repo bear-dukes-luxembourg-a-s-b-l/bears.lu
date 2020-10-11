@@ -30,11 +30,12 @@ samedi:
 dimanche:
 - title: Bear Brunch
   time: 10am
-  place: ''
-  place_url: ''
-  price: tbd
-  description: More informations coming soon. But the idea is to get together and
-    have one last meal before we go.
+  place: Mama Shelter, Luxembourg
+  place_url: https://g.page/MamaShelterLuxembourg
+  price: 17€
+  description: The idea is to get together and have one last meal before we go. Mama
+    Shelter offers a cosy and nice place to share a big buffet breakfast before going
+    back.
   facebook: ''
   ticket_url: ''
   rsvp_url: https://thibault.typeform.com/to/aCoySXkI
