@@ -4,7 +4,7 @@ date: 2021-05-13 12:40:39 +0200
 title: Worldfetish show contest
 image: "/uploads/2021/05/13-160800189_1585766504964308_6989241815136050473_n.jpg"
 categories: fetish, contest, show, eurovision
-author: ''
+author: clawfire
 
 ---
 The Worldfetish Show Contest started in 2020 as a fun project to entertain a group of friends, who were depressed because of the pandemic. There were no professional movie crews to shoot the videos, just them and their mobile phones. 
