@@ -24,8 +24,9 @@ fields:
 - type: file
   name: image
   label: Splash Image
-- type: text
-  name: categories
+- name: categories
+  type: tag_list
+  default: []
   label: Categories
 - type: text
   name: author
