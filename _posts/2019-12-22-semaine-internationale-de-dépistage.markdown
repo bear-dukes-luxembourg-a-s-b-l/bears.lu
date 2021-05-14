@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Semaine Internationale de dépistage
-date: '2019-12-01 22:45:41'
-image: /assets/img/uploads/img_20191207_114853.jpg
-categories: news prevention
+date: 2019-12-01 22:45:41
+image: "/assets/img/uploads/img_20191207_114853.jpg"
+categories:
+- prevention
+- news
 author: clawfire
----
 
+---
 🤔 C'est quoi une pratique à risque? Nouvelle brochure de la Croix Rouge Luxembourg , disponible dans les soirées Fairytails, Banana et Woof Luxembourg et [en téléchargement ici](/assets/img/uploads/brochure.pdf)
 
 💦Liquide corporel + 🩸ouverture corporelle + ☝️contact = risque.
