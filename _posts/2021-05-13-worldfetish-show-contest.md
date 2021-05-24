@@ -22,8 +22,7 @@ This year's edition have more than 40 artists for 25+ countries and not just Eur
 If Luxembourg doesn't compete for Eurovision since years thanks to the lack of enthusiasm from our government and broadcasters (even without speaking how the hell we would host when we win 😅), we are part of the fetish version since the first edition.
 
 Luxembourg entry for last year was _Tom(s) of Luxembourg_ and this year, **Paul** asked if he can participate and represent the Bears of Luxembourg to this fun event. Of course we agreed on this immediately. 
-
-![](/uploads/2021/05/13-184527555_1623225791218379_868940944998998917_n.jpg)
+<img src="/uploads/2021/05/13-184527555_1623225791218379_868940944998998917_n.jpg" title="Paul, Luxembourgish contestant" class="ui large centered image"/>
 
 🥰 We can't be more proud of him following the work of all the misters bear Luxembourg before him putting our tiny country on the international scene. 
 
@@ -51,4 +50,4 @@ Unless Eurovision, everybody can vote! You just need to install [Telegram Messen
 
 See you all on this Saturday and don't forget:
 
-# Luxembourg 12 points! 
+# Luxembourg 12 points!
