@@ -24,11 +24,12 @@ layout: default
       </div>
       {% endfor %}
       <a class="fluid ui button" href="/news">Read all news</a>
+      {% include _module-mailchimp.html %}
     </section>
     {% endif %}
   </div>
   <div class="eight wide column">
-    {% include _module-buy.html %}
+
     <section id="events">
         <h1 class="ui header"><i class="calendar icon"></i>Our next events</h1>
         <p>From time to time we organise some events. Just a casual one or a party, there's different kind of them. We aggregate also other bears events just to let you know about what happen or not around.</p>
@@ -42,13 +43,9 @@ layout: default
             <div class="content">You can add our calendar to your phone or laptop <a href="https://airtable.com/shrVx2fQZGsjm5COn/iCal?timeZone=Europe%2FLuxembourg&userLocale=fr" title="Get the subscribtion link">using this link</a></div>
           </div>
         </div>
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrzdDB0ctF0eMYko?backgroundColor=pink&layout=card" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrzdDB0ctF0eMYko?backgroundColor=pink&layout=card" frameborder="0" onmousewheel="" width="100%" height="333" style="background: transparent; border: 1px solid #ccc;"></iframe>
     </section>
-  </div>
-</div>
-<div class="ui one column centered grid">
-  <div class="sixteen wide phone ten wide computer column">
-    {% include _module-mailchimp.html %}
+    {% include _module-shop-list.html %}
   </div>
 </div>
 
