@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
+- type: document
+  path: _data/shop.yaml
+  label: Product List
+  match: "**/*"
 - type: jekyll-posts
   label: Posts
   create: documents
@@ -16,9 +20,6 @@ sections:
   - page
 - type: heading
   label: Products
-- type: document
-  path: _data/products.yaml
-  label: Products list
 - type: heading
   label: Bear Pride
 - type: document
