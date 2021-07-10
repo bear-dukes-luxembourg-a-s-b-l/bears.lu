@@ -19,7 +19,6 @@ sections:
 - type: document
   path: _data/shop.yaml
   label: Product List
-  match: "**/*"
 - type: heading
   label: Bear Pride
 - type: document
