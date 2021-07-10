@@ -1,0 +1,26 @@
+---
+- name: Philadelphia 2017 eight-stripe flag
+  price: 10
+  description: In June 2017, the city of  Philadelphia  adopted a revised version of the flag designed by the marketing firm Tierney that adds black and brown stripes to the top of the standard six-color flag, to draw attention to issues of  people of color  within the LGBT community. Some LGBT activists in Philadelphia and other communities criticized the variation as unnecessary and divisive.
+  picture:
+  stripe_link: https://buy.stripe.com/5kA0170aZe6T8j6aEI
+- name: Progress 2018 Flag
+  price: 10
+  description: In June 2018 designer  [Daniel Quasar](https://en.wikipedia.org/wiki/Daniel_Quasar)  released a redesign incorporating elements from both the Philadelphia flag and  trans pride flag  to bring focus on inclusion and progress within the community. The flag design immediately went viral on social media, prompting worldwide coverage in news outlets.  While retaining the common six-stripe rainbow design as a base, the « Progress » variation adds a  chevron along the hoist that features black, brown, light blue, pink, and white stripes to bring those communities (marginalized  people of color , trans individuals, and those living with HIV/AIDS and those who have been lost) to the forefront; « the arrow points to the right to show forward movement, while being along the left edge shows that progress still needs to be made. »
+  picture:
+  stripe_link: https://buy.stripe.com/7sI5lr2j71k70QE9AA
+- name: Bear Flag
+  price: 10
+  description: "The **International Bear Brotherhood Flag** was designed to represent the  bear within the  LGBT community . The colours of the flag are meant to include the colours of the furs of animal bears throughout the world, not necessarily referring to human skin and hair colour tones: Dark brown, orange/rust, golden yellow, tan, white, gray, and black. The flag was designed with inclusion in mind. The gay bear culture celebrates  secondary sex characteristics  such as growth of  body hair  and  facial hair , which is typically considered a « bear » trait."
+  picture:
+  stripe_link: https://buy.stripe.com/4gw15b6zn4wj56U8wx
+- name: Transgender Pride Flag
+  price: 10
+  description: The **transgender pride flag** is a light blue, pink and white striped flag designed by  American   trans woman   [Monica Helms](https://en.wikipedia.org/wiki/Monica_Helms)  in 1999, and is a symbol of the  transgender  community, organizations, and individuals.
+  stripe_link: https://buy.stripe.com/8wMdRXf5TbYL8j68wz
+  picture:
+- name: Bisexual Pride Flag
+  price: 10
+  description: "The **bisexual pride flag** was designed by  [Michael Page](https://en.wikipedia.org/wiki/Michael_Page_(activist))  in 1998 to give the  bisexual community  its symbol comparable to the  gay pride flag of the larger  LGBTQ+ Community.  He aimed to increase the visibility of bisexuals, both among society as a whole and within the LGBTQ+ community. The first bisexual pride flag was unveiled at the BiCafe’s first-anniversary party on December 5, 1998."
+  stripe_link: https://buy.stripe.com/7sIcNTbTH0g3eHu6oq
+  picture:
