@@ -1,5 +1,3 @@
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
 <section id="buy" class="ui segment unstackable items">
   <div class="item" style="margin-bottom:0">
     <div class="image">
@@ -20,35 +18,4 @@
       </div>
     </div>
   </div>
-  <div id="error-message"></div>
-  <script>
-  (function() {
-    var stripe = Stripe('pk_live_JaB4dZhVh2aJqFDed52kggEv');
-
-    var checkoutButton = document.getElementById('checkout-button-price_1H73Lm2EsI6YBHZn80MuYdJE');
-    checkoutButton.addEventListener('click', function () {
-      // When the customer clicks on the button, redirect
-      // them to Checkout.
-      stripe.redirectToCheckout({
-        lineItems: [{price: 'price_1H73Lm2EsI6YBHZn80MuYdJE', quantity: 1}],
-        mode: 'payment',
-        // Do not rely on the redirect to the successUrl for fulfilling
-        // purchases, customers may not always reach the success_url after
-        // a successful payment.
-        // Instead use one of the strategies described in
-        // https://stripe.com/docs/payments/checkout/fulfillment
-        successUrl: 'https://bears.lu/payment/success/',
-        cancelUrl: 'https://bears.lu/payment/cancelled/',
-      })
-      .then(function (result) {
-        if (result.error) {
-          // If `redirectToCheckout` fails due to a browser or network
-          // error, display the localized error message to your customer.
-          var displayError = document.getElementById('error-message');
-          displayError.textContent = result.error.message;
-        }
-      });
-    });
-  })();
-  </script>
 </section>
