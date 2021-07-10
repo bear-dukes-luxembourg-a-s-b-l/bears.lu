@@ -1,0 +1,24 @@
+---
+- name: WOOF Luxembourg Cap
+  price:
+    normal: 29
+    discounted: 25
+  description: >-
+    For the anniversary of Woof Luxembourg, the men-only party, we decided to release a small batch of high quality cap with 3D embroised logo on it.
+  shipping:
+    lu:
+      price: 3,75
+      api_id: price_1HO8L12EsI6YBHZn3iiFz5fV
+    be:
+      price: 3,75
+      api_id: price_1HO8L12EsI6YBHZn3iiFz5fV
+    fr:
+      price: 5,90
+      api_id: price_1HO8KB2EsI6YBHZnR8D5IzDo
+    de:
+      price: 9,5
+      api_id: price_1HO8LZ2EsI6YBHZnlgvBDKW5
+    pickup:
+      price: 0
+      api_id: price_1H73Lm2EsI6YBHZn80MuYdJE
+  pictures:
