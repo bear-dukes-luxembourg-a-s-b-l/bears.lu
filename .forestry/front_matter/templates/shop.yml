@@ -36,3 +36,5 @@ fields:
     description: Most of the time it's the stripe link
     config:
       required: true
+pages:
+- _data/shop.yaml
