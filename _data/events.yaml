@@ -9,6 +9,16 @@ vendredi:
   facebook: ''
   ticket_url: ''
   rsvp_url: https://tally.so/r/w7DJ6n
+- time: '20:20'
+  place_url: https://goo.gl/maps/TmADCmkF5Kr9k9FRA
+  price: N/A
+  facebook: ''
+  ticket_url: ''
+  rsvp_url: ''
+  title: Friendly Bear Diner
+  place: Onestto
+  description: 'You''ll be able to make it deliver to the Palais if you came for a
+    drink before, and if we''re too much we''ll move there to get diner all together. '
 samedi:
 - title: Mystère Bear (Bear Hunt in the city)
   time: '14:00'
