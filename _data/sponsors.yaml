@@ -1,4 +1,8 @@
 ---
 gold: []
 silver: []
-media: []
+media:
+- name: El Hombre
+  title: Checkout the sponsor website
+  url: https://www.facebook.com/ElHombreBar
+  image: "/uploads/2019/07/28/El Hombre Extended@3x.png"
