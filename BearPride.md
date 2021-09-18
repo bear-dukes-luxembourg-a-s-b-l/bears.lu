@@ -95,7 +95,7 @@ Want to be the next Mr Bear Luxembourg ?
 We are always looking for sponsors and offering a wide range of compensation. You can checkout the <a href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub" title="Sponsoring documentation">Sponsoring documentation</a> to know everything about the metrics of the events, the differents sponsoring opportunities ...
 </div>
 
-{%- if site.data.sponsors.gold > 0 -%}
+{%- if site.data.sponsors.gold.size > 0 -%}
 ### Gold Sponsors
 
 They are kindly sponsor the entire weekend.
@@ -106,7 +106,7 @@ They are kindly sponsor the entire weekend.
 {% endfor %}
 </div>
 {%- endif -%}
-{%- if site.data.sponsors.silver > 0 -%}
+{%- if site.data.sponsors.silver.size > 0 -%}
 ### Silver sponsors
 
 They are offering prizes for the Mr. Bear Luxembourg candidates.
@@ -117,7 +117,7 @@ They are offering prizes for the Mr. Bear Luxembourg candidates.
 {% endfor %}
 </div>
 {%- endif -%}
-{%- if site.data.sponsors.media > 0 -%}
+{%- if site.data.sponsors.media.size > 0 -%}
 #### Communication sponsors
 
 They are helping us to raise awarness about our events.
