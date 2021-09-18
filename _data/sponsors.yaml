@@ -2,6 +2,10 @@
 gold: []
 silver: []
 media:
+- name: Fairytails
+  title: Checkout the sponsor website
+  url: https://fairytailsparties.wixsite.com/home
+  image: "/uploads/2021/09/18-fairytails.png"
 - name: Brunos
   title: Checkout the sponsor website
   url: https://brunos.de/
