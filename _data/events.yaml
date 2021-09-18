@@ -10,6 +10,13 @@ vendredi:
   ticket_url: ''
   rsvp_url: https://tally.so/r/w7DJ6n
 samedi:
+- title: Mystère Bear (Bear Hunt in the city)
+  time: '14:00'
+  place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
+  price: Free
+  rsvp_url: ''
+  place: Places d'armes
+  description: Discover our beautiful city while hunting bears around.
 - title: Woof Sin City
   time: 22h
   place: The Ground
@@ -22,11 +29,4 @@ samedi:
   facebook: https://www.facebook.com/events/235346318504330/
   ticket_url: https://tickets.out.lu/e/3/woof-sin-city?ref=bearsite
   rsvp_url: ''
-- title: Mystère Bear (Bear Hunt in the city)
-  time: '14:00'
-  place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
-  price: Free
-  rsvp_url: ''
-  place: Places d'armes
-  description: Discover our beautiful city while hunting bears around.
 dimanche: []
