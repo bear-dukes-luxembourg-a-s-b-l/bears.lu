@@ -1,41 +1,13 @@
 ---
 vendredi:
-- title: OctoBEARFest
-  time: 7pm
-  place: Bar rouge
-  place_url: https://goo.gl/maps/DHDNxchegTpxjKCcA
-  price: FREE
-  description: "Let's begin the Bear-Weekend with the OctoBEARfest \U0001F43B\U0001F37B\U0001F601\U0001F3F3️‍\U0001F308
-    Come and share with our fellow bears some good drinks. \U0001F4F8 Don't forget
-    to catch Mr. Bear 2020 to take a picture with him and share online with #bearpridelux
-    For Bears AND Friends! \U0001F603\U0001F603 Bring all your friends  Book your
-    seats on our website and get a 10€ voucher to use on your drinks at the bar. Seat
-    super limited."
-  facebook: https://www.facebook.com/events/672328533407898
-  ticket_url: https://tickets.out.lu/e/5/octobearfest
-  rsvp_url: ''
-samedi:
-- title: Bear Pride Diner Spectacle
-  time: 6pm
-  place: Barnum Cabaret Ma Dame Yoko
-  place_url: https://goo.gl/maps/RL77hi4KpcjG6bFi7
-  price: 45€
-  description: "Come and enjoy seated dinning with an awesome show. <br> \U0001F37D
-    1 course + desserts, 45€ (incl. entry).<br> <a href=\"https://share.getcloudapp.com/P8uylrNR\">Detailed
-    menu here</a>. Want to come just for a drink? **Limited seating** will be available
-    same day with 10€ entry fee."
-  facebook: https://www.facebook.com/events/778314932999822
-  ticket_url: https://tickets.out.lu/e/4/bear-pride-2020-diner-spectacle
-  rsvp_url: ''
-dimanche:
-- title: Bear Brunch
-  time: 10am
-  place: Mama Shelter, Luxembourg
-  place_url: https://g.page/MamaShelterLuxembourg
-  price: 17€
-  description: The idea is to get together and have one last meal before we go. Mama
-    Shelter offers a cosy and nice place to share a big buffet breakfast before going
-    back.
+- title: Aperobear
+  time: '19:00'
+  place: Palais
+  place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
+  price: ''
+  description: Meet & Greet for a drink with your fellow bears
   facebook: ''
   ticket_url: ''
-  rsvp_url: https://thibault.typeform.com/to/aCoySXkI
+  rsvp_url: ''
+samedi: []
+dimanche: []
