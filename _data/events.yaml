@@ -29,4 +29,13 @@ samedi:
   facebook: https://www.facebook.com/events/235346318504330/
   ticket_url: https://tickets.out.lu/e/3/woof-sin-city?ref=bearsite
   rsvp_url: ''
-dimanche: []
+dimanche:
+- title: Big Bear Brunch
+  time: "11"
+  place: TBD
+  price: N/A
+  description: 'Let''s end this weekend with a final meetup with a nice big bear brunch
+    in a nice venue. Please RSVP so we can book a venue accordingly. '
+  facebook: ''
+  ticket_url: ''
+  rsvp_url: https://tally.so/r/wQrxln
