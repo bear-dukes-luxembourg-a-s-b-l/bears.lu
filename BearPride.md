@@ -1,54 +1,25 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2020
-subtitle: 16-18 Oct.
+title: Bear Pride Luxembourg 2021
+subtitle: 15-16-17 Oct.
 menu:
   header:
     identifier: bearpride
     weight: 3
 
 ---
-#COVID19 forced us to reinvent this event in something smaller, focus on local community and our direct neighbour instead of a true international event. But Luxembourg isn't already international after all?
+We are happy to be able to restart all those community events. Drinks, Restaurants and even parties are allowed again. 
 
-<a href="https://www.facebook.com/events/1817803265022358" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+<a href="https://www.facebook.com/events/1016422518883526/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
 <!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
-
-<div class="ui message warning">
-  <p>😷 Please be safe, don't come for hundreds of kilometers for us.<br/>We 🤎 you but we want you safe and following your government directive regarding the oncoming crisis.</p>
-</div>
 
 ## Schedule
 
 <div class="ui stackable three column grid">
 <div class="column">
-<h3>Friday 16th</h3>
+<h3>Friday 15th</h3>
     {% for event in site.data.events.vendredi %}
-    <div class="ui raised fluid card">
-        <div class="content">
-            <div class="header">{{event.title}}</div>
-            <div class="meta">{{event.time}} {% if event.place %}<a href="{{event.place_url}}" title="{{event.place}}"><i class="small building icon"></i> {{event.place}}</a> {% endif %} {% if event.price %}<i class="euro icon"></i>{{event.price}}{% endif %}</div>
-            <div class="description">{{event.description | markdownify}}</div>
-        </div>
-        {% if event.facebook or event.ticket_url or event.rsvp_url %}
-        <div class="extra content">
-            <div class="ui two buttons">
-                {% if event.facebook != ''%}
-                {{ event.facebook | jsonify }}<
-                <a href="{{event.facebook}}" class="ui  button"><i class="facebook blue icon"></i> Event</a>
-                {% else %}
-                <a href="#" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
-                {% endif %}
-                {% if event.ticket_url != ''%}
-                <a href="{{event.ticket_url}}" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
-                {% elsif event.rsvp_url != '' %}
-                <a href="{{event.rsvp_url}}" class="ui button">RSVP</a>
-                {% else %}
-                <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
-                {% endif %}
-            </div>
-        </div>
-        {% endif %}
-    </div>
+      {% include _event-details.html %}
     {% endfor %}
     <div class="ui floating message">
         <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
@@ -57,33 +28,9 @@ menu:
     </div>
 </div>
 <div class="column">
-    <h3>Saturday 17th</h3>
+    <h3>Saturday 16th</h3>
     {% for event in site.data.events.samedi %}
-    <div class="ui raised fluid card">
-        <div class="content">
-            <div class="header">{{event.title}}</div>
-            <div class="meta">{{event.time}} {% if event.place %}<a href="{{event.place_url}}" title="{{event.place}}"><i class="small building icon"></i> {{event.place}}</a> {% endif %} {% if event.price %}<i class="euro icon"></i>{{event.price}}{% endif %}</div>
-            <div class="description">{{event.description | markdownify}}</div>
-        </div>
-        {% if event.facebook or  event.ticket_url or event.rsvp_url %}
-        <div class="extra content">
-            <div class="ui two buttons">
-                {% if event.facebook != ''%}
-                <a href="{{event.facebook}}" class="ui  button"><i class="facebook blue icon"></i> Event</a>
-                {% else %}
-                <a href="#" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
-                {% endif %}
-                {% if event.ticket_url != '' %}
-                <a href="{{event.ticket_url}}" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
-                {% elsif event.rsvp_url != '' %}
-                <a href="{{event.rsvp_url}}" class="ui button">RSVP</a>
-                {% else %}
-                <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
-                {% endif %}
-            </div>
-        </div>
-        {% endif %}
-    </div>
+      {% include _event-details.html %}
     {% endfor %}
     <div class="ui message info">
       <p>Due to COVID19, <strong>there will be no election this year</strong>. You can <a href="/news/2020/09/22/mr-bear-2020-will-stay-for-another-year/" title="read the Bear Duke's statement">read the Bear Duke's statement on this here</a></p>
@@ -91,34 +38,14 @@ menu:
 
 </div>
 <div class="column">
-    <h3>Sunday 18th</h3>
+    <h3>Sunday 17th</h3>
     {% for event in site.data.events.dimanche %}
-    <div class="ui raised fluid card">
-        <div class="content">
-            <div class="header">{{event.title}}</div>
-            <div class="meta">{{event.time}} {% if event.place %}<a href="{{event.place_url}}" title="{{event.place}}"><i class="small building icon"></i> {{event.place}}</a> {% endif %} {% if event.price %}<i class="euro icon"></i>{{event.price}}{% endif %}</div>
-            <div class="description">{{event.description | markdownify}}</div>
-        </div>
-        {% if event.facebook or event.ticket_url or event.rsvp_url %}
-        <div class="extra content">
-            <div class="ui two buttons">
-                {% if event.facebook != '' %}
-                <a href="{{event.facebook}}" class="ui  button"><i class="facebook blue icon"></i> Event</a>
-                {% else %}
-                <a href="#" class="ui disabled button"><i class="facebook blue icon"></i> Event</a>
-                {% endif %}
-                {% if event.ticket_url != '' %}
-                <a href="{{event.ticket_url}}" class="ui button"><i class="ticket alternate red icon"></i> Tickets</a>
-                {% elsif event.rsvp_url != '' %}
-                <a href="{{event.rsvp_url}}" class="ui button">RSVP</a>
-                {% else %}
-                <a href="#" class="ui disabled button"><i class="ticket alternate red icon"></i> No presales</a>
-                {% endif %}
-            </div>
-        </div>
-        {% endif %}
-    </div>
+      {% include _event-details.html %}
     {% endfor %}
+    <div class="ui message info">
+      <p>Please note that a <strong>EU Covid Certificte is required</strong> in most of the venues inside.<br/>While it's not mandatory (tests can be arranged at venue, for a fee), you'll not be able to stay after 1am if you don't have a certificate (can be PCR testing, recovery or vaccine).</p>
+      <p>Tired of carrying the paper version of your pass? Save it into your smartphone's wallet (iPhone, Android) using <a href="https://covid19passbook.netlify.app/">this free tool</a>.</p>
+    </div>
     <!-- <div class="ui message">
     <div class="header">Saunas</div>
     <p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
@@ -204,7 +131,7 @@ They are helping us to raise awarness about our events.
 {%- endif -%}
 <small>[Sponsoring T&C](https://docs.google.com/document/d/e/2PACX-1vRiHgdxO-wmB5S4NaAdCm4oLEZPC95LRDyx2kJgEE3jtC9QR11ku3sn3SXS03O47ErFz2byoaw7F3ky/pub)</small>
 
-## Where to find ...
+<!-- ## Where to find ...
 
 So, for the new ones as the bears who already know our lovely capital city, here's a map where we gather the venues of the evens, bars & restaurants we love, cool shops, nice art & culture venues and some usefull grocery shops and hotels in the city.
 
@@ -212,4 +139,4 @@ Don't miss our special partnership with Melia Luxembourg Hotel!
 
 <i class="info circle blue icon"></i>click on the drawer symbol (1st icon on the title bar of the map) to show the menu with the categories.
 
-<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Y5-12S01_kVDaGj8hVwH4rOFlIORfDgS" width="760" height="480" style="border:none"></iframe>
+<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Y5-12S01_kVDaGj8hVwH4rOFlIORfDgS" width="760" height="480" style="border:none"></iframe> -->
