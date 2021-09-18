@@ -4,7 +4,7 @@ vendredi:
   time: '19:00'
   place: Palais
   place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
-  price: ''
+  price: "0"
   description: Meet & Greet for a drink with your fellow bears
   facebook: ''
   ticket_url: ''
