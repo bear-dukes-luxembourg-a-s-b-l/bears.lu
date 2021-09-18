@@ -10,6 +10,18 @@ vendredi:
   ticket_url: ''
   rsvp_url: https://tally.so/r/w7DJ6n
 samedi:
+- title: Woof Sin City
+  time: 22h
+  place: The Ground
+  place_url: https://goo.gl/maps/9wzHibiHG1eUgbAz5
+  price: "20"
+  description: "After 2 years without a party, we are thrilled to welcome you back
+    to a physical location.\n\n\U0001F3A7 International DJ Black Flamingo coming straight
+    from Madrid.\n\U0001F4AA\U0001F3FC Paco & Manuel Scalco as performers for a very
+    hot show"
+  facebook: https://www.facebook.com/events/235346318504330/
+  ticket_url: https://tickets.out.lu/e/3/woof-sin-city?ref=bearsite
+  rsvp_url: ''
 - title: Mystère Bear (Bear Hunt in the city)
   time: '14:00'
   place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
