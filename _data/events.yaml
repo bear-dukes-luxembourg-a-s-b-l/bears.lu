@@ -19,6 +19,16 @@ vendredi:
   place: Onestto
   description: 'You''ll be able to make it deliver to the Palais if you came for a
     drink before, and if we''re too much we''ll move there to get diner all together. '
+- place: Palais
+  place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
+  price: FREE
+  facebook: ''
+  ticket_url: ''
+  rsvp_url: ''
+  title: Until the end of the night
+  time: '22:30'
+  description: If you're not tired, join us for a couple of drinks until the end of
+    the night (well, technically 1am).
 samedi:
 - title: Mystère Bear (Bear Hunt in the city)
   time: '14:00'
