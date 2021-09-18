@@ -9,5 +9,12 @@ vendredi:
   facebook: ''
   ticket_url: ''
   rsvp_url: https://tally.so/r/w7DJ6n
-samedi: []
+samedi:
+- title: Mystère Bear (Bear Hunt in the city)
+  time: '14:00'
+  place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
+  price: Free
+  rsvp_url: ''
+  place: Places d'armes
+  description: Discover our beautiful city while hunting bears around.
 dimanche: []
