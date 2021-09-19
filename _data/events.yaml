@@ -1,7 +1,7 @@
 ---
 vendredi:
 - title: Aperobear
-  time: '19:00'
+  time: 7 pm
   place: Palais
   place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
   price: N/A
@@ -9,7 +9,7 @@ vendredi:
   facebook: ''
   ticket_url: ''
   rsvp_url: ''
-- time: '20:20'
+- time: '08:30 pm'
   place_url: https://goo.gl/maps/TmADCmkF5Kr9k9FRA
   price: N/A
   facebook: ''
@@ -26,22 +26,22 @@ vendredi:
   ticket_url: ''
   rsvp_url: ''
   title: Until the end of the night
-  time: '22:30'
+  time: 10:30 pm
   description: If you're not tired, join us for a couple of drinks until the end of
     the night (well, technically 1am).
 samedi:
 - title: Mystère Bear (Bear Hunt in the city)
-  time: '14:00'
+  time: 2 pm
   place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
   price: Free
   rsvp_url: ''
   place: Places d'armes
   description: Discover our beautiful city while hunting bears around.
 - title: Woof Sin City
-  time: 22h
+  time: 10 pm
   place: The Ground
   place_url: https://goo.gl/maps/9wzHibiHG1eUgbAz5
-  price: "20"
+  price: 20€
   description: "After 2 years without a party, we are thrilled to welcome you back
     to a physical location.\n\n\U0001F3A7 International DJ Black Flamingo coming straight
     from Madrid.\n\U0001F4AA\U0001F3FC Paco & Manuel Scalco as performers for a very
