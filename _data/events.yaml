@@ -51,9 +51,9 @@ samedi:
   rsvp_url: ''
 dimanche:
 - title: Big Bear Brunch
-  time: "11"
+  time: 11 am
   place: TBD
-  price: N/A
+  price: "±17€"
   description: 'Let''s end this weekend with a final meetup with a nice big bear brunch
     in a nice venue. Please RSVP so we can book a venue accordingly. '
   facebook: ''
