@@ -6,7 +6,7 @@ vendredi:
   place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
   price: N/A
   description: Meet & Greet for a drink with your fellow bears
-  facebook: ''
+  facebook: 'https://www.facebook.com/events/636489864250557/'
   ticket_url: ''
   rsvp_url: ''
 - time: '08:30 pm'
@@ -35,6 +35,7 @@ samedi:
   place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
   price: Free
   rsvp_url: ''
+  facebook: 'https://www.facebook.com/events/983936112168370/'
   place: Places d'armes
   description: Discover our beautiful city while hunting bears around.
 - title: Woof Sin City
