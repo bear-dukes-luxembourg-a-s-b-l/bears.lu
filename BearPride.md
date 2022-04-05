@@ -79,9 +79,9 @@ Instead, you have to come and meet, in real life, face to face, the candidates. 
 
 <!-- <div class="ui message info">The application are closed. Discover the contestant soon here. </div>-->
 
-Want to be the next Mr Bear Luxembourg ?
+## Want to be the next Mr Bear Luxembourg ?
 
-<a href="https://tally.so/r/wbJ46w" class="ui brown button">Fill the application form online</a> -->
+<a href="https://tally.so/r/wbJ46w" class="ui brown button">Fill the application form online</a>
 
 ## Sponsoring
 
