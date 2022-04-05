@@ -10,7 +10,7 @@ menu:
 ---
 We are happy to be able to restart all those community events. Drinks, Restaurants and even parties are allowed again.
 
-<a href="https://www.facebook.com/events/1016422518883526/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+<a href="https://www.facebook.com/events/3195090970815289/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
 <!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
 
 ## Schedule
