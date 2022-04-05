@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2021
-subtitle: 15-16-17 Oct.
+title: Bear Pride Luxembourg 2022
+subtitle: 14-15-16th Oct.
 menu:
   header:
     identifier: bearpride
     weight: 3
 
 ---
-We are happy to be able to restart all those community events. Drinks, Restaurants and even parties are allowed again. 
+We are happy to be able to restart all those community events. Drinks, Restaurants and even parties are allowed again.
 
 <a href="https://www.facebook.com/events/1016422518883526/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
 <!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
@@ -17,69 +17,63 @@ We are happy to be able to restart all those community events. Drinks, Restauran
 
 <div class="ui stackable three column grid">
 <div class="column">
-<h3>Friday 15th</h3>
-    {% for event in site.data.events.vendredi %}
-      {% include _event-details.html %}
-    {% endfor %}
-    <div class="ui floating message">
-        <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
-        <p>Our partner, <a href="http://melia.lu" title="See our partner">Melia Luxembourg</a>, offer you a <em>room for 2 without breakfast for 90€/night</em>. It's close to the city center, got their own tram station and is 10min from city center by public transportation.</p>
-        <p>Use the code <a href="https://airtable.com/shrhhsIN0QdxTbVw3">this form</a> to make your booking and they'll get back to you ASAP.</p>
-    </div>
+<h3>Friday 14th</h3>
+{% for event in site.data.events.vendredi %}
+{% include _event-details.html %}
+{% endfor %}
+<!--<div class="ui floating message">
+<div class="header"><i class="icon hotel"></i> Need an hotel?</div>
+<p>Our partner, <a href="http://melia.lu" title="See our partner">Melia Luxembourg</a>, offer you a <em>room for 2 without breakfast for 90€/night</em>. It's close to the city center, got their own tram station and is 10min from city center by public transportation.</p>
+<p>Use the code <a href="https://airtable.com/shrhhsIN0QdxTbVw3">this form</a> to make your booking and they'll get back to you ASAP.</p>
+</div>-->
 </div>
 <div class="column">
-    <h3>Saturday 16th</h3>
-    {% for event in site.data.events.samedi %}
-      {% include _event-details.html %}
-    {% endfor %}
-    <div class="ui message info">
-      <p>Due to COVID19, <strong>there will be no election this year</strong>. You can <a href="/news/2020/09/22/mr-bear-2020-will-stay-for-another-year/" title="read the Bear Duke's statement">read the Bear Duke's statement on this here</a></p>
-    </div>
+<h3>Saturday 15th</h3>
+{% for event in site.data.events.samedi %}
+{% include _event-details.html %}
+{% endfor %}
 
 </div>
 <div class="column">
-    <h3>Sunday 17th</h3>
-    {% for event in site.data.events.dimanche %}
-      {% include _event-details.html %}
-    {% endfor %}
-    <div class="ui message info">
-      <p>Please note that a <strong>EU Covid Certificte is required</strong> in most of the venues inside.<br/>While it's not mandatory (tests can be arranged at venue, for a fee), you'll not be able to stay after 1am if you don't have a certificate (can be PCR testing, recovery or vaccine).</p>
-      <p>Tired of carrying the paper version of your pass? Save it into your smartphone's wallet (iPhone, Android) using <a href="https://covid19passbook.netlify.app/">this free tool</a>.</p>
-    </div>
-    <!-- <div class="ui message">
-    <div class="header">Saunas</div>
-    <p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
-    </div> -->
+<h3>Sunday 16th</h3>
+{% for event in site.data.events.dimanche %}
+{% include _event-details.html %}
+{% endfor %}
+<!-- <div class="ui message">
+<div class="header">Saunas</div>
+<p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
+</div> -->
 
 </div>
 </div>
 
 {%- if site.data.candidates > 0 -%}
+
 ## Mr Bear Election Candidates
 
 <div class="ui stackable four columns grid">
 {%- for candidate in site.data.candidates -%}
-    <div class="column">
-        <div class="ui fluid card">
-            <div class="image">
-                <img src="{{candidate.photos[1]}}" alt="">
-            </div>
-            <div class="content">
-                <div class="header">{{candidate.firstname}}</div>
-                <div class="meta">{{candidate.dob | date: "%Y"}}</div>
-                <div class="description">{{candidate.about | markdownify}}</div>
-            </div>
-        </div>
-    </div>
+<div class="column">
+<div class="ui fluid card">
+<div class="image">
+<img src="{{candidate.photos\[1\]}}" alt="">
+</div>
+<div class="content">
+<div class="header">{{candidate.firstname}}</div>
+<div class="meta">{{candidate.dob | date: "%Y"}}</div>
+<div class="description">{{candidate.about | markdownify}}</div>
+</div>
+</div>
+</div>
 
 {%- endfor -%}
 
 </div>
 
 <div class="ui message info">
-  <div class="header">How to vote?</div>
-  <p>We don't have online voting because it's too easy to cheat. Every bear contest who tried to put one in place experimented it. So we just don't.<br>
-    Instead, you have to come and meet, in real life, face to face, the candidates. We think it's more interesting than just a like race over the internet. When you arrive at the party, you'll get a voting toket (a coin) which you'll be able to use to vote for your favorite candidate when the voting will be open. You'll have only one, no more, even if you "lose" it.</p>
+<div class="header">How to vote?</div>
+<p>We don't have online voting because it's too easy to cheat. Every bear contest who tried to put one in place experimented it. So we just don't.<br>
+Instead, you have to come and meet, in real life, face to face, the candidates. We think it's more interesting than just a like race over the internet. When you arrive at the party, you'll get a voting toket (a coin) which you'll be able to use to vote for your favorite candidate when the voting will be open. You'll have only one, no more, even if you "lose" it.</p>
 </div>
 {%- endif -%}
 
@@ -96,35 +90,38 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 </div>
 
 {%- if site.data.sponsors.gold.size > 0 -%}
+
 ### Gold Sponsors
 
 They are kindly sponsor the entire weekend.
 
 <div class="ui medium rounded images">
 {% for sponsor in site.data.sponsors.gold %}
-            <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
+<a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
 </div>
 {%- endif -%}
 {%- if site.data.sponsors.silver.size > 0 -%}
+
 ### Silver sponsors
 
 They are offering prizes for the Mr. Bear Luxembourg candidates.
 
 <div class="ui tiny images">
 {% for sponsor in site.data.sponsors.silver %}
-            <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
+<a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
 </div>
 {%- endif -%}
 {%- if site.data.sponsors.media.size > 0 -%}
+
 #### Communication sponsors
 
 They are helping us to raise awarness about our events.
 
 <div class="ui mini images">
 {% for sponsor in site.data.sponsors.media %}
-            <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
+<a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
 
 </div>
