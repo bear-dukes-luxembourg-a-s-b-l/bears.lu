@@ -1,14 +1,5 @@
 ---
 vendredi:
-- title: Aperobear
-  time: 7 pm
-  place: Palais
-  place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
-  price: N/A
-  description: Meet & Greet for a drink with your fellow bears
-  facebook: https://www.facebook.com/events/636489864250557/
-  ticket_url: ''
-  rsvp_url: ''
 - time: 07:00 pm
   place_url: https://goo.gl/maps/2jbYZmfmfS3gWYQf6
   price: N/A
@@ -18,44 +9,13 @@ vendredi:
   title: Bear Diner
   place: Snooze Sport's Bar
   description: ''
-- place: Palais
-  place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
-  price: N/A
-  facebook: ''
-  ticket_url: ''
-  rsvp_url: ''
-  title: Until the end of the night
-  time: 10:30 pm
-  description: If you're not tired, join us for a couple of drinks until the end of
-    the night (well, technically 1am).
 samedi:
-- title: Mystère Bear (Bear Hunt in the city)
-  time: 2 pm
-  place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
-  price: Free
-  rsvp_url: ''
-  facebook: https://www.facebook.com/events/983936112168370/
-  place: Places d'armes
-  description: Discover our beautiful city while hunting bears around.
-- title: Woof Sin City
-  time: 10 pm
-  place: The Ground
-  place_url: https://goo.gl/maps/9wzHibiHG1eUgbAz5
-  price: 20€
-  description: "After 2 years without a party, we are thrilled to welcome you back
-    to a physical location.\n\n\U0001F3A7 International DJ Black Flamingo coming straight
-    from Madrid.\n\U0001F4AA\U0001F3FC Paco & Manuel Scalco as performers for a very
-    hot show"
-  facebook: https://www.facebook.com/events/235346318504330/
-  ticket_url: https://tickets.out.lu/e/3/woof-sin-city?ref=bearsite
-  rsvp_url: ''
-dimanche:
-- title: Big Bear Brunch
-  time: 11 am
-  place: TBD
-  price: "±17€"
-  description: 'Let''s end this weekend with a final meetup with a nice big bear brunch
-    in a nice venue. Please RSVP so we can book a venue accordingly. '
-  facebook: https://www.facebook.com/events/554240765657612/
-  ticket_url: ''
-  rsvp_url: https://tally.so/r/wQrxln
+- title: Laser Game
+  time: 3:00 pm
+  place_url: https://goo.gl/maps/dPQdSoK2XZ1QBJER7
+  price: "±20€"
+  rsvp_url: https://f.bears.lu/lasergame
+  facebook: ''
+  place: Laser Game Evolution
+  description: ''
+dimanche: []
