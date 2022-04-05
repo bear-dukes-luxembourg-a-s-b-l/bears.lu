@@ -6,19 +6,18 @@ vendredi:
   place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
   price: N/A
   description: Meet & Greet for a drink with your fellow bears
-  facebook: 'https://www.facebook.com/events/636489864250557/'
+  facebook: https://www.facebook.com/events/636489864250557/
   ticket_url: ''
   rsvp_url: ''
-- time: '08:30 pm'
-  place_url: https://goo.gl/maps/TmADCmkF5Kr9k9FRA
+- time: 07:00 pm
+  place_url: https://goo.gl/maps/2jbYZmfmfS3gWYQf6
   price: N/A
   facebook: ''
   ticket_url: ''
-  rsvp_url: https://tally.so/r/w7DJ6n
-  title: Friendly Bear Diner
-  place: Onestto
-  description: 'You''ll be able to make it deliver to the Palais if you came for a
-    drink before, and if we''re too much we''ll move there to get diner all together. '
+  rsvp_url: https://f.bears.lu/beardiner
+  title: Bear Diner
+  place: Snooze Sport's Bar
+  description: ''
 - place: Palais
   place_url: https://goo.gl/maps/j28JSfqU6M2t8TW37
   price: N/A
@@ -35,7 +34,7 @@ samedi:
   place_url: https://goo.gl/maps/tqss8ZiJtnEsFm3w7
   price: Free
   rsvp_url: ''
-  facebook: 'https://www.facebook.com/events/983936112168370/'
+  facebook: https://www.facebook.com/events/983936112168370/
   place: Places d'armes
   description: Discover our beautiful city while hunting bears around.
 - title: Woof Sin City
