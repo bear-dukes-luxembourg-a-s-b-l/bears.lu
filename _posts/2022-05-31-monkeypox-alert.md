@@ -40,4 +40,12 @@ Symptoms include fever, headache, body aches, rash and blisters, itching, swolle
 
 ## What to do if you have symptoms?
 
-Contact the national infectious diseases service: 4, rue Ernest Barblé L-1210 Luxembourg • Tel: 4411-3091
+1. Contact the national infectious diseases service: 4, rue Ernest Barblé L-1210 Luxembourg. Tel: 4411-3091
+2. Avoid sexual activity, close contact or sharing of objects and fabrics (clothing, bedding) until monkeypox has been ruled out or the infection has resolved (minimum 3 weeks).
+
+Read more about the outbreak:
+
+* [https://www.santepubliquefrance.fr/les-actualites/2022/cas-de-monkeypox-point-de-situation-au-23-mai-2022](https://www.santepubliquefrance.fr/les-actualites/2022/cas-de-monkeypox-point-de-situation-au-23-mai-2022 "https://www.santepubliquefrance.fr/les-actualites/2022/cas-de-monkeypox-point-de-situation-au-23-mai-2022")
+* [https://www.aidshilfe.de/affenpocken-faelle](https://www.aidshilfe.de/affenpocken-faelle "https://www.aidshilfe.de/affenpocken-faelle")
+* [https://www.hpsc.ie/a-z/zoonotic/monkeypox/factsheets/](https://www.hpsc.ie/a-z/zoonotic/monkeypox/factsheets/ "https://www.hpsc.ie/a-z/zoonotic/monkeypox/factsheets/")
+* [https://www.ecdc.europa.eu/en/publications-data/risk-assessment-monkeypox-multi-country-outbreak](https://www.ecdc.europa.eu/en/publications-data/risk-assessment-monkeypox-multi-country-outbreak "https://www.ecdc.europa.eu/en/publications-data/risk-assessment-monkeypox-multi-country-outbreak")
