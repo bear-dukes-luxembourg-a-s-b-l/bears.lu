@@ -5,7 +5,7 @@ categories:
 - health
 title: Monkeypox alert
 image: "/uploads/2022/05/31-chris-jarvis-0pf7fkrtdpi-unsplash.jpeg"
-author: ''
+author: clawfire
 
 ---
 In Europe and worldwide, cases of monkeypox have been reported in recent weeks.
