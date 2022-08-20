@@ -108,3 +108,5 @@ fields:
     label: price
   config:
     labelField: title
+pages:
+- _data/events.yaml

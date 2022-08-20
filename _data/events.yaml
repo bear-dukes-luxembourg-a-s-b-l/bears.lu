@@ -1,6 +1,6 @@
 ---
 vendredi:
-- time: 07:00 pm
+- time: 7:00 PM
   place_url: https://goo.gl/maps/2jbYZmfmfS3gWYQf6
   price: N/A
   facebook: https://www.facebook.com/events/2346963078814061
@@ -12,7 +12,7 @@ vendredi:
     a privatised area downstairs of the bar and can accommodate ± 20 people. RSVP
     mandatory.
 - title: Banana Care Bear
-  time: 10:00 pm
+  time: 10:00
   place: Knokke Out Luxembourg
   place_url: https://goo.gl/maps/P3ZqDFA4J9NKUFJ96
   price: 10€-15€
@@ -49,6 +49,7 @@ samedi:
   place_url: https://goo.gl/maps/ddkJAxRzb25fDNSe8
   price: 15€ - 20€
   facebook: https://www.facebook.com/events/590155546012605
+  rsvp_url: ''
 dimanche:
 - title: Bear Brunch
   description: Let's meet one more last time around a nice brunch all together before
