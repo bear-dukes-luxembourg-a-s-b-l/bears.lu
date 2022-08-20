@@ -19,8 +19,8 @@ fields:
       date_format: 
       time_format: ''
       display_utc: false
-      export_format: h:mm
-    label: Time
+      export_format: h:mm A
+    label: Date & Time
   - type: text
     name: place
     label: Place Name
