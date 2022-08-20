@@ -7,32 +7,47 @@ fields:
   label: vendredi
   fields:
   - type: text
-    name: time
-    label: time
-  - type: text
-    name: place_url
-    label: place_url
-  - type: text
-    name: price
-    label: price
-  - type: text
-    name: facebook
-    label: facebook
-  - type: text
-    name: ticket_url
-    label: ticket_url
-  - type: text
-    name: rsvp_url
-    label: rsvp_url
-  - type: text
     name: title
-    label: title
+    label: Title
+    config:
+      required: true
+  - name: time
+    type: datetime
+    description: ''
+    config:
+      required: true
+      date_format: 
+      time_format: ''
+      display_utc: false
+      export_format: h:mm
+    label: Time
   - type: text
     name: place
-    label: place
+    label: Place Name
+    default: TBA
+  - type: text
+    name: place_url
+    label: Place Google Map URL
+  - type: text
+    name: price
+    label: Price Range
+    default: N/A
+  - type: text
+    name: facebook
+    label: FB event URL
+  - type: text
+    name: ticket_url
+    label: Ticket URL
+  - type: text
+    name: rsvp_url
+    label: RSVP URL
   - type: textarea
     name: description
-    label: description
+    label: Description
+    config:
+      required: true
+  config:
+    labelField: title
 - type: field_group_list
   name: samedi
   label: samedi
@@ -61,6 +76,8 @@ fields:
   - type: textarea
     name: description
     label: description
+  config:
+    labelField: title
 - type: field_group_list
   name: dimanche
   label: dimanche
@@ -89,3 +106,5 @@ fields:
   - type: text
     name: price
     label: price
+  config:
+    labelField: title
