@@ -8,7 +8,7 @@ image: "/uploads/2022/08/20-towfiqu-barbhuiya-hftv5xp2lki-unsplash.jpeg"
 author: clawfire
 
 ---
-Monkeypox vaccination is available since last Tuesday in Luxembourg!
+🇬🇧 Monkeypox vaccination is available since last Tuesday in Luxembourg!
 
 It's by appointment, 📞 call (+352) 4411-3129 from Mon-Fri 8h-17h to get one.
 
@@ -22,7 +22,7 @@ Get more informations about the Monkeypox on [monkeypox.lu](monkeypox.lu).
 
 ***
 
-La vaccination contre la variole du singe est disponible depuis mardi dernier au Luxembourg !
+🇫🇷 La vaccination contre la variole du singe est disponible depuis mardi dernier au Luxembourg !
 
 C'est sur rendez-vous, 📞 appelez le (+352) 4411-3129 du Lun-Ven 8h-17h pour en obtenir un.
 
@@ -36,7 +36,7 @@ Obtenez plus d'informations sur le Monkeypox sur [monkeypox.lu](monkeypox.lu).
 
 ***
 
-Die Affenpockenimpfung ist seit letztem Dienstag in Luxemburg erhältlich!
+🇩🇪 Die Affenpockenimpfung ist seit letztem Dienstag in Luxemburg erhältlich!
 
 Nach Vereinbarung 📞 rufen Sie (+352) 4411-3129 von Mo-Fr 8h-17h an, um einen Termin zu bekommen.
 
@@ -50,7 +50,7 @@ Mehr Informationen über die Affenpocken finden Sie auf [monkeypox.lu](monkeypox
 
 ***
 
-A vacinação contra a varíola macaco está disponível desde terça-feira passada no Luxemburgo!
+🇵🇹 A vacinação contra a varíola macaco está disponível desde terça-feira passada no Luxemburgo!
 
 É por marcação, 📞 ligue (+352) 4411-3129 de Mon-Fri 8h-17h para obter uma.
 
