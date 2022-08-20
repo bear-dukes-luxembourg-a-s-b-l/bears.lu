@@ -1,0 +1,91 @@
+---
+label: Bear Pride Events
+hide_body: true
+fields:
+- type: field_group_list
+  name: vendredi
+  label: vendredi
+  fields:
+  - type: text
+    name: time
+    label: time
+  - type: text
+    name: place_url
+    label: place_url
+  - type: text
+    name: price
+    label: price
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: ticket_url
+    label: ticket_url
+  - type: text
+    name: rsvp_url
+    label: rsvp_url
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: place
+    label: place
+  - type: textarea
+    name: description
+    label: description
+- type: field_group_list
+  name: samedi
+  label: samedi
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: time
+    label: time
+  - type: text
+    name: place_url
+    label: place_url
+  - type: text
+    name: price
+    label: price
+  - type: text
+    name: rsvp_url
+    label: rsvp_url
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: place
+    label: place
+  - type: textarea
+    name: description
+    label: description
+- type: field_group_list
+  name: dimanche
+  label: dimanche
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: description
+    label: description
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: ticket_url
+    label: ticket_url
+  - type: text
+    name: rsvp_url
+    label: rsvp_url
+  - type: text
+    name: time
+    label: time
+  - type: text
+    name: place
+    label: place
+  - type: text
+    name: price
+    label: price
