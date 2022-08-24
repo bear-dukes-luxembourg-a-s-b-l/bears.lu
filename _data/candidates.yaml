@@ -1,1 +1,58 @@
---- []
+---
+- name: Almedin Rebronja
+  age: 29
+  about: I m a very social person, I like to be surrounded by people. I m always positive
+    and I have always a smile on my face. I am very funny and spontaneous and very
+    manly :)
+  motivation: I want to be mr. Bear because I have the perfect look for it, and I
+    think I would represent the Bear community very well.
+  photos:
+  - "/uploads/2022/08/24-02-almedin-rebronja-01.jpeg"
+  links:
+    instagram: https://instagram.com/the.beauty.s.beast
+    twitter: ''
+    facebook: ''
+    tiktok: ''
+    website: ''
+- name: Angel Gonzalez
+  age: 42
+  about: "Je me présente, je m'appelle Angel, j'ai 42 ans et je travaille comme jardinier
+    dans une entreprise privée. J'aime les plantes autant que la nature. Pour moi,
+    il est très important d'être dynamique dans mon travail. Ceci me donne à la fois
+    de l'assurance et la possibilité de gagner la confiance de mes clients. J'ai beaucoup
+    de plaisir à les conseiller. Ça me permet de montrer mon savoir-faire et mes connaissances
+    des plantes. Je fais ainsi en sorte que le client soit satisfait.  \n  \nIl m'est
+    facile d'entrer en contact avec les gens, que ce soit dans le cadre professionnel
+    ou privé.  \n  \nJ'aime me promener, faire du tourisme et découvrir de nouvelles
+    villes dans le monde entier. Rencontrer des amis ou de nouvelles personnes, m'asseoir
+    en bonne compagnie sur une terrasse et avoir de bonnes conversations autour d'un
+    bon verre de vin me fait très plaisir.  \n  \nJ'aime aller danser et m'amuser
+    avec mes amis.  \n  \nD'ailleurs, j'ai été le champion national de gymnastique
+    quand j'étais jeune. On peut encore le voir aujourd'hui lorsque je me défoule
+    sur la piste de danse.  \n  \nJ'aime énormément cuisiner et j'adore la bonne nourriture.
+    On dit de moi que je suis un bon cuisinier et que je cuisine avec beaucoup d'amour
+    - comme il se doit.  \n  \nEn effet, je surprends volontiers mon partenaire et
+    mes amis avec de la bonne nourriture de mon pays, comme une délicieuse paella
+    par exemple. Je suis un grand mangeur et j'apprécie la bonne nourriture.  \n  \nJe
+    suis un grand amateur de cinéma. Si je reste à la maison, j'aime regarder Netflix
+    et des films d'horreur très effrayants et sanglants - houuuuu."
+  motivation: "Je souhaite prendre l'initiative de projets communs avec d'autres communautés
+    d'ours, au Luxembourg comme à l'étranger.  \n  \nJe me considère comme un ours
+    poilu qui accepte tout le monde tel qu'il est, avec ou sans poils, avec des rondeurs
+    ou non, qu'il s'agisse d'un ours ou d'une loutre, ou même d'une crevette ;-)  \n
+    \ \nEn tant qu'ours, je veux non seulement développer la confiance en soi, mais
+    aussi et surtout transmettre cette confiance aux autres !  \n  \nJe souhaite motiver
+    d'autres ours à nous rejoindre et à découvrir notre communauté d'ours au Luxembourg.
+    Tout le monde est le bienvenu.  \n  \nJe souhaite me développer en tant que personne
+    motivée à faire des projets et à organiser des sorties et des fêtes entre ours."
+  photos:
+  - "/uploads/2022/08/24-01-angel-gonzalez-1.jpeg"
+  - "/uploads/2022/08/24-01-angel-gonzalez-4.jpeg"
+  - "/uploads/2022/08/24-01-angel-gonzalez-3.jpeg"
+  - "/uploads/2022/08/24-01-angel-gonzalez-2.jpeg"
+  links:
+    instagram: https://www.instagram.com/stuppi3357/
+    facebook: https://www.facebook.com/profile.php?id=100006449642988
+    twitter: ''
+    tiktok: ''
+    website: ''
