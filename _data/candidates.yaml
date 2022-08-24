@@ -1,4 +1,31 @@
 ---
+- name: Steve Goerend
+  age: 36
+  about: |-
+    je m‘appelle Steve. J‘ai 36 ans et je travaille dans le social. Je suis ouvert, gentil, rigolo et très émotionnel. J‘aimer chanter, faire et entendre la musique, danser, me déguiser, dessiner, acteur, voyager, floristique….
+
+    Apres des années de longues maladies j‘ai enfin compris ce qui est le plus important dans une vie.
+  motivation: |-
+    Tres simple parce que je veut montrer que le plus important c'est pas le physique, mais c‘est le coeur, l‘attitude face a la vie, et l‘humanité qui compte!
+
+    De plus je veut faire notre communauté LGBTQI+ et bear encore plus visible au Luxembourg et dans le monde, et qu‘on mords pas ;) on est tout doux sympa et adorable ;)
+
+    Je peut pas changer le monde mais Je peux peut-être rendre le monde un peu plus meilleur.
+
+    J‘ai envie de vivre dans un monde de paix et d‘amour!
+  photos:
+  - "/uploads/2022/08/24-04-steve-goerend-6.jpg"
+  - "/uploads/2022/08/24-04-steve-goerend-5.jpg"
+  - "/uploads/2022/08/24-04-steve-goerend-4.jpg"
+  - "/uploads/2022/08/24-04-steve-goerend-3.jpg"
+  - "/uploads/2022/08/24-04-steve-goerend-2.jpg"
+  - "/uploads/2022/08/24-04-steve-goerend-1.jpg"
+  links:
+    facebook: https://www.facebook.com/steve.goerend
+    instagram: https://instagram.com/gostphotography
+    twitter: ''
+    tiktok: ''
+    website: ''
 - name: Damien Maas
   age: 29
   about: I'm a 29 years old man, living in Germany but born and working in Luxembourg.
