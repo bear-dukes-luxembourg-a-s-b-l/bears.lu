@@ -8,34 +8,68 @@ fields:
   fields:
   - type: text
     name: name
-    label: Last Name
+    label: Name
     config:
       required: true
-  - type: text
-    name: firstname
-    label: First name
+  - name: age
+    type: number
+    label: Age
+    description: ''
+    default: 0
+    required: true
     config:
-      required: true
-  - type: datetime
-    name: dob
-    label: Date of Birth
-    config:
-      required: false
-  - type: text
-    name: social
-    label: Social Media Link
-    config:
-      required: false
+      min: 
+      max: 
+      step: 
   - type: textarea
     name: about
     label: About
     config:
-      wysiwyg: false
+      wysiwyg: true
       schema:
-        format: html
+        format: markdown
       required: true
+  - name: motivation
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Motivation
   - type: image_gallery
     name: photos
     label: Photos
+  - name: links
+    type: field_group
+    config: {}
+    fields:
+    - name: instagram
+      type: text
+      config:
+        required: false
+      label: Instagram
+    - name: twitter
+      type: text
+      config:
+        required: false
+      label: Twitter
+    - name: facebook
+      type: text
+      config:
+        required: false
+      label: Facebook
+    - name: tiktok
+      type: text
+      config:
+        required: false
+      label: TikTok
+    - name: website
+      type: text
+      config:
+        required: false
+      label: Website
+    label: Links
 pages:
 - _data/candidates.yaml
