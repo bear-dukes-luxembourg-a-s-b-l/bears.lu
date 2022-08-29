@@ -34,7 +34,7 @@ logo: "/assets/Bear Dukes Luxembourg.png"
 social:
   name: Thibault M.
   links:
-    - https://twitter.com/clawdire
+    - https://twitter.com/clawfire
     - https://github.com/clawfire
     - https://keybase.io/thibault
     - https://www.facebook.com/thibault.milan.1
@@ -53,13 +53,13 @@ email: contact@bears.lu
 bearpride:
   enabled: true
   application_open: true
-  candidate_list: true
+  candidate_list: false
   hotel_cta:
     display: true
     content: |-
       Our partner, INNSiDE by Melià, is excited to welcome you in their
       brand new hotel in Cloche d'Or, the vibrant and fast growing new neighborhood
-      in Luxembourg-city.  
+      in Luxembourg-city.
       All rooms includes Breakfast.
     url: https://tally.so/r/nGZ0pw
 pagination:
