@@ -50,7 +50,18 @@ permalink: "/news/:year/:month/:day/:title/"
 baseurl: "/"
 email: contact@bears.lu
 
-
+bearpride:
+  enabled: true
+  application_open: true
+  candidate_list: true
+  hotel_cta:
+    display: true
+    content: |-
+      Our partner, INNSiDE by Melià, is excited to welcome you in their
+      brand new hotel in Cloche d'Or, the vibrant and fast growing new neighborhood
+      in Luxembourg-city.  
+      All rooms includes Breakfast.
+    url: https://tally.so/r/nGZ0pw
 pagination:
   enabled: true
   debug: true

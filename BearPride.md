@@ -21,11 +21,13 @@ We are happy to be able to restart all those community events. Drinks, Restauran
 {% for event in site.data.events.vendredi %}
 {% include _event-details.html %}
 {% endfor %}
-<!--<div class="ui floating message">
-<div class="header"><i class="icon hotel"></i> Need an hotel?</div>
-<p>Our partner, <a href="http://melia.lu" title="See our partner">Melia Luxembourg</a>, offer you a <em>room for 2 without breakfast for 90€/night</em>. It's close to the city center, got their own tram station and is 10min from city center by public transportation.</p>
-<p>Use the code <a href="https://airtable.com/shrhhsIN0QdxTbVw3">this form</a> to make your booking and they'll get back to you ASAP.</p>
-</div>-->
+{% if site.bearpride.hotel_cta.display %}
+<div class="ui floating message">
+  <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
+  {{ site.bearpride.hotel_cta.content | markdownify}}
+  <p>Use <a href="{{site.bearpride.hotel_cta.url}}">this form</a> to make your booking and they'll get back to you ASAP.</p>
+</div>
+{% endif %}
 </div>
 <div class="column">
 <h3>Saturday 15th</h3>
@@ -47,41 +49,58 @@ We are happy to be able to restart all those community events. Drinks, Restauran
 </div>
 </div>
 
-{%- if site.data.candidates > 0 -%}
+{% if site.bearpride.application_open %}
+
+## Want to be the next Mr Bear Luxembourg ?
+
+<a href="https://f.bears.lu/mrbear" class="ui brown button">Fill the application form online</a>
+{% else %}
+<div class="ui message info">The application are closed. Discover the contestant soon here. </div>
+{% endif %}
+
+{%- if site.bearpride.candidate_list -%}
 
 ## Mr Bear Election Candidates
 
-<div class="ui stackable four columns grid">
-{%- for candidate in site.data.candidates -%}
-<div class="column">
-<div class="ui fluid card">
-<div class="image">
-<img src="{{candidate.photos\[1\]}}" alt="">
-</div>
-<div class="content">
-<div class="header">{{candidate.firstname}}</div>
-<div class="meta">{{candidate.dob | date: "%Y"}}</div>
-<div class="description">{{candidate.about | markdownify}}</div>
-</div>
-</div>
-</div>
-
-{%- endfor -%}
-
+<div class="ui stackable three columns grid">
+  {%- for candidate in site.data.candidates -%}
+  <div class="column">
+    <div class="ui fluid card">
+    {%- if candidate.photos.size > 1 -%}
+      <div class="ui slide masked reveal image">
+        <img src="{{candidate.photos.first}}?nf_resize=smartcrop&w=480&h=603" alt="" class="visible content">
+        <img src="{{candidate.photos[1]}}?nf_resize=smartcrop&w=480&h=603" alt="" class="hidden content">
+      </div>
+    {%- else -%}
+      <div class="image">
+        <img src="{{candidate.photos.first}}?nf_resize=smartcrop&w=480&h=603" alt="" class="visible content">
+      </div>
+    {%- endif -%}
+      <div class="content">
+        <div class="header">{{candidate.name}}</div>
+        <div class="meta">{{candidate.age}} years old</div>
+        <div class="description">{{candidate.about | truncatewords: 50 | markdownify}}</div>
+        <div class="ui horizontal divider">Why me?</div>
+        <div class="description">{{candidate.motivation | truncatewords: 50 | markdownify }}</div>
+      </div>
+      <div class="extra content">
+      {%- for link in candidate.links -%}
+        {%- if link[1] != "" -%}
+        <a href="{{link[1]}}" title="Checkout their {{link[0]}}"><i class="{{link[0]}} icon"></i></a>
+        {%- endif -%}
+      {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
 </div>
 
 <div class="ui message info">
 <div class="header">How to vote?</div>
 <p>We don't have online voting because it's too easy to cheat. Every bear contest who tried to put one in place experimented it. So we just don't.<br>
-Instead, you have to come and meet, in real life, face to face, the candidates. We think it's more interesting than just a like race over the internet. When you arrive at the party, you'll get a voting toket (a coin) which you'll be able to use to vote for your favorite candidate when the voting will be open. You'll have only one, no more, even if you "lose" it.</p>
+Instead, you have to come and meet, in real life, face to face, the candidates. We think it's more interesting than just a like race over the internet. When you arrive at the party, you'll get a voting toket (a coin) which you'll be able to use to vote for your favorite candidate when the voting will be open. You'll have only one, no more, <strong>even if you lose it</strong>.</p>
 </div>
 {%- endif -%}
-
-<!-- <div class="ui message info">The application are closed. Discover the contestant soon here. </div>-->
-
-## Want to be the next Mr Bear Luxembourg ?
-
-<a href="https://f.bears.lu/mrbear" class="ui brown button">Fill the application form online</a>
 
 ## Sponsoring
 
