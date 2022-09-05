@@ -52,8 +52,8 @@ email: contact@bears.lu
 
 bearpride:
   enabled: true
-  application_open: true
-  candidate_list: false
+  application_open: false
+  candidate_list: true
   hotel_cta:
     display: true
     content: |-
