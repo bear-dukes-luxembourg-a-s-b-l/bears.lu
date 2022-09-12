@@ -65,9 +65,10 @@ dimanche:
   price: N/A
   place_url: ''
 - title: Bear Sauna
-  description: Come and enjoy some steam and some fur if you dare. This year we do
+  description: "Come and enjoy some steam and some fur if you dare. This year we do
     one sauna to be sure to meet all together. It's the closest from Luxembourg, accessible
-    by train every hour on Sunday from LU/FR
+    by train every hour on Sunday from LU/FR. Say the passphrase \"vive les ours\"
+    to the entrance to get the special price \U0001F61C"
   time: 2pm
   place: Red Sauna
   price: 10€
