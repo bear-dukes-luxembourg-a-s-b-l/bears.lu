@@ -32,6 +32,7 @@ samedi:
   description: It's in the dark and you gonna have unlimited ammo to shoot all the
     bears (and chasers, otters, etc) you can. 3 matchs of 20min with drinks in between
     and time to rest. RSVP mandatory
+  ticket_url: ''
 - title: Mr. Bear Luxembourg 2023 Election
   place_url: https://goo.gl/maps/ddkJAxRzb25fDNSe8
   rsvp_url: ''
@@ -41,6 +42,7 @@ samedi:
     future Mr. Bear Luxembourg. '
   price: 15 - 20€ incl. woof entry
   time: 10pm
+  ticket_url: ''
 - title: Woof Bear Pride
   time: 11:59pm
   place: Ground Luxembourg
@@ -50,6 +52,7 @@ samedi:
   price: 15€ - 20€
   facebook: https://www.facebook.com/events/590155546012605
   rsvp_url: ''
+  ticket_url: ''
 dimanche:
 - title: Bear Brunch
   description: Let's meet one more last time around a nice brunch all together before
@@ -60,3 +63,15 @@ dimanche:
   time: 10:30 am
   place: TBA
   price: N/A
+  place_url: ''
+- title: Bear Sauna
+  description: Come and enjoy some steam and some fur if you dare. This year we do
+    one sauna to be sure to meet all together. It's the closest from Luxembourg, accessible
+    by train every hour on Sunday from LU/FR
+  time: 2pm
+  place: Red Sauna
+  price: 10€
+  facebook: ''
+  ticket_url: ''
+  rsvp_url: ''
+  place_url: https://goo.gl/maps/9eHTLhoQd16tK7Lx7
