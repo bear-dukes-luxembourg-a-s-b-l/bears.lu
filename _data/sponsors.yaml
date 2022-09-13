@@ -1,11 +1,11 @@
 ---
 gold: []
-silver:
+silver: []
+media:
 - name: Barnum Cabaret, Restaurant, Bar
   title: Checkout the sponsor website
   url: https://www.barnum.lu/
   image: "/uploads/2022/09/13-logo-header.png"
-media:
 - name: Gentle Bear Bar
   title: Checkout the sponsor website
   url: https://www.facebook.com/gentleBearsCGN
