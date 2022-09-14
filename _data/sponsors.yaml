@@ -1,6 +1,10 @@
 ---
 gold: []
-silver: []
+silver:
+- name: SuperFurry
+  title: Checkout the sponsor website
+  url: https://superfurry.nl/
+  image: "/uploads/2022/09/14-webshop-round-logo-png-trans.png"
 media:
 - name: Barnum Cabaret, Restaurant, Bar
   title: Checkout the sponsor website
