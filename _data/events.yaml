@@ -57,13 +57,13 @@ dimanche:
 - title: Bear Brunch
   description: Let's meet one more last time around a nice brunch all together before
     you all return in your respective countries ❤.
-  facebook: ''
+  facebook: https://www.facebook.com/events/459326206005378/
   ticket_url: ''
-  rsvp_url: ''
-  time: 10:30 am
-  place: TBA
+  rsvp_url: https://f.bears.lu/brunch
+  time: 11:30 am
+  place: Bouneweger Stuff
   price: N/A
-  place_url: ''
+  place_url: https://g.page/bouneweger-stuff-luxembourg?share
 - title: Bear Sauna
   description: "Come and enjoy some steam and some fur if you dare. This year we do
     one sauna to be sure to meet all together. It's the closest from Luxembourg, accessible
