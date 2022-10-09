@@ -1,6 +1,10 @@
 ---
 gold: []
 silver:
+- name: Red Sauna
+  title: Checkout the sponsor website
+  url: http://redsauna.fr/
+  image: "/uploads/2019/07/28/RedSaunaSquare@3x.png"
 - name: Kink Duke
   title: Checkout the sponsor website
   url: https://www.instagram.com/kinkduke/
@@ -10,6 +14,11 @@ silver:
   url: https://superfurry.nl/
   image: "/uploads/2022/09/14-webshop-round-logo-png-trans.png"
 media:
+- name: Centre des communautés lesbiennes, gays,  bisexuelles, trans’, intersexes,
+    queer+
+  title: Checkout the sponsor website
+  url: https://www.cigale.lu/
+  image: "/uploads/2022/10/09-195219963_4366446946733920_1031080011772756299_n-removebg-preview.png"
 - name: Barnum Cabaret, Restaurant, Bar
   title: Checkout the sponsor website
   url: https://www.barnum.lu/
