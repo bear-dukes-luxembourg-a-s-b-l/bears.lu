@@ -30,11 +30,6 @@ sections:
 - type: document
   path: _data/sponsors.yaml
   label: Sponsors
-- type: heading
-  label: Config
-- type: document
-  path: config.yml
-  label: General config
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
