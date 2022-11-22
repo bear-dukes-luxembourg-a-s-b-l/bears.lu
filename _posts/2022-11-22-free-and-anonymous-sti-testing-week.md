@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-11-22 21:31:17 +0100
+date: 2022-11-22T21:31:17.000+01:00
 categories:
 - health
 title: Free and anonymous STI testing week
