@@ -4,7 +4,7 @@ date: 2022-11-22 21:31:17 +0100
 categories:
 - health
 title: Free and anonymous STI testing week
-image: ''
+image: "/uploads/2022/11/22-support-fb-croix-rouge.png"
 author: clawfire
 
 ---
