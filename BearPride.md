@@ -2,10 +2,6 @@
 layout: page
 title: Bear Pride Luxembourg 2022
 subtitle: 14-15-16th Oct.
-menu:
-  header:
-    identifier: bearpride
-    weight: 3
 
 ---
 We are happy to be able to restart all those community events. Drinks, Restaurants and even parties are allowed again.
