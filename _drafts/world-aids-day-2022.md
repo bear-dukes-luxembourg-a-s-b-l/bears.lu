@@ -32,8 +32,11 @@ Four decades into the HIV response, inequalities still persist for the most basi
 
 ## Luxembourg
 
-🆕 Screening for HIV, Syphilis and Hep C by quick tests every Thursday form 12:30pm to 2:30pm at the Centre LGBTIQ+ CIGALE, 16, rue Notre Dame (2nd floor) L-2240 Luxembourg !  
-No appointement, free and anonymous.
+🆕 Screening for HIV, Syphilis and Hep C by quick tests  
+🕧 every Thursday form 12:30pm to 2:30pm  
+📍 Centre LGBTIQ+ CIGALE, 16, rue Notre Dame (2nd floor) L-2240 Luxembourg
+
+✅ No appointement, ✅ free and ✅ anonymous.
 
 ### Selftesting
 
