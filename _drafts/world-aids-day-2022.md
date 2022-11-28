@@ -42,10 +42,12 @@ Four decades into the HIV response, inequalities still persist for the most basi
 
 Launched during the COVID-19 health crisis, a free HIV self-testing mail-in service is available by phone on [2755-4500](tel:27554500) or by e-mail: [hivberodung@croix-rouge.lu](mailto:hivberodung@croix-rouge.lu).
 
+[Know more about this service here](https://www.croix-rouge.lu/en/service/hiv-berodung-prevention-testing-and-treatment/selftest/)
+
 ## The day
 
 On World AIDS Day on 1st December, events will take place across the world. These activities will be led not only by official bodies but also, most importantly, by communities.
 
-In Luxembourg, [HIV Berodung](https://www.croix-rouge.lu/en/service/hiv-berodung-prevention-testing-and-treatment/) (from Luxembourgish Red Cross) organizes a vernissage of their art on condoms exhibition with our national talent, Madame Yoko as host.
+In Luxembourg, [HIV Berodung](https://www.croix-rouge.lu/en/service/hiv-berodung-prevention-testing-and-treatment/) (from Luxembourgish Red Cross) organizes a vernissage of their art on condoms exhibition with our national talent, Madame Yoko as host at [Bâtiment 4](https://goo.gl/maps/Bsws6yuAfTPL2SZv5) à Esch-sur-Alzette.
 
 ![](/uploads/2022/11/28-invitation-1er-decembre.png)
