@@ -48,6 +48,11 @@ Launched during the COVID-19 health crisis, a free HIV self-testing mail-in serv
 
 On World AIDS Day on 1st December, events will take place across the world. These activities will be led not only by official bodies but also, most importantly, by communities.
 
-In Luxembourg, [HIV Berodung](https://www.croix-rouge.lu/en/service/hiv-berodung-prevention-testing-and-treatment/) (from Luxembourgish Red Cross) organizes a vernissage of their art on condoms exhibition with our national talent, Madame Yoko as host at [Bâtiment 4](https://goo.gl/maps/Bsws6yuAfTPL2SZv5) à Esch-sur-Alzette.
+In Luxembourg, [HIV Berodung](https://www.croix-rouge.lu/en/service/hiv-berodung-prevention-testing-and-treatment/) (from Luxembourgish Red Cross) organizes several events during the day: 
+
+* **7:30am - 9:30am** at Luxembourg train station & Funiculaire in Kirchberg, free condom distribution
+* **11:30am - 2:30pm** in front of Delhaize Luxembourg Gare, DIMPS will do free screenings
+* **12:30pm - 2:30pm** at CIGALE (Luxembourg city), free screening too
+* **5:30pm** a vernissage of their art on condoms exhibition with our national talent, Madame Yoko as host at [Bâtiment 4](https://goo.gl/maps/Bsws6yuAfTPL2SZv5) à Esch-sur-Alzette.
 
 ![](/uploads/2022/11/28-invitation-1er-decembre.png)
