@@ -2,7 +2,7 @@
 layout: post
 title: " 🏳️‍🌈 🎉🇱🇺 Happy Luxembourg National Day! 🇱🇺🎉🏳️‍🌈"
 date: 2023-06-23 22:13:14
-splash: /assets/img/uploads/arthur-chauvineau-dn7p1u26zke-unsplash.jpg
+image: /assets/img/uploads/arthur-chauvineau-dn7p1u26zke-unsplash.jpg
 categories: News
 author: clawfire
 ---
