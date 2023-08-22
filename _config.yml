@@ -10,8 +10,6 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server
 #  process.
 
-pride: false  # Enable or disable the bear pride panel on homepage
-
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -51,17 +49,29 @@ baseurl: "/"
 email: contact@bears.lu
 
 bearpride:
-  enabled: true
-  application_open: false
-  candidate_list: true
+  enabled: true #that will display the bear pride panel on homepage
+  homepage_panel:
+    title: "Bear Pride Luxembourg 2023"
+    description: |-
+      On Oct. 6-7-8, it's the Bear Pride in Luxembourg city. Clubbing, social activities, Mr Bear election, city tour ...
+      all you need to know about the event is here. The Bear Pride in Luxembourg city is a three-day event that celebrates the
+      LGBTQ+ community and the bear subculture. On Oct. 6th, the festivities kick off with a bear night at the city’s newest
+      popular gay bar, followed by a social gathering on Oct. 7th. On the same day, the Mr Bear election will take place, where the
+      winner will be crowned the Bear of Luxembourg. Whether you’re a bear, a cub, or an ally, the Bear Pride in Luxembourg city is the
+      perfect opportunity to celebrate diversity and have a great time.
+  facebook_main_event: https://fb.me/e/2DKQ8CGAU
+  combo_ticket_url:
+  application_open: true
+  candidate_list: false
   hotel_cta:
-    display: true
+    display: false
     content: |-
       Our partner, INNSiDE by Melià, is excited to welcome you in their
       brand new hotel in Cloche d'Or, the vibrant and fast growing new neighborhood
       in Luxembourg-city.
       All rooms includes Breakfast.
     url: https://tally.so/r/nGZ0pw
+
 pagination:
   enabled: true
   debug: true

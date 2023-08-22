@@ -1,22 +1,48 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2022
-subtitle: 14-15-16th Oct.
+title: Bear Pride Luxembourg 2023
+subtitle: 5-6-7-8th Oct.
 
 ---
-We are happy to be able to restart all those community events. Drinks, Restaurants and even parties are allowed again.
+{{site.bearpride.homepage_panel.description | markdownify }}
 
-<a href="https://www.facebook.com/events/3195090970815289/" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
-<!-- <a href="https://tickets.bears.lu/e/23/bear-pride-luxembourg-2019?ref=site" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a> -->
+{% if site.bearpride.facebook_main_event %}
+<a href="{{site.bearpride.facebook_main_event}}" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+{% endif %}
 
-## Schedule
+{% if site.bearpride.combo_ticket_url %}
+<a href="{{site.bearpride.combo_ticket_url}}" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a>
+{% endif %}
+
+
+## 🗓️ Schedule
 
 <div class="ui stackable three column grid">
 <div class="column">
-<h3>Friday 14th</h3>
+<!-- <h3>Thursday 5th</h3>
+{% for event in site.data.events.jeudi %}
+{% include _event-details.html %}
+{% endfor %} -->
+
+<h3>Friday 6th</h3>
 {% for event in site.data.events.vendredi %}
 {% include _event-details.html %}
 {% endfor %}
+</div>
+
+<div class="column">
+<h3>Saturday 7th</h3>
+{% for event in site.data.events.samedi %}
+{% include _event-details.html %}
+{% endfor %}
+</div>
+
+<div class="column">
+<h3>Sunday 8th</h3>
+{% for event in site.data.events.dimanche %}
+{% include _event-details.html %}
+{% endfor %}
+
 {% if site.bearpride.hotel_cta.display %}
 <div class="ui floating message">
   <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
@@ -24,35 +50,28 @@ We are happy to be able to restart all those community events. Drinks, Restauran
   <p>Use <a href="{{site.bearpride.hotel_cta.url}}">this form</a> to make your booking and they'll get back to you ASAP.</p>
 </div>
 {% endif %}
-</div>
-<div class="column">
-<h3>Saturday 15th</h3>
-{% for event in site.data.events.samedi %}
-{% include _event-details.html %}
-{% endfor %}
-
-</div>
-<div class="column">
-<h3>Sunday 16th</h3>
-{% for event in site.data.events.dimanche %}
-{% include _event-details.html %}
-{% endfor %}
-<!-- <div class="ui message">
-<div class="header">Saunas</div>
-<p><a href="http://zenhit.be" title="Gay Wellness Sauna in Luxembourg">Zenhit Sauna</a> organise a <a href="https://www.facebook.com/events/728419207585197/" title="See the event on facebook"><i class="icon facebook"></i>After Bear Sunday</a> after each <a href="http://woofmenonly.com" title="The men-only gay party for kinkster and bears">Woof men-only party</a> in Luxembourg. Only 5€ entry.</p>
-</div> -->
 
 </div>
 </div>
 
-{% if site.bearpride.application_open %}
+{% capture application_content %}
+## 🐻👑 CALLING ALL BEARS! The search for Mr. Bear Luxembourg 2024 has officially begun
 
-## Want to be the next Mr Bear Luxembourg ?
+Could you be the next ambassador for our bear community in Luxembourg and beyond? Do you embody the spirit of camaraderie, diversity, and pride that we stand for?
 
-<a href="https://f.bears.lu/mrbear" class="ui brown button">Fill the application form online</a>
-{% else %}
-<div class="ui message info">The application are closed. Discover the contestant soon here. </div>
-{% endif %}
+Requirements:
+
+1. Work, live, or study in Luxembourg 🏠
+2. Be 18 years of age or older 🎂
+3. Identify as a man (trans men are welcome) 🌈
+
+As Mr. Bear Luxembourg, you will be representing us at various national and European events, wearing the coveted Mr. Bear sash, and receiving fantastic prizes from our partners. Not to mention, you'll have an unforgettable experience at our 3-day Bear Pride event this October, where you'll be invited to participate in all the exciting activities!
+This is more than just a title, it's a chance to represent your community, make a difference, and create lifelong memories!
+
+So, don't delay! Start your journey today and apply to become the face of Bear Dukes Luxembourg.
+{% endcapture %}
+
+{% include _bearpride_applications.html content=application_content %}
 
 {%- if site.bearpride.candidate_list -%}
 
@@ -98,7 +117,7 @@ Instead, you have to come and meet, in real life, face to face, the candidates. 
 </div>
 {%- endif -%}
 
-## Sponsoring
+## 🎖️ Sponsoring
 
 <div class="ui message">
 We are always looking for sponsors and offering a wide range of compensation. You can checkout the <a href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub" title="Sponsoring documentation">Sponsoring documentation</a> to know everything about the metrics of the events, the differents sponsoring opportunities ...
@@ -143,7 +162,7 @@ They are helping us to raise awarness about our events.
 {%- endif -%}
 <small>[Sponsoring T&C](https://docs.google.com/document/d/e/2PACX-1vRiHgdxO-wmB5S4NaAdCm4oLEZPC95LRDyx2kJgEE3jtC9QR11ku3sn3SXS03O47ErFz2byoaw7F3ky/pub)</small>
 
-<!-- ## Where to find ...
+## 📍 Where to find ...
 
 So, for the new ones as the bears who already know our lovely capital city, here's a map where we gather the venues of the evens, bars & restaurants we love, cool shops, nice art & culture venues and some usefull grocery shops and hotels in the city.
 
@@ -151,4 +170,4 @@ Don't miss our special partnership with Melia Luxembourg Hotel!
 
 <i class="info circle blue icon"></i>click on the drawer symbol (1st icon on the title bar of the map) to show the menu with the categories.
 
-<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Y5-12S01_kVDaGj8hVwH4rOFlIORfDgS" width="760" height="480" style="border:none"></iframe> -->
+<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Y5-12S01_kVDaGj8hVwH4rOFlIORfDgS" width="760" height="480" style="border:none"></iframe>

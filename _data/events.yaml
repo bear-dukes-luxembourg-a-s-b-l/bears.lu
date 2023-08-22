@@ -1,78 +1,63 @@
 ---
-vendredi:
-- time: 7:00 PM
-  place_url: https://goo.gl/maps/2jbYZmfmfS3gWYQf6
-  price: N/A
-  facebook: https://www.facebook.com/events/2346963078814061
+jeudi:
+- title: "Bear Movie Night: Cachorro Bear Cub"
+  time: 7:30 PM
+  place: Rainbow Center
+  place_url: https://goo.gl/maps/KgQdL1vs1pGUjSyi7
+  price: Donation based
+  description: 'For the very first time, Bear Pride Luxembourg is excited to introduce a brand-new event to kick off our celebrations - a heartwarming movie night under the stars! Dive into the captivating world of film and join us for this unforgettable evening.'
+  facebook: ''
   ticket_url: ''
-  rsvp_url: https://f.bears.lu/beardiner
-  title: Bear Diner
-  place: Snooze Sport's Bar
-  description: Just a nice casual dinner to get to know each other better. We'll have
-    a privatised area downstairs of the bar and can accommodate ± 20 people. RSVP
-    mandatory.
-- title: Drinks & Music
-  time: 10:00 PM
-  place: Side Bar
-  place_url: https://goo.gl/maps/Usj5bfjCVXjep6dR7
+  rsvp_url: ''
+vendredi:
+- title: Meet & Greet
+  time: 9:00 PM
+  place: Let's Boyz
+  place_url: https://goo.gl/maps/mvrL4wZdSE4p8u8m6
   price: N/A
-  description: 'After dinner, let''s all meet for some drinks at the welcoming Side
-    Bar and good music. '
-  facebook: https://www.facebook.com/events/414892323907278/
+  description: 'We are thrilled to announce the inaugural event of Bear Pride Luxembourg 2023 at the freshly opened gay bar, Letz Boys. Join us in celebrating love, diversity, and the power of the bear community!'
+  facebook: https://fb.me/e/KRq7Dfon
   ticket_url: ''
   rsvp_url: ''
 samedi:
-- title: Laser Game
-  time: 3:15 pm
-  place_url: https://goo.gl/maps/dPQdSoK2XZ1QBJER7
-  price: "±20€"
-  rsvp_url: https://f.bears.lu/lasergame
-  facebook: https://www.facebook.com/events/5373560866061897
-  place: Laser Game Evolution
+- title: Bear Bowling
+  time: 3:00 PM
+  place_url: https://goo.gl/maps/3irzNYhxHf2cvZjb7
+  price: "15€ + 2,5€ for shoes"
+  rsvp_url: ''
+  facebook: https://fb.me/e/11qDC1wja
+  place: Bowling Kockelscheuer
   description: It's in the dark and you gonna have unlimited ammo to shoot all the
     bears (and chasers, otters, etc) you can. 3 matchs of 20min with drinks in between
     and time to rest. RSVP mandatory
   ticket_url: ''
-- title: Mr. Bear Luxembourg 2023 Election
+- title: Mr. Bear Luxembourg 2024 Election
   place_url: https://goo.gl/maps/ddkJAxRzb25fDNSe8
+  time: 9:00 PM
   rsvp_url: ''
-  facebook: ''
+  facebook: 'https://fb.me/e/2DKQ8CGAU'
   place: Ground Luxembourg
-  description: 'Merged with the following Woof men-only party, come and vote for the
-    future Mr. Bear Luxembourg. '
-  price: 20 - 25€ incl. woof entry
-  time: 10pm
-  ticket_url: https://tickets.out.lu/e/15/mr-bear-election-woof-bear-pride-2022?ref=website
+  description: 'The most awaited evening of the Bear Pride Luxembourg 2023 festivities is here! Gather around, witness history in the making, and be part of a magical night as we crown the next Mr. Bear Luxembourg!'
+  price: 20€, incl. Woof
+  ticket_url:
 - title: Woof Bear Pride
-  time: 11:59pm
+  time: Midnight
   place: Ground Luxembourg
   description: Your men-only party, special Bear Pride Edition. International Djs,
     performers and the freshly crown Mr. Bear Luxembourg 2023!
   place_url: https://goo.gl/maps/ddkJAxRzb25fDNSe8
-  price: 20 - 25€ incl. election
-  facebook: https://www.facebook.com/events/590155546012605
+  price: 20€, incl. election
+  facebook:
   rsvp_url: ''
-  ticket_url: https://tickets.out.lu/e/15/mr-bear-election-woof-bear-pride-2022?ref=website
+  ticket_url:
 dimanche:
 - title: Bear Brunch
   description: Let's meet one more last time around a nice brunch all together before
     you all return in your respective countries ❤.
-  facebook: https://www.facebook.com/events/459326206005378/
+  facebook:
   ticket_url: ''
-  rsvp_url: https://f.bears.lu/brunch
-  time: 11:30 am
-  place: Bouneweger Stuff
+  rsvp_url:
+  time: 11:30 AM
+  place: TBD
   price: N/A
-  place_url: https://g.page/bouneweger-stuff-luxembourg?share
-- title: Bear Sauna
-  description: "Come and enjoy some steam and some fur if you dare. This year we do
-    one sauna to be sure to meet all together. It's the closest from Luxembourg, accessible
-    by train every hour on Sunday from LU/FR. Say the passphrase \"vive les ours\"
-    to the entrance to get the special price \U0001F61C"
-  time: 2pm
-  place: Red Sauna
-  price: 10€
-  facebook: https://www.facebook.com/events/2616598845144384/
-  ticket_url: ''
-  rsvp_url: ''
-  place_url: https://goo.gl/maps/9eHTLhoQd16tK7Lx7
+  place_url:

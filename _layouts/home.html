@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-{%- if site.pride -%}
+{%- if site.bearpride.enabled -%}
 <section class="ui piled segment">
-    <h2 class="ui centered align header">Bear Pride 2019</h2>
-    <p>On Oct. 18-19-20, it's the Bear Pride in Luxembourg city. Clubbing, social activities, Mr Bear election, city tour ... all you need to know about the event is here.</p>
-    <a href="/bearpride" class="ui brown button">Checkout Bear Pride Page</a>
+    <h2 class="ui centered align header">{{site.bearpride.homepage_panel.title}}</h2>
+    <p>{{site.bearpride.homepage_panel.description | markdownify }}</p>
+    <a href="/bearpride" class="ui fluid brown button">Checkout Bear Pride Page</a>
 </section>
 {%- endif -%}
 <div class="ui stackable grid">

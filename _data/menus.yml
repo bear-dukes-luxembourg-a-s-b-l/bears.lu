@@ -4,3 +4,7 @@ header:
   title: Events
   identifier: events
   weight: 1
+- url: "/bearpride"
+  title: Bear Pride 2023
+  identifier: bearpride
+  weight: 1
