@@ -39,3 +39,43 @@ If you're looking for the sponsoring opportunities: [Bear Pride Sponsoring oppor
 <p>The <i class="asterisk small red icon"></i>indicate a mandatory fields.</p>
 <button class="ui right blue labeled icon button" type="submit">Send <i class="paper plane icon"></i></button>
 </form>
+
+<div class="ui divider"></div>
+
+<section id="donation">
+  <h2 class="ui header">Donation</h2>
+  <p>
+    If you want to support us, you can make a donation to our non-profit organization.
+    We will use the money to organize events, to support the community and to help
+    other non-profit organizations.
+  </p>
+  <div class="ui message">
+    <p>
+      We are a non-profit organization, so we can't give you a tax receipt.Since we are not (yet) a non-profit "reconnu d'utilité publique", you cannot pretent to a tax reduction for your donation.<br>
+    </p>
+  </div>
+  <div class="ui message warning">
+    <p>Please include an email address in the communication field of your wire transfert, so we can email you the receipt.</p>
+  </div>
+  <p>Our bank account is:</p>
+  <table class="ui definition table">
+    <tbody>
+    <tr>
+      <td>Account name</td>
+      <td>Bear Dukes Luxembourg a.s.b.l</td>
+    </tr>
+    <tr>
+      <td>IBAN</td>
+      <td>IE54 SUMU 9903 6510 3303 48</td>
+    </tr>
+    <tr>
+      <td>BIC</td>
+      <td>SUMUIE21XXX</td>
+    </tr>
+    <tr>
+      <td>Bank</td>
+      <td>SumUp Payments Limited</td>
+    </tr>
+    </tbody>
+  </table>
+</section>
