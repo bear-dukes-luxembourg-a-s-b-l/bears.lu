@@ -8,7 +8,7 @@ categories:
 - news
 author: clawfire
 ---
-Dear Bear Pride Community,
+Dear Bear Community,
 
 It's with deep sadness that we must announce that due to the lack of participants for this year's Mr. Bear Luxembourg election, the event has been forced into cancellation. This means we will not have a Mr. Bear Luxembourg for the year 2024.
 
