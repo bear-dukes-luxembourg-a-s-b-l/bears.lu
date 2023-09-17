@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Official Announcement: Cancellation of the Mr. Bear Luxembourg 2024 Election"
-date: 2023-09-17 18:19:33
+date: 2023-09-17 18:00:00 +0200
 image: /uploads/william-krause-ikyuzpneqws-unsplash.jpg
-categories: press release, news
+categories:
+- press release
+- news
 author: clawfire
 ---
 Dear Bear Pride Community,
