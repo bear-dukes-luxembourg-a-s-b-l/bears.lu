@@ -26,5 +26,5 @@ We remain hopeful and driven to inspire greater enthusiasm for next year's editi
 
 Stay tuned for more updates and forthcoming details. Your understanding, support, and love for the community are more appreciated than ever.
 
-With all our warmth and dedication,  \
+With all our warmth and dedication,
 The Bear Dukes Luxembourg Team 🐻❤️🌈

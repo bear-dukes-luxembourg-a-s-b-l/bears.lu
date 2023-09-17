@@ -61,7 +61,7 @@ bearpride:
       perfect opportunity to celebrate diversity and have a great time.
   facebook_main_event: https://fb.me/e/2DKQ8CGAU
   combo_ticket_url:
-  application_open: true
+  application_open: false
   candidate_list: false
   hotel_cta:
     display: false
