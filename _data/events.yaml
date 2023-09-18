@@ -31,15 +31,6 @@ samedi:
     bears (and chasers, otters, etc) you can. 3 matchs of 20min with drinks in between
     and time to rest. RSVP mandatory
   ticket_url: ''
-- title: Mr. Bear Luxembourg 2024 Election
-  place_url: https://goo.gl/maps/ddkJAxRzb25fDNSe8
-  time: 9:00 PM
-  rsvp_url: ''
-  facebook: 'https://fb.me/e/2DKQ8CGAU'
-  place: Ground Luxembourg
-  description: 'The most awaited evening of the Bear Pride Luxembourg 2023 festivities is here! Gather around, witness history in the making, and be part of a magical night as we crown the next Mr. Bear Luxembourg!'
-  price: 20, incl. Woof
-  ticket_url:
 - title: Woof Bear Pride
   time: 11:00 PM
   place: Ground Luxembourg
@@ -52,15 +43,14 @@ samedi:
   ticket_url: https://tickets.out.lu/e/30/bear-pride-special-in-partnership-with-mad-bear?ref=bearslu
 dimanche:
 - title: Bear Brunch
-  description: Let's meet one more last time around a nice brunch all together before
-    you all return in your respective countries ❤.
-  facebook:
+  description: On Sunday from 11.30am, join us for an all-you-can-eat buffet brunch at the Buvettes Rotondes for €30, including a hot drink and juice of your choice; RSVP compulsory.
+  facebook: https://fb.me/e/3P11lry6c
   ticket_url: ''
-  rsvp_url:
+  rsvp_url: https://tally.so/r/3NlZkj
   time: 11:30 AM
-  place: TBD
-  price: N/A
-  place_url:
+  place: Rotondes Buvette
+  price: 30
+  place_url: https://maps.app.goo.gl/zcmaXTBZXCMghSFE9
 - title: Bear Sauna
   description: >-
    The perfect way to end the weekend, a nice sauna with all the bears and chasers.
