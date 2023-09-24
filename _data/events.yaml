@@ -23,14 +23,12 @@ samedi:
 - title: Bear Bowling
   time: 3:00 PM
   place_url: https://goo.gl/maps/3irzNYhxHf2cvZjb7
-  price: "15 + 2,5€ for shoes"
+  price: "15 + 2,8€ for shoes"
   rsvp_url: ''
   facebook: https://fb.me/e/11qDC1wja
   place: Bowling Kockelscheuer
-  description: It's in the dark and you gonna have unlimited ammo to shoot all the
-    bears (and chasers, otters, etc) you can. 3 matchs of 20min with drinks in between
-    and time to rest. RSVP mandatory
-  ticket_url: ''
+  description: Unleash your inner bowling bear at the exclusive Bear Bowling Bash, a rollicking afternoon of strikes, spares, and unbridled laughter.
+  ticket_url: https://tickets.out.lu/e/31/bear-bowling-bash?ref=website
 - title: Woof Bear Pride
   time: 11:00 PM
   place: Ground Luxembourg
