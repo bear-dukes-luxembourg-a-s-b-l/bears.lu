@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "he Importance of Authentic Support: Choosing LGBTQ+ Owned Venues and
+title: "The Importance of Authentic Support: Choosing LGBTQ+ Owned Venues and
   Businesses for Our Events"
-date: 2023-12-05 22:18:18
+date: 2023-12-05 22:18:18 +0200
 image: /uploads/anastasiia-chepinska-co2obhgjbhi-unsplash.jpg
 categories: Thoughts, Advocacy
 author: clawfire
