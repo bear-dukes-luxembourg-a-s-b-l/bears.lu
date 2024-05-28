@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Join the EMIS-2024 Survey: Your Voice Matters!"
-date: 2024-05-28 22:43:05
+date: 2024-05-28 22:43:05 +0200
 image: /uploads/dall·e-men-with-smartphones.webp
 categories: health, study
 author: clawfire
