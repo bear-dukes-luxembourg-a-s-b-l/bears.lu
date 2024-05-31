@@ -3,8 +3,11 @@ layout: post
 title: "Join the EMIS-2024 Survey: Your Voice Matters!"
 date: 2024-05-28 22:43:05 +0200
 image: /uploads/dall·e-men-with-smartphones.webp
-categories: health, study
+categories:
+  - health
+  - study
 author: clawfire
+slug: join-emis-2024-survey-voice-matters
 ---
 The European MSM Internet Survey (EMIS) is back for 2024, and we need your help to make a difference! This important survey is designed to collect valuable data from gay, bisexual, and other men who have sex with men (MSM) across Europe. Your participation can help shape the future of sexual health services and policies, ensuring they are tailored to meet the needs of our community.
 
