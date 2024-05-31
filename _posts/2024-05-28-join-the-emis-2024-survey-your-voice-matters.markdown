@@ -22,10 +22,12 @@ EMIS-2024 is a comprehensive, anonymous online survey that aims to gather insigh
 3. **Influence Change**: The results from EMIS have historically influenced public health policies and services, leading to better support and resources for our community.
 
 ## How to Participate
-
-Taking part in EMIS-2024 is simple and takes only a few minutes. Click on the link below to start the survey and share your experiences and insights.
+Taking part in EMIS-2024 is simple and takes about 20 minutes. Click on the link below to start the survey and share your experiences and insights. Remember, your contribution is invaluable and helps build a stronger community.
 
 [Participate in EMIS-2024](https://www.emis-project.eu/emis-2024/)
+
+## Stay Committed
+We understand that 20 minutes can seem like a long time, but your full participation is crucial. Every question you answer brings us one step closer to improving the health services that benefit us all. Let's make every minute count!
 
 ## Our Partners
 
