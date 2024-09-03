@@ -83,20 +83,21 @@ So, don't delay! Start your journey today and apply to become the face of Bear D
     <div class="ui fluid card">
     {%- if candidate.photos.size > 1 -%}
       <div class="ui slide masked reveal image">
-        <img src="{{candidate.photos.first}}?nf_resize=smartcrop&w=480&h=603" alt="" class="visible content">
-        <img src="{{candidate.photos[1]}}?nf_resize=smartcrop&w=480&h=603" alt="" class="hidden content">
+        {%- for photo in candidate.photos limit:4 -%}
+        <img src="{{ photo | prepend: site.url }}?nf_resize=smartcrop&w=480&h=603" alt="" class="{% if forloop.first %}visible content{% else %}hidden content{% endif %}">
+      {%- endfor -%}
       </div>
     {%- else -%}
       <div class="image">
-        <img src="{{candidate.photos.first}}?nf_resize=smartcrop&w=480&h=603" alt="" class="visible content">
+        <img src="{{candidate.photos.first | prepend: site.url}}?nf_resize=smartcrop&w=480&h=603" alt="" class="visible content">
       </div>
     {%- endif -%}
       <div class="content">
         <div class="header">{{candidate.name}}</div>
         <div class="meta">{{candidate.age}} years old</div>
-        <div class="description">{{candidate.about | truncatewords: 50 | markdownify}}</div>
+        <div class="description">{{candidate.about | markdownify}}</div>
         <div class="ui horizontal divider">Why me?</div>
-        <div class="description">{{candidate.motivation | truncatewords: 50 | markdownify }}</div>
+        <div class="description">{{candidate.motivation | markdownify }}</div>
       </div>
       <div class="extra content">
       {%- for link in candidate.links -%}
@@ -109,6 +110,7 @@ So, don't delay! Start your journey today and apply to become the face of Bear D
   </div>
   {%- endfor -%}
 </div>
+
 
 <div class="ui message info">
 <div class="header">How to vote?</div>

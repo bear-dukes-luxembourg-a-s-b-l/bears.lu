@@ -51,5 +51,76 @@
       "path": "[[workspace]]/_posts"
     }
   ],
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.data.files": [
+    {
+      "id" : "candidates",
+      "title" : "Candidates",
+      "file" : "[[workspace]]/_data/candidates.json",
+      "fileType": "json",
+      "labelField": "name",
+      "singleEntry": false,
+      "schema": {
+        "title": "candidates",
+        "type": "object",
+        "required": [
+          "name",
+          "age",
+          "about",
+          "motivation",
+          "photos"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+            "title": "Name"
+          },
+          "age": {
+            "type": "integer",
+            "title": "Age"
+          },
+          "about": {
+            "type": "string",
+            "title": "About"
+          },
+          "motivation": {
+            "type": "string",
+            "title": "Motivation"
+          },
+          "photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "title": "Photos"
+          },
+          "links": {
+            "type": "object",
+            "properties": {
+              "instagram": {
+                "type": "string",
+                "title": "Instagram"
+              },
+              "x": {
+                "type": "string",
+                "title": "𝕏"
+              },
+              "facebook": {
+                "type": "string",
+                "title": "Facebook"
+              },
+              "tiktok": {
+                "type": "string",
+                "title": "TikTok"
+              },
+              "website": {
+                "type": "string",
+                "title": "Website"
+              }
+            },
+            "title": "Links"
+          }
+      }
+    }
+  ]
 }
