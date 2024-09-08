@@ -40,7 +40,7 @@ subtitle: 9th to 13th Oct.
 
 
 {% capture application_content %}
-## 🐻👑 CALLING ALL BEARS! The search for Mr. Bear Luxembourg 2024 has officially begun
+## 🐻👑 CALLING ALL BEARS! The search for Mr. Bear Luxembourg 2025 has officially begun
 
 Could you be the next ambassador for our bear community in Luxembourg and beyond? Do you embody the spirit of camaraderie, diversity, and pride that we stand for?
 
@@ -50,7 +50,7 @@ Requirements:
 2. Be 18 years of age or older 🎂
 3. Identify as a man (trans men are welcome) 🌈
 
-As Mr. Bear Luxembourg, you will be representing us at various national and European events, wearing the coveted Mr. Bear sash, and receiving fantastic prizes from our partners. Not to mention, you'll have an unforgettable experience at our 3-day Bear Pride event this October, where you'll be invited to participate in all the exciting activities!
+As Mr. Bear Luxembourg, you will be representing us at various national and European events, wearing the coveted Mr. Bear sash, and receiving fantastic prizes from our partners. Not to mention, you'll have an unforgettable experience at our 5-days Bear Pride event this October, where you'll be invited to participate in all the exciting activities!
 This is more than just a title, it's a chance to represent your community, make a difference, and create lifelong memories!
 
 So, don't delay! Start your journey today and apply to become the face of Bear Dukes Luxembourg.
