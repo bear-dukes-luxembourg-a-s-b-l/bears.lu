@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2023
-subtitle: 5-6-7-8th Oct.
+title: Bear Pride Luxembourg 2024
+subtitle: 9th to 13th Oct.
 
 ---
 {{site.bearpride.homepage_panel.description | markdownify }}
@@ -18,41 +18,26 @@ subtitle: 5-6-7-8th Oct.
 ## 🗓️ Schedule
 
 <div class="ui stackable three column grid">
+<!-- iterate through all the days of the schedule and display one column per day, with all events of this day in it. -->
+{% for day in site.data.events %}
 <div class="column">
-<!-- <h3>Thursday 5th</h3>
-{% for event in site.data.events.jeudi %}
-{% include _event-details.html %}
-{% endfor %} -->
-
-<h3>Friday 6th</h3>
-{% for event in site.data.events.vendredi %}
-{% include _event-details.html %}
+  <h3>{{ day.date | date: '%A %e th'  }}</h3>
+  {% for event in day.events %}
+  {% include _event-details.html %}
+  {% endfor %}
+</div>
 {% endfor %}
 </div>
-
-<div class="column">
-<h3>Saturday 7th</h3>
-{% for event in site.data.events.samedi %}
-{% include _event-details.html %}
-{% endfor %}
-</div>
-
-<div class="column">
-<h3>Sunday 8th</h3>
-{% for event in site.data.events.dimanche %}
-{% include _event-details.html %}
-{% endfor %}
 
 {% if site.bearpride.hotel_cta.display %}
 <div class="ui floating message">
   <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
   {{ site.bearpride.hotel_cta.content | markdownify}}
-  <p>Use <a href="{{site.bearpride.hotel_cta.url}}">this form</a> to make your booking and they'll get back to you ASAP.</p>
+  <p>Use <a href="{{site.bearpride.hotel_cta.url}}">this form</a> to make your booking and they'll get back to you ASAP.
+  </p>
 </div>
 {% endif %}
 
-</div>
-</div>
 
 {% capture application_content %}
 ## 🐻👑 CALLING ALL BEARS! The search for Mr. Bear Luxembourg 2024 has officially begun
