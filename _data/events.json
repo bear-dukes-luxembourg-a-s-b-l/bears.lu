@@ -1,0 +1,104 @@
+[
+  {
+    "date": "2024-10-09",
+    "events": [
+      {
+        "title": "Vernissage Expo A hug is always the right size",
+        "time": "7:00 PM",
+        "place": "Rainbow Center",
+        "place_url": "https://goo.gl/maps/KgQdL1vs1pGUjSyi7",
+        "price": "Free",
+        "description": "",
+        "facebook": "",
+        "ticket_url": "",
+        "rsvp_url": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-10-10",
+    "events": [
+      {
+        "title": "Bear Movie Night: Cachorro Bear Cub",
+        "time": "7:30 PM",
+        "place": "Rainbow Center",
+        "place_url": "https://goo.gl/maps/KgQdL1vs1pGUjSyi7",
+        "price": "Free",
+        "description": "For the very first time, Bear Pride Luxembourg is excited to introduce a brand-new event to kick off our celebrations - a heartwarming movie night under the stars! Dive into the captivating world of film and join us for this unforgettable evening.",
+        "facebook": "https://fb.me/e/B9AjDREfL",
+        "ticket_url": "",
+        "rsvp_url": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-10-11",
+    "events": [
+      {
+        "title": "Meet & Greet",
+        "time": "9:00 PM",
+        "place": "Let's Boyz",
+        "place_url": "https://goo.gl/maps/mvrL4wZdSE4p8u8m6",
+        "price": "N/A",
+        "description": "We are thrilled to announce the inaugural event of Bear Pride Luxembourg 2023 at the freshly opened gay bar, Letz Boys. Join us in celebrating love, diversity, and the power of the bear community!",
+        "facebook": "https://fb.me/e/KRq7Dfon",
+        "ticket_url": "",
+        "rsvp_url": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-10-12",
+    "events": [
+      {
+        "title": "Cheers & Chews with Mr. Bear: A Pre-Party Gathering!",
+        "time": "6:30 PM",
+        "place_url": "",
+        "price": "N/A",
+        "rsvp_url": "",
+        "facebook": "",
+        "place": "Beim Lentz",
+        "description": "Fancy a meal and mingle with fellow bears? Let's gather at Beim Lentz this Saturday.",
+        "ticket_url": ""
+      },
+      {
+        "title": "Electio night + Woof Bear Pride",
+        "time": "11:00 PM",
+        "place": "Ground Luxembourg",
+        "description": "Your men-only party, special Bear Pride Edition. International Djs, performers and the freshly crown Mr. Bear Luxembourg 2023!",
+        "place_url": "https://goo.gl/maps/ddkJAxRzb25fDNSe8",
+        "price": "20, incl. election",
+        "facebook": "",
+        "rsvp_url": "",
+        "ticket_url": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-09-15",
+    "events": [
+      {
+        "title": "Bear Brunch",
+        "description": "More information soon",
+        "facebook": "",
+        "ticket_url": "",
+        "rsvp_url": "",
+        "time": "",
+        "place": "TBD",
+        "price": "TBD",
+        "place_url": ""
+      },
+      {
+        "title": "Bear Sauna",
+        "description": "More information soon",
+        "facebook": "",
+        "ticket_url": "",
+        "rsvp_url": "",
+        "time": "",
+        "place": "TBD",
+        "price": "TBD",
+        "place_url": ""
+      }
+    ]
+  }
+]
