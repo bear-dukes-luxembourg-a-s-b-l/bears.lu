@@ -1,0 +1,50 @@
+[
+  {
+    "year": 2015,
+    "name": "José",
+    "description": "First Mister Bear in Luxembourg, José travelled Europe to meet other title holders and attend all the Bear Pride he can in order to make our Tiny country known.",
+    "image": "/assets/img/uploads/José-3.jpg",
+    "social": {
+      "facebook": "https://www.facebook.com/djBelosso",
+      "instagram": "https://instagram.com/dj_josesanchez",
+      "twitter": "https://twitter.com/sanchezjosedj"
+    }
+  },
+  {
+    "year": "2016/2017",
+    "name": "Thibault",
+    "description": "Thibault used his title as a platform to create the [Bear Dukes Luxembourg a.s.b.l.](https://bears.lu) and create [Woof men-only party](https://woofmenonly.com) as well as [out.lu](https://out.lu) website which is a LGBT+ agenda in the Greater Region. He also served one year and half with the title in order to align the date of the election with others bear events in Europe.",
+    "image": "/assets/img/uploads/Thibault-5.jpg",
+    "social": {
+      "facebook": "https://www.facebook.com/mr.bear.luxembourg.2016/",
+      "instagram": "https://instagram.com/clawfire",
+      "twitter": "https://twitter.com/clawfire"
+    }
+  },
+  {
+    "year": 2019,
+    "name": "Michel",
+    "description": "Michel was the globetrotter of the Misters. He participate to more events than any of us all around Europe and made the Bears of Luxembourg known in many new countries. Thanks to him, the Bear Pride 2019 was packed.",
+    "image": "/assets/img/uploads/Michel-2.jpg",
+    "social": {
+      "instagram": "https://www.instagram.com/mr.bearluxemburg2019/",
+      "facebook": "https://www.facebook.com/michel.krier.5"
+    }
+  },
+  {
+    "year": "2020/2021",
+    "name": "Paul",
+    "description": "Paul is our winner during the 2019 Bear Pride in Luxembourg. With a big heart and a lot of good will, he try to give more exposure to what Luxembourg has to offer as a country in terms of LGBT+ events, non-profits, ...",
+    "image": "/assets/img/uploads/paul-10.jpg",
+    "social": {
+      "facebook": "https://www.facebook.com/profile.php?id=100076202127202"
+    }
+  },
+  {
+    "year": 2023,
+    "name": "Steve",
+    "description": "Steve is our winner during the 2022 Bear Pride in Luxembourg. He is a passionate bear who loves to nature, plants and meet new people. He is also a passionate about photography.",
+    "image": "",
+    "social": {}
+  }
+]
