@@ -51,7 +51,7 @@ email: contact@bears.lu
 bearpride:
   enabled: true #that will display the bear pride panel on homepage
   homepage_panel:
-    title: "Bear Pride Luxembourg 2023"
+    title: "Bear Pride Luxembourg"
     description: |-
       Welcome to Bear Pride Luxembourg 2024, a celebration of diversity, inclusion, and the vibrant bear community in the heart of Europe. This year’s event promises a dynamic blend of culture, connection, and pride, bringing together the LGBTQ+ community, especially gay and trans men, for a week full of unique activities and unforgettable moments.
 
