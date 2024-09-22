@@ -38,9 +38,9 @@ subtitle: 9th to 13th Oct.
 </div>
 {% endif %}
 
-
+{% assign next_year = 'now' | date: "%Y" | plus: 1 %}
 {% capture application_content %}
-## 🐻👑 CALLING ALL BEARS! The search for Mr. Bear Luxembourg 2025 has officially begun
+## 🐻👑 CALLING ALL BEARS! The search for Mr. Bear Luxembourg {{ next_year }} has officially begun
 
 Could you be the next ambassador for our bear community in Luxembourg and beyond? Do you embody the spirit of camaraderie, diversity, and pride that we stand for?
 
