@@ -35,6 +35,16 @@
     "date": "2024-10-11",
     "events": [
       {
+        "title": "Cheers & Chews with Mr. Bear: A Pre-Party Gathering!",
+        "time": "6:30 PM",
+        "place_url": "",
+        "price": "N/A",
+        "rsvp_url": "",
+        "facebook": "",
+        "place": "Beim Lentz",
+        "description": "Fancy a meal and mingle with fellow bears? Let's gather at Beim Lentz this Saturday.",
+        "ticket_url": ""
+      },{
         "title": "Meet & Greet",
         "time": "9:00 PM",
         "place": "Let's Boyz",
@@ -51,18 +61,7 @@
     "date": "2024-10-12",
     "events": [
       {
-        "title": "Cheers & Chews with Mr. Bear: A Pre-Party Gathering!",
-        "time": "6:30 PM",
-        "place_url": "",
-        "price": "N/A",
-        "rsvp_url": "",
-        "facebook": "",
-        "place": "Beim Lentz",
-        "description": "Fancy a meal and mingle with fellow bears? Let's gather at Beim Lentz this Saturday.",
-        "ticket_url": ""
-      },
-      {
-        "title": "Electio night + Woof Bear Pride",
+        "title": "Election night + Woof Bear Pride",
         "time": "11:00 PM",
         "place": "Ground Luxembourg",
         "description": "Your men-only party, special Bear Pride Edition. International Djs, performers and the freshly crown Mr. Bear Luxembourg 2025!",
@@ -75,7 +74,7 @@
     ]
   },
   {
-    "date": "2024-09-15",
+    "date": "2024-10-13",
     "events": [
       {
         "title": "Bear Brunch",
@@ -84,9 +83,9 @@
         "ticket_url": "",
         "rsvp_url": "",
         "time": "",
-        "place": "TBD",
-        "price": "TBD",
-        "place_url": ""
+        "place": "Paname",
+        "price": "A la carte",
+        "place_url": "https://g.co/kgs/bmkk1x9"
       },
       {
         "title": "Bear Sauna",
