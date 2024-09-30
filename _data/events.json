@@ -39,7 +39,7 @@
         "time": "6:30 PM",
         "place_url": "https://g.co/kgs/a3VW2aE",
         "price": "N/A",
-        "rsvp_url": "https://g.co/kgs/a3VW2aE",
+        "rsvp_url": "https://fb.me/e/3PCKoLfSw",
         "facebook": "https://fb.me/e/3PCKoLfSw",
         "place": "Beim Lentz",
         "description": "Fancy a meal and mingle with fellow bears? Let's gather at Beim Lentz this Saturday. Please RSVP on the Facebook event so we can accommodate you all.",
@@ -60,6 +60,17 @@
   {
     "date": "2024-10-12",
     "events": [
+      {
+        "title": "Bear Diner: Fondue party",
+        "time": "7 PM",
+        "place": "Beim Lentz",
+        "place_url": "https://g.co/kgs/a3VW2aE",
+        "price": "31€",
+        "description": "Join us for a delightful Fondue Party as part of Bear Pride Luxembourg. Enjoy an evening of delicious food, laughter, and community spirit for just €31 per person. Reserve your spot now and don't miss out on this flavorful celebration!",
+        "facebook": "",
+        "rsvp_url": "https://f.bears.lu/beardiner",
+        "ticket_url": ""
+      },
       {
         "title": "Election night + Woof Bear Pride",
         "time": "11:00 PM",
