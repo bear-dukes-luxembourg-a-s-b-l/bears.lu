@@ -54,9 +54,9 @@
   "frontMatter.git.enabled": true,
   "frontMatter.data.files": [
     {
-      "id" : "candidates",
-      "title" : "Candidates",
-      "file" : "[[workspace]]/_data/candidates.json",
+      "id": "candidates",
+      "title": "Candidates",
+      "file": "[[workspace]]/_data/candidates.json",
       "fileType": "json",
       "labelField": "name",
       "singleEntry": false,
@@ -72,7 +72,7 @@
         ],
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
             "title": "Name"
           },
           "age": {
@@ -120,7 +120,62 @@
             },
             "title": "Links"
           }
+        }
       }
+    },{
+      "id": "events",
+      "title": "Events",
+      "file": "[[workspace]]/_data/events.json",
+      "fileType": "json",
+      "labelField": "date",
+      "singleEntry": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Date"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title"
+                },
+                "time": {
+                  "type": "string",
+                  "title": "Time"
+                },
+                "place": {
+                  "type": "string",
+                  "title": "Place"
+                },
+                "price": {
+                  "type": "string",
+                  "title": "Price"
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description"
+                },
+                "facebook": {
+                  "type": "string",
+                  "title": "Facebook"
+                },
+                "ticket_url": {
+                  "type": "string",
+                  "title": "Ticket URL"
+                },
+                "rsvp_url": {
+                  "type": "string",
+                  "title": "RSVP URL"
+                }
+
     }
-  ]
+  ],
+  "frontMatter.website.host": "https://bears.lu"
 }
