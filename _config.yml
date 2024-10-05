@@ -64,7 +64,7 @@ bearpride:
       Join us for Bear Pride Luxembourg 2024—let’s celebrate our shared community spirit!
   facebook_main_event: https://fb.me/e/3aTqGHFDo
   combo_ticket_url:
-  application_open: true
+  application_open: false
   candidate_list: true
   hotel_cta:
     display: false
