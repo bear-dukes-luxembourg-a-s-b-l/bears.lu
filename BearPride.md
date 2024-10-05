@@ -116,7 +116,7 @@ We are always looking for sponsors and offering a wide range of compensation. Yo
 
 They are kindly sponsor the entire weekend.
 
-<div class="ui medium rounded images">
+<div class="ui big rounded images">
 {% for sponsor in site.data.sponsors.gold %}
 <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
@@ -128,7 +128,7 @@ They are kindly sponsor the entire weekend.
 
 They are offering prizes for the Mr. Bear Luxembourg candidates.
 
-<div class="ui tiny images">
+<div class="ui big images">
 {% for sponsor in site.data.sponsors.silver %}
 <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
@@ -140,7 +140,7 @@ They are offering prizes for the Mr. Bear Luxembourg candidates.
 
 They are helping us to raise awarness about our events.
 
-<div class="ui mini images">
+<div class="ui tiny images">
 {% for sponsor in site.data.sponsors.media %}
 <a href="{{sponsor.url}}" title="{{sponsor.title}}"><img src="{{sponsor.image}}" alt="{{sponsor.name}}" class="ui image"></a>
 {% endfor %}
