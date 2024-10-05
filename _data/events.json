@@ -89,11 +89,11 @@
     "events": [
       {
         "title": "Bear Brunch",
-        "description": "More information soon",
-        "facebook": "",
+        "description": "Join us for a delightful Bear Pride Brunch. Enjoy a range of brunch options from €27 to €41, with bottomless Mimosa for €40 or Prosecco for €35. You can also choose items à la carte. Seating is extremely limited, so RSVP ASAP. Don't miss out on this fabulous gathering!",
+        "facebook": "https://fb.me/e/212ViIuLX",
         "ticket_url": "",
-        "rsvp_url": "",
-        "time": "",
+        "rsvp_url": "https://f.bears.lu/brunch",
+        "time": "12:30",
         "place": "Paname",
         "price": "A la carte",
         "place_url": "https://g.co/kgs/bmkk1x9"
