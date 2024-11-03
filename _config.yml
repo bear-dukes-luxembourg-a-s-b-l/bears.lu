@@ -49,7 +49,7 @@ baseurl: "/"
 email: contact@bears.lu
 
 bearpride:
-  enabled: true #that will display the bear pride panel on homepage
+  enabled: false #that will display the bear pride panel on homepage
   homepage_panel:
     title: "Bear Pride Luxembourg"
     description: |-
