@@ -8,8 +8,8 @@
             {{ site.title | escape }}
         </a>
         <div class="right menu">
-          {% for item in site.menus.header %}
-          <a href="{{item.url}}" class="item menu-item-{{ loop.index }}" title="See {{item.title}}">{{item.title}}</a>
+          {% for item in site.data.menus.header %}
+          <a href="{{item.url}}" class="item menu-item-{{ forloop.index }}" title="See {{item.title}}">{{item.title}}</a>
           {%- endfor -%}
         </div>
     </div>

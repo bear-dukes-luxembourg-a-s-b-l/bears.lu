@@ -1,6 +1,22 @@
 ---
 header:
+- url: "/luxembourg-bear-pride"
+  title: Bear Pride
+  identifier: bearpride
+  weight: 1
 - url: "/#events"
   title: Events
   identifier: events
-  weight: 1
+  weight: 2
+- url: "/mr-bear"
+  title: Mister Bear
+  identifier: mrbear
+  weight: 3
+- url: "/news"
+  title: News
+  identifier: news
+  weight: 4
+- url: "/contact"
+  title: Contact Us
+  identifier: contact
+  weight: 5
