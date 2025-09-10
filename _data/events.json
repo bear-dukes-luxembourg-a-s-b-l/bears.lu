@@ -1,113 +1,17 @@
 [
   {
-    "date": "2024-10-09",
+    "date": "",
     "events": [
       {
-        "title": "Vernissage Expo A hug is always the right size",
-        "time": "7:00 PM",
-        "place": "Rainbow Center",
-        "place_url": "https://goo.gl/maps/KgQdL1vs1pGUjSyi7",
-        "price": "Free",
-        "description": "Join us for the opening of ‘A Hug is Always the Right Size’, an inspiring art exhibition celebrating bear culture, body positivity, and community connection, showcasing work from Joseph Wolfgang Ohlert, Julien van Aken and Pit Reiding.",
-        "facebook": "https://fb.me/e/1ZWU6fT6D",
-        "ticket_url": "",
-        "rsvp_url": ""
-      }
-    ]
-  },
-  {
-    "date": "2024-10-10",
-    "events": [
-      {
-        "title": "Bear Movie Night: Cachorro Bear Cub",
-        "time": "7:30 PM",
-        "place": "Rainbow Center",
-        "place_url": "https://goo.gl/maps/KgQdL1vs1pGUjSyi7",
-        "price": "Free",
-        "description": "For the very first time, Bear Pride Luxembourg is excited to introduce a brand-new event to kick off our celebrations - a heartwarming movie night under the stars! Dive into the captivating world of film and join us for this unforgettable evening.",
-        "facebook": "https://fb.me/e/B9AjDREfL",
-        "ticket_url": "",
-        "rsvp_url": ""
-      }
-    ]
-  },
-  {
-    "date": "2024-10-11",
-    "events": [
-      {
-        "title": "Cheers & Chews with Mr. Bear: A Pre-Party Gathering!",
-        "time": "6:30 PM",
-        "place_url": "https://g.co/kgs/a3VW2aE",
-        "price": "N/A",
-        "rsvp_url": "https://fb.me/e/3PCKoLfSw",
-        "facebook": "https://fb.me/e/3PCKoLfSw",
-        "place": "Beim Lentz",
-        "description": "Fancy a meal and mingle with fellow bears? Let's gather at Beim Lentz this Saturday. Please RSVP on the Facebook event so we can accommodate you all.",
-        "ticket_url": ""
-      },{
-        "title": "Meet & Greet",
-        "time": "9:00 PM",
-        "place": "Let's Boyz",
-        "place_url": "https://goo.gl/maps/mvrL4wZdSE4p8u8m6",
-        "price": "N/A",
-        "description": "We are thrilled to announce the inaugural event of Bear Pride Luxembourg 2023 at the freshly opened gay bar, Letz Boys. Join us in celebrating love, diversity, and the power of the bear community!",
-        "facebook": "https://fb.me/e/2tCnkxF6A",
-        "ticket_url": "",
-        "rsvp_url": ""
-      }
-    ]
-  },
-  {
-    "date": "2024-10-12",
-    "events": [
-      {
-        "title": "Bear Diner: Fondue party",
-        "time": "7 PM",
-        "place": "Beim Lentz",
-        "place_url": "https://g.co/kgs/a3VW2aE",
-        "price": "31€",
-        "description": "Join us for a delightful Fondue Party as part of Bear Pride Luxembourg. Enjoy an evening of delicious food, laughter, and community spirit for just €31 per person. Reserve your spot now and don't miss out on this flavorful celebration!",
-        "facebook": "https://fb.me/e/8dHxninx1",
-        "rsvp_url": "https://f.bears.lu/beardiner",
-        "ticket_url": ""
-      },
-      {
-        "title": "Election night + Woof Bear Pride",
-        "time": "11:00 PM",
-        "place": "Ground Luxembourg",
-        "description": "Your men-only party, special Bear Pride Edition. International Djs, performers and the freshly crown Mr. Bear Luxembourg 2025!",
-        "place_url": "https://goo.gl/maps/ddkJAxRzb25fDNSe8",
-        "price": "20, incl. election",
-        "facebook": "https://fb.me/e/6C2Srg2aB",
-        "rsvp_url": "",
-        "ticket_url": ""
-      }
-    ]
-  },
-  {
-    "date": "2024-10-13",
-    "events": [
-      {
-        "title": "Bear Brunch",
-        "description": "Join us for a delightful Bear Pride Brunch. Enjoy a range of brunch options from €27 to €41, with bottomless Mimosa for €40 or Prosecco for €35. You can also choose items à la carte. Seating is extremely limited, so RSVP ASAP. Don't miss out on this fabulous gathering!",
-        "facebook": "https://fb.me/e/212ViIuLX",
-        "ticket_url": "",
-        "rsvp_url": "https://f.bears.lu/brunch",
-        "time": "12:30",
-        "place": "Paname",
-        "price": "A la carte",
-        "place_url": "https://g.co/kgs/bmkk1x9"
-      },
-      {
-        "title": "Bear Sauna",
-        "description": "More information soon",
+        "title": "",
+        "time": "",
+        "place": "",
+        "place_url": "",
+        "price": "",
+        "description": "",
         "facebook": "",
         "ticket_url": "",
-        "rsvp_url": "",
-        "time": "",
-        "place": "TBD",
-        "price": "TBD",
-        "place_url": ""
+        "rsvp_url": ""
       }
     ]
   }
