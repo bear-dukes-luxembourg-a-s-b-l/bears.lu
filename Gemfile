@@ -26,7 +26,7 @@ group :jekyll_plugins do
   gem 'jemoji'
   gem 'jekyll-paginate-v2'
   gem 'jekyll-seo-tag'
-  gem "jekyll-menus"
+# gem "jekyll-menus" # Temporarily disabled due to Jekyll 4.4.1 compatibility
   gem "jekyll-humanize", git:"https://github.com/clawfire/jekyll-humanize.git", branch: 'master'
 end
 
@@ -37,3 +37,4 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 gem "webrick", "~> 1.7"
+gem "ostruct"
