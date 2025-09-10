@@ -32,7 +32,6 @@ logo: "/assets/Bear Dukes Luxembourg.png"
 social:
   name: Thibault M.
   links:
-    - https://twitter.com/clawfire
     - https://github.com/clawfire
     - https://keybase.io/thibault
     - https://www.facebook.com/thibault.milan.1
@@ -54,15 +53,15 @@ bearpride:
     title: "Bear Pride Luxembourg 2025 - Cowboy Edition"
     description: |-
       Saddle up for Bear Pride Luxembourg 2025! This year we're embracing our wild side with a Cowboy Edition theme from October 8-12, 2025.
-      
+
       Four days of unbridled celebration await as Luxembourg's bear community and friends come together for an unforgettable weekend. Whether you're channeling denim daddy vibes, rhinestone rebel energy, or flirty sheriff charm, bring your Wild West fantasy to life in the heart of Europe.
-      
+
       From intimate gatherings to high-energy parties, we're creating spaces for connection, pride, and authentic celebration. Grab your boots (or don't), tip your hat, and join us for a weekend where community spirit meets cowboy swagger.
-      
+
       This Pride, we ride together! 🤠🌈
   facebook_main_event: https://fb.me/e/6bl4Inya6
   combo_ticket_url:
-  application_open: false
+  application_open: true
   candidate_list: true
   hotel_cta:
     display: false

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Bear Pride Luxembourg 2024
-subtitle: 9th to 13th Oct.
+title: Bear Pride Luxembourg 2025
+subtitle: 8th to 12th Oct.
 permalink: luxembourg-bear-pride
 
 ---

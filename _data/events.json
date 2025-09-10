@@ -1,16 +1,59 @@
 [
   {
-    "date": "",
+    "date": "2025-10-08",
     "events": [
       {
-        "title": "",
-        "time": "",
-        "place": "",
-        "place_url": "",
-        "price": "",
-        "description": "",
-        "facebook": "",
+        "title": "Bearaoke After Work",
+        "time": "7:00 PM",
+        "place": "Rainbow Center",
+        "place_url": "https://goo.gl/maps/KgQdL1vs1pGUjSyi7",
+        "price": "Free",
+        "description": "As part of Luxembourg Bear Pride, we're teaming up with the Rainbow Center for a fun and friendly Bearaoke After Work night! Whether you're ready to grab the mic or just want to enjoy the vibes, come sing along to your favorite songs in a relaxed and welcoming atmosphere. Open karaoke, bear vibes & good company. Feel free to bring some drinks or snacks (chips, finger food, etc.) to share! Let's kick off Pride Week with music, laughter, and community. Everyone is welcome!",
+        "facebook": "https://fb.me/e/7APdK7Bkl",
         "ticket_url": "",
+        "rsvp_url": ""
+      }
+    ]
+  },
+  {
+    "date": "2025-10-10",
+    "events": [
+      {
+        "title": "Bear After Work + Diner",
+        "time": "6:30 PM",
+        "place": "Bazaar",
+        "place_url": "https://maps.app.goo.gl/vxPyySDbfCuKvpWo8",
+        "price": "À la carte",
+        "description": "Start your Bear Pride weekend the right way — with a relaxed and stylish Bear After Work at the vibrant Bazaar Luxembourg! Unwind with fellow bears, friends, and allies over cocktails, good food, and great vibes. Whether you're here to mingle, flirt, or just enjoy the atmosphere — this is your perfect Friday evening warm-up! Everyone is welcome – just bring your smile and Bear Pride energy! Booking a table is essential – spots go fast, and we want you comfy and ready for fun.",
+        "facebook": "https://fb.me/e/ax6TDXPEG",
+        "ticket_url": "",
+        "rsvp_url": "https://f.bears.lu/beardiner"
+      },
+      {
+        "title": "Bear Saloon Party",
+        "time": "10:00 PM",
+        "place": "Letz Boys",
+        "place_url": "https://goo.gl/maps/mvrL4wZdSE4p8u8m6",
+        "price": "Free",
+        "description": "The perfect way to kick off Luxembourg Bear Pride! Join us at the Bear Saloon Party – where the vibes are chill, the drinks are flowing, and it's all about being together, just us Bears. Whether you're local or coming in for the weekend – this is where it all begins. Let's start Luxembourg Bear Pride weekend the right way: good music, cold drinks, and great company. See you at the Saloon!",
+        "facebook": "https://fb.me/e/4J1i07F1H",
+        "ticket_url": "",
+        "rsvp_url": ""
+      }
+    ]
+  },
+  {
+    "date": "2025-10-11",
+    "events": [
+      {
+        "title": "Bearback Mountain Party",
+        "time": "9:00 PM",
+        "place": "Melusina Lounge",
+        "place_url": "https://maps.app.goo.gl/qw16mspnBoM8Vxdw8",
+        "price": "15€, only 150 tixs",
+        "description": "Saddle up, cowboys — it's time to ride! Join the furry frontier at BEARBACK MOUNTAIN, the official party of Luxembourg Bear Pride 2025, where denim meets leather, and beards meet beats. Main Event: Mr. Bear Luxembourg 2025 Election — who'll take the crown this year? Come cast your vote and show your support! Expect boot-stompin' beats & wild west vibes, sexy bears, cowboys, cubs & chasers, hot election moments, cool drinks, and untamed fun. Western dress code encouraged (but never required). Whether you're a lone ranger or a party posse, BEARBACK MOUNTAIN is where the West gets wild and the bears get bold.",
+        "facebook": "https://fb.me/e/9QLw8Gfmd",
+        "ticket_url": "https://shotgun.live/events/bearback-mountain?utm_source=website",
         "rsvp_url": ""
       }
     ]
