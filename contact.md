@@ -79,3 +79,26 @@ If you're looking for the sponsoring opportunities: [Bear Pride Sponsoring oppor
     </tbody>
   </table>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bear Dukes Luxembourg",
+  "image": "URL_to_your_logo_image",
+  "@id": "https://bears.lu",
+  "url": "https://bears.lu",
+  "telephone": "+35220334190",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "59 Rue Jean Jaures",
+    "addressLocality": "Dudelange",
+    "postalCode": "3490",
+    "addressCountry": "LU"
+  },
+  "sameAs": [
+    "https://www.facebook.com/groups/beardukes",
+    "https://t.me/bearsLU"
+  ]
+}
+</script>
