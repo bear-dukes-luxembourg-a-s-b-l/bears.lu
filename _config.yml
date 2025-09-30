@@ -61,7 +61,7 @@ bearpride:
       This Pride, we ride together! 🤠🌈
   facebook_main_event: https://fb.me/e/6bl4Inya6
   combo_ticket_url:
-  application_open: true
+  application_open: false
   candidate_list: true
   hotel_cta:
     display: false
