@@ -1,6 +1,6 @@
 [
   {
-    "year": 2015,
+    "year": "2015",
     "name": "José",
     "description": "First Mister Bear in Luxembourg, José travelled Europe to meet other title holders and attend all the Bear Pride he can in order to make our Tiny country known.",
     "image": "/assets/img/uploads/José-3.jpg",
@@ -22,13 +22,13 @@
     }
   },
   {
-    "year": 2019,
+    "year": "2019",
     "name": "Michel",
     "description": "Michel was the globetrotter of the Misters. He participate to more events than any of us all around Europe and made the Bears of Luxembourg known in many new countries. Thanks to him, the Bear Pride 2019 was packed.",
     "image": "/assets/img/uploads/Michel-2.jpg",
     "social": {
-      "instagram": "https://www.instagram.com/mr.bearluxemburg2019/",
-      "facebook": "https://www.facebook.com/michel.krier.5"
+      "facebook": "https://www.facebook.com/michel.krier.5",
+      "instagram": "https://www.instagram.com/mr.bearluxemburg2019/"
     }
   },
   {
@@ -41,7 +41,7 @@
     }
   },
   {
-    "year": 2023,
+    "year": "2023",
     "name": "Steve",
     "description": "Steve is our winner during the 2022 Bear Pride in Luxembourg. He is a passionate bear who loves to nature, plants and meet new people. He is also a passionate about photography.",
     "image": "",
