@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import logo from '../assets/logo.png';
 import { postUrl } from '../lib/posts';
+import Newsletter from '../components/Newsletter.astro';
 
 const eventDays = await getCollection('events');
 const upcoming = eventDays
@@ -123,18 +124,7 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
         </a>
       </div>
 
-      <div class="rounded-2xl border border-border bg-surface p-6">
-        <div class="mb-1 flex items-center gap-2 font-extrabold">
-          <Icon name="mail" class="text-gold" /> Newsletter
-        </div>
-        <div class="mb-3.5 text-sm text-tan">Events and news, straight to your inbox.</div>
-        <div class="flex gap-2">
-          <div class="h-[42px] flex-1 rounded-lg border border-border bg-ink px-3.5 text-sm text-[#6B6254] flex items-center">
-            you@email.lu
-          </div>
-          <button class="h-[42px] flex-none rounded-lg bg-gold px-5 text-sm font-extrabold text-ink">OK</button>
-        </div>
-      </div>
+      <Newsletter />
     </div>
   </section>
 
