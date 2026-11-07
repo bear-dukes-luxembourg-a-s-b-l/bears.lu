@@ -131,6 +131,10 @@ const generalEvents = defineCollection({
     // Marks an event we're just relaying (another city's Bear Pride, a
     // regional weekend…) as opposed to one Bear Dukes itself organizes.
     community: z.boolean().optional(),
+    // Powers the optional "X km from you" line on /calendar (opt-in via
+    // the browser's geolocation API) — the event location's coordinates,
+    // not the visitor's.
+    coordinates: z.object({ lat: z.number(), lon: z.number() }).optional(),
   }),
 });
 

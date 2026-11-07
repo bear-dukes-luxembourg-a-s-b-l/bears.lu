@@ -66,6 +66,13 @@ for (const event of events) {
     >
       Community
     </button>
+    <button
+      type="button"
+      id="locate-me"
+      class="ml-auto rounded-full border border-dashed border-border px-3.5 py-2 text-xs font-bold text-tan"
+    >
+      📍 How far is each one from me?
+    </button>
   </section>
 
   <section class="mx-auto flex max-w-[1240px] flex-col gap-9 px-8 pb-20 pt-9">
@@ -123,5 +130,49 @@ for (const event of events) {
         group.classList.toggle('hidden', !anyVisible);
       });
     });
+  });
+
+  // Fun, fully opt-in: distance from the visitor to each event, using the
+  // browser's own geolocation — nothing is sent anywhere, it's all computed
+  // client-side from the event coordinates already in the page.
+  const locateButton = document.getElementById('locate-me');
+
+  function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number) {
+    const R = 6371;
+    const toRad = (deg: number) => (deg * Math.PI) / 180;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a =
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+
+  locateButton?.addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      locateButton.textContent = "Geolocation isn't available in this browser";
+      return;
+    }
+
+    locateButton.textContent = 'Locating…';
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        document.querySelectorAll<HTMLElement>('[data-lat][data-lon]').forEach((card) => {
+          const lat = parseFloat(card.dataset.lat!);
+          const lon = parseFloat(card.dataset.lon!);
+          const km = Math.round(haversineKm(latitude, longitude, lat, lon));
+          const target = card.querySelector<HTMLElement>('[data-distance]');
+          if (target) target.textContent = ` · ~${km.toLocaleString('en')} km away`;
+        });
+
+        locateButton.remove();
+      },
+      () => {
+        locateButton.textContent = "Couldn't get your location — check your browser's permission for this site";
+      }
+    );
   });
 </script>

@@ -16,7 +16,11 @@ const dayNumber = (iso: string) => new Date(`${iso}T00:00:00`).getDate();
 
 const dark = event.community || index % 2 === 1;
 ---
-<div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
+<div
+  class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4"
+  data-lat={event.coordinates?.lat}
+  data-lon={event.coordinates?.lon}
+>
   <div
     class:list={[
       'flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl',
@@ -30,7 +34,10 @@ const dark = event.community || index % 2 === 1;
   </div>
   <div class="min-w-0 flex-1">
     <div class="truncate text-base font-bold">{event.title}</div>
-    <div class="text-sm text-tan">{event.time} · {event.place}</div>
+    <div class="text-sm text-tan">
+      {event.time} · {event.place}
+      {event.coordinates && <span data-distance></span>}
+    </div>
   </div>
   {event.community ? (
     <span class="flex-none rounded-full border border-tan px-2.5 py-1 text-xs font-bold text-tan">Community</span>
