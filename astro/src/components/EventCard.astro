@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  event: CollectionEntry<'generalEvents'>['data'];
+  /** Alternates the day badge between the rust and dark style; community
+   * events always get the dark one regardless of this. */
+  index: number;
+}
+
+const { event, index } = Astro.props;
+
+const monthShort = (iso: string) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString('en', { month: 'short' });
+const dayNumber = (iso: string) => new Date(`${iso}T00:00:00`).getDate();
+
+const dark = event.community || index % 2 === 1;
+---
+<div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
+  <div
+    class:list={[
+      'flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl',
+      dark ? 'border border-border bg-ink' : 'bg-rust',
+    ]}
+  >
+    <span class="text-xl font-extrabold leading-none">{dayNumber(event.date)}</span>
+    <span class:list={['text-[10px] font-bold uppercase tracking-wide', dark ? 'text-tan' : 'text-gold-pale']}>
+      {monthShort(event.date)}
+    </span>
+  </div>
+  <div class="min-w-0 flex-1">
+    <div class="truncate text-base font-bold">{event.title}</div>
+    <div class="text-sm text-tan">{event.time} · {event.place}</div>
+  </div>
+  {event.community ? (
+    <span class="flex-none rounded-full border border-tan px-2.5 py-1 text-xs font-bold text-tan">Community</span>
+  ) : (
+    event.price && (
+      <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
+        {event.price}
+      </span>
+    )
+  )}
+</div>

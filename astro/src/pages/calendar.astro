@@ -1,0 +1,122 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventCard from '../components/EventCard.astro';
+
+const events = (await getCollection('generalEvents'))
+  .map((entry) => entry.data)
+  .sort((a, b) => a.date.localeCompare(b.date));
+
+const monthLabel = (iso: string) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString('en', { month: 'long', year: 'numeric' });
+
+// Group consecutive events by month, keeping the badge-color alternation
+// (passed down as a running index) continuous across the whole list
+// rather than restarting at each month.
+const months: { label: string; events: typeof events }[] = [];
+for (const event of events) {
+  const label = monthLabel(event.date);
+  const last = months.at(-1);
+  if (last?.label === label) {
+    last.events.push(event);
+  } else {
+    months.push({ label, events: [event] });
+  }
+}
+---
+<BaseLayout title="Calendar" description="Every upcoming bear event — ours, and the wider scene around us.">
+  <section class="mx-auto flex max-w-[1240px] flex-wrap items-end justify-between gap-5 px-8 pb-2 pt-14">
+    <div>
+      <div class="mb-2 text-xs font-extrabold uppercase tracking-wide text-gold">Calendar</div>
+      <h1 class="font-display text-[34px]">Upcoming events</h1>
+      <p class="mt-2 max-w-[520px] text-[15px] text-tan-soft">
+        Everything coming up — ours, and the wider bear scene around us.
+      </p>
+    </div>
+    <a
+      href="/calendar.ics"
+      class="inline-flex items-center gap-2 rounded-full border border-gold px-5 py-2.5 text-sm font-bold text-gold"
+    >
+      ⤓ Subscribe (.ics)
+    </a>
+  </section>
+
+  <section class="mx-auto flex flex-wrap gap-2.5 px-8 pt-4">
+    <button
+      type="button"
+      data-filter="all"
+      class="filter-pill rounded-full bg-gold px-3.5 py-2 text-xs font-bold text-ink"
+    >
+      All
+    </button>
+    <button
+      type="button"
+      data-filter="ours"
+      class="filter-pill rounded-full border border-border px-3.5 py-2 text-xs font-bold text-tan"
+    >
+      Bear Dukes
+    </button>
+    <button
+      type="button"
+      data-filter="community"
+      class="filter-pill rounded-full border border-border px-3.5 py-2 text-xs font-bold text-tan"
+    >
+      Community
+    </button>
+  </section>
+
+  <section class="mx-auto flex max-w-[1240px] flex-col gap-9 px-8 pb-20 pt-9">
+    {events.length > 0 ? (
+      months.map((month) => (
+        <div data-month-group>
+          <div class="font-display mb-3.5 text-sm text-tan">{month.label}</div>
+          <div class="flex flex-col gap-2.5">
+            {month.events.map((event) => (
+              <div data-kind={event.community ? 'community' : 'ours'}>
+                <EventCard event={event} index={events.indexOf(event)} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    ) : (
+      <div class="rounded-2xl border border-dashed border-border p-5 text-sm text-tan">
+        No events scheduled right now — follow our{' '}
+        <a href="https://www.facebook.com/groups/beardukes" class="font-bold text-gold">Facebook group</a>{' '}
+        to know when the next one's up.
+      </div>
+    )}
+  </section>
+</BaseLayout>
+
+<script>
+  const pills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
+  const cards = document.querySelectorAll<HTMLElement>('[data-kind]');
+
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const filter = pill.dataset.filter;
+
+      pills.forEach((p) => {
+        const active = p === pill;
+        p.classList.toggle('bg-gold', active);
+        p.classList.toggle('text-ink', active);
+        p.classList.toggle('border', !active);
+        p.classList.toggle('border-border', !active);
+        p.classList.toggle('text-tan', !active);
+      });
+
+      cards.forEach((card) => {
+        const show = filter === 'all' || card.dataset.kind === filter;
+        card.classList.toggle('hidden', !show);
+      });
+
+      document.querySelectorAll<HTMLElement>('[data-month-group]').forEach((group) => {
+        const anyVisible = [...group.querySelectorAll<HTMLElement>('[data-kind]')].some(
+          (card) => !card.classList.contains('hidden')
+        );
+        group.classList.toggle('hidden', !anyVisible);
+      });
+    });
+  });
+</script>

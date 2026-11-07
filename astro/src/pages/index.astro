@@ -6,6 +6,7 @@ import Icon from '../components/Icon.astro';
 import logo from '../assets/logo.png';
 import { postUrl } from '../lib/posts';
 import Newsletter from '../components/Newsletter.astro';
+import EventCard from '../components/EventCard.astro';
 
 const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 
@@ -29,10 +30,6 @@ const spotlightMrBear = mrbears.find((mister) => mister.data.spotlight);
 // The asbl's own year-round partners — separate from the Bear Pride
 // edition's gold/silver/media sponsors shown on /bear-pride.
 const sponsorLogos = (await getCollection('generalSponsors')).map((entry) => entry.data);
-
-const monthShort = (iso: string) =>
-  new Date(`${iso}T00:00:00`).toLocaleDateString('en', { month: 'short' });
-const dayNumber = (iso: string) => new Date(`${iso}T00:00:00`).getDate();
 
 const latestPosts = (await getCollection('posts'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -134,45 +131,11 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
         <h2 class="font-display flex items-center gap-2 text-2xl">
           <Icon name="paw" class="text-gold" /> Upcoming events
         </h2>
-        <a href="https://www.facebook.com/groups/beardukes" class="text-sm font-bold text-gold">Facebook group →</a>
+        <a href="/calendar" class="text-sm font-bold text-gold">Full calendar →</a>
       </div>
       <div class="flex flex-col gap-3.5">
         {upcoming.length > 0 ? (
-          upcoming.map((event, i) => (
-            <div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
-              <div
-                class:list={[
-                  'flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl',
-                  event.community || i % 2 === 1 ? 'border border-border bg-ink' : 'bg-rust',
-                ]}
-              >
-                <span class="text-xl font-extrabold leading-none">{dayNumber(event.date)}</span>
-                <span
-                  class:list={[
-                    'text-[10px] font-bold uppercase tracking-wide',
-                    event.community || i % 2 === 1 ? 'text-tan' : 'text-gold-pale',
-                  ]}
-                >
-                  {monthShort(event.date)}
-                </span>
-              </div>
-              <div class="min-w-0 flex-1">
-                <div class="truncate text-base font-bold">{event.title}</div>
-                <div class="text-sm text-tan">{event.time} · {event.place}</div>
-              </div>
-              {event.community ? (
-                <span class="flex-none rounded-full border border-tan px-2.5 py-1 text-xs font-bold text-tan">
-                  Community
-                </span>
-              ) : (
-                event.price && (
-                  <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
-                    {event.price}
-                  </span>
-                )
-              )}
-            </div>
-          ))
+          upcoming.map((event, i) => <EventCard event={event} index={i} />)
         ) : (
           <div class="rounded-2xl border border-dashed border-border p-5 text-sm text-tan">
             No events scheduled right now — follow our{' '}
