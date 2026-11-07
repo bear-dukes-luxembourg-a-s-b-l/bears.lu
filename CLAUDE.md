@@ -47,7 +47,7 @@ The Bear Pride functionality is controlled by the `bearpride.enabled` boolean in
 
 ### Data Schema Examples
 Mr. Bear entries include year, name, description, image, and social media links.
-Candidates have photos array, personal info (name, age), about section, motivation, and social links.
-Events contain title, time, venue details, pricing, and external links (Facebook, tickets, RSVP).
+Candidates have a photos array, personal info (name, age), about section, motivation, and social links.
+Events are grouped by day (`events.json` is an array of `{date, events: [...]}`); each event has title, time, venue details, pricing, and external links (Facebook, tickets, RSVP).
 
 The site is deployed on Netlify with auto-launch enabled for development previews.
