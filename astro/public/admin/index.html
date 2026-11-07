@@ -60,5 +60,108 @@
   </head>
   <body>
     <script src="https://unpkg.com/@sveltia/cms@0.261.0/dist/sveltia-cms.js" type="module"></script>
+    <script type="module">
+      // Custom "geocoder" field type: lets an editor search a place name
+      // instead of typing latitude/longitude by hand. Stores the same
+      // { lat, lon } shape the "coordinates" field already expects, via
+      // OpenStreetMap's free Nominatim API (no key needed; usage policy at
+      // https://operations.osmfoundation.org/policies/nominatim/ — fine for
+      // this site's occasional, low-volume use).
+      const { useState } = CMS.React;
+
+      const GeocoderControl = ({ forID, classNameWrapper, value, onChange }) => {
+        const [query, setQuery] = useState('');
+        const [results, setResults] = useState([]);
+        const [loading, setLoading] = useState(false);
+        const [error, setError] = useState('');
+
+        const search = async () => {
+          if (!query.trim()) return;
+          setLoading(true);
+          setError('');
+          setResults([]);
+          try {
+            const res = await fetch(
+              `https://nominatim.openstreetmap.org/search?format=json&limit=5&q=${encodeURIComponent(query)}`
+            );
+            const data = await res.json();
+            if (data.length === 0) setError('No results found — try a broader search.');
+            setResults(data);
+          } catch {
+            setError('Lookup failed — check your connection and try again.');
+          } finally {
+            setLoading(false);
+          }
+        };
+
+        const pick = (result) => {
+          onChange({ lat: parseFloat(result.lat), lon: parseFloat(result.lon) });
+          setResults([]);
+          setQuery(result.display_name);
+        };
+
+        return html`
+          <div class=${classNameWrapper} style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 8px;">
+              <input
+                id=${forID}
+                type="text"
+                placeholder="Search a city or venue…"
+                value=${query}
+                onChange=${(e) => setQuery(e.target.value)}
+                onKeyDown=${(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    search();
+                  }
+                }}
+                style="flex: 1; min-width: 0;"
+              />
+              <button type="button" onClick=${search} disabled=${loading}>
+                ${loading ? 'Searching…' : 'Search'}
+              </button>
+            </div>
+            ${error && html`<div style="color: #d16a6a; font-size: 12px;">${error}</div>`}
+            ${results.length > 0 &&
+            html`
+              <ul
+                style="list-style: none; margin: 0; padding: 0; border: 1px solid #332c23; border-radius: 8px; max-height: 180px; overflow: auto;"
+              >
+                ${results.map(
+                  (r) => html`
+                    <li key=${r.place_id}>
+                      <button
+                        type="button"
+                        onClick=${() => pick(r)}
+                        style="display: block; width: 100%; text-align: left; padding: 8px 10px; background: none; border: none; cursor: pointer; font-size: 13px;"
+                      >
+                        ${r.display_name}
+                      </button>
+                    </li>
+                  `
+                )}
+              </ul>
+            `}
+            ${value?.lat != null &&
+            value?.lon != null &&
+            html`
+              <div style="font-size: 12px; color: #afa393;">
+                Current: ${value.lat.toFixed(4)}, ${value.lon.toFixed(4)}
+                <button type="button" onClick=${() => onChange(undefined)} style="margin-left: 8px;">
+                  Clear
+                </button>
+              </div>
+            `}
+          </div>
+        `;
+      };
+
+      const GeocoderPreview = ({ value }) =>
+        value?.lat != null
+          ? html`<span>${value.lat.toFixed(4)}, ${value.lon.toFixed(4)}</span>`
+          : html`<span>—</span>`;
+
+      CMS.registerFieldType('geocoder', GeocoderControl, GeocoderPreview);
+    </script>
   </body>
 </html>

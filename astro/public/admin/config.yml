@@ -199,13 +199,10 @@ collections:
         required: false
         hint: "Tick this for events we're just relaying — other bear groups' Prides, regional weekends, etc. Leave off for events Bear Dukes itself organizes."
       - name: coordinates
-        label: "Coordinates (for the \"X km from you\" feature)"
-        widget: object
+        label: "Location (for the \"X km from you\" feature)"
+        widget: geocoder
         required: false
-        collapsed: true
-        fields:
-          - { name: lat, label: Latitude, widget: number, value_type: float }
-          - { name: lon, label: Longitude, widget: number, value_type: float }
+        hint: "Search a city or venue and pick the right result — no need to look up coordinates by hand."
 
   - name: posts
     label: News
