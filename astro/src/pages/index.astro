@@ -7,9 +7,10 @@ import logo from '../assets/logo.png';
 import { postUrl } from '../lib/posts';
 import Newsletter from '../components/Newsletter.astro';
 
-const eventDays = await getCollection('events');
-const upcoming = eventDays
-  .flatMap((day) => day.data.events.map((event) => ({ ...event, date: day.data.date })))
+// General community events (not the Bear Pride week's own programme, which
+// lives on /bear-pride and comes from the `events` collection).
+const upcoming = (await getCollection('generalEvents'))
+  .map((entry) => entry.data)
   .sort((a, b) => a.date.localeCompare(b.date))
   .slice(0, 3);
 
@@ -18,10 +19,9 @@ const mrbears = (await getCollection('mrbears')).sort(
   (a, b) => yearNumber(b.data.year) - yearNumber(a.data.year)
 );
 
-const sponsorTiers = await getCollection('sponsors');
-const silver = sponsorTiers.find((tier) => tier.id === 'silver')?.data ?? [];
-const media = sponsorTiers.find((tier) => tier.id === 'media')?.data ?? [];
-const sponsorLogos = [...silver, ...media].slice(0, 6);
+// The asbl's own year-round partners — separate from the Bear Pride
+// edition's gold/silver/media sponsors shown on /bear-pride.
+const sponsorLogos = (await getCollection('generalSponsors')).map((entry) => entry.data);
 
 const monthShort = (iso: string) =>
   new Date(`${iso}T00:00:00`).toLocaleDateString('en', { month: 'short' });
@@ -67,29 +67,34 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
         <h2 class="font-display flex items-center gap-2 text-2xl">
           <Icon name="paw" class="text-gold" /> Upcoming events
         </h2>
-        <a href="/bear-pride" class="text-sm font-bold text-gold">Full calendar →</a>
+        <a href="https://www.facebook.com/groups/beardukes" class="text-sm font-bold text-gold">Facebook group →</a>
       </div>
       <div class="flex flex-col gap-3.5">
-        {upcoming.map((event) => (
-          <div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
-            <div class="flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl bg-rust">
-              <span class="text-xl font-extrabold leading-none">{dayNumber(event.date)}</span>
-              <span class="text-[10px] font-bold uppercase tracking-wide text-gold-pale">{monthShort(event.date)}</span>
+        {upcoming.length > 0 ? (
+          upcoming.map((event) => (
+            <div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
+              <div class="flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl bg-rust">
+                <span class="text-xl font-extrabold leading-none">{dayNumber(event.date)}</span>
+                <span class="text-[10px] font-bold uppercase tracking-wide text-gold-pale">{monthShort(event.date)}</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="truncate text-base font-bold">{event.title}</div>
+                <div class="text-sm text-tan">{event.time} · {event.place}</div>
+              </div>
+              {event.price && (
+                <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
+                  {event.price}
+                </span>
+              )}
             </div>
-            <div class="min-w-0 flex-1">
-              <div class="truncate text-base font-bold">{event.title}</div>
-              <div class="text-sm text-tan">{event.time} · {event.place}</div>
-            </div>
-            {event.price && (
-              <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
-                {event.price}
-              </span>
-            )}
+          ))
+        ) : (
+          <div class="rounded-2xl border border-dashed border-border p-5 text-sm text-tan">
+            No events scheduled right now — follow our{' '}
+            <a href="https://www.facebook.com/groups/beardukes" class="font-bold text-gold">Facebook group</a>{' '}
+            to know when the next one's up.
           </div>
-        ))}
-        <a href="/bear-pride" class="rounded-xl border border-dashed border-border p-2.5 text-center text-sm font-bold text-tan">
-          + see the full programme
-        </a>
+        )}
       </div>
     </div>
 

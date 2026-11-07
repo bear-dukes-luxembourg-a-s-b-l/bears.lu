@@ -113,11 +113,44 @@ const sponsorEntry = z.object({
 });
 
 const sponsors = defineCollection({
-  // Top-level keys (gold / silver / media) become entry ids; each value is
-  // that tier's list of sponsors. Object-shaped data doesn't need an `id`
-  // field, so the built-in file() loader works fine here.
+  // Bear Pride-specific sponsors for the current edition. Top-level keys
+  // (gold / silver / media) become entry ids; each value is that tier's
+  // list of sponsors. Object-shaped data doesn't need an `id` field, so the
+  // built-in file() loader works fine here.
   loader: file('../_data/sponsors.json'),
   schema: sponsorEntry.array(),
+});
+
+// The asbl's own year-round partners, shown on the home page — separate
+// from `sponsors` (above), which is specific to the current Bear Pride
+// edition and shown on /bear-pride. Starts empty: fill in
+// _data/general-sponsors.json with the real list when ready.
+const generalSponsors = defineCollection({
+  loader: jsonArrayLoader('../_data/general-sponsors.json'),
+  schema: sponsorEntry,
+});
+
+const generalEventEntry = z.object({
+  title: z.string(),
+  date: z.string(),
+  time: z.string(),
+  place: z.string(),
+  place_url: z.string().optional(),
+  price: z.union([z.string(), z.number()]).optional(),
+  description: z.string().optional(),
+  facebook: z.string().optional(),
+  ticket_url: z.string().optional(),
+  rsvp_url: z.string().optional(),
+});
+
+// General community events shown on the home page — separate from
+// `events` (below), which is the Bear Pride week's own programme and
+// shown on /bear-pride. The Jekyll site used an Airtable embed for this;
+// this is the "manage it ourselves" replacement. Starts empty: fill in
+// _data/general-events.json with real upcoming events when ready.
+const generalEvents = defineCollection({
+  loader: jsonArrayLoader('../_data/general-events.json'),
+  schema: generalEventEntry,
 });
 
 /**
@@ -258,4 +291,13 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { mrbears, candidates, events, sponsors, bearPrideConfig, posts };
+export const collections = {
+  mrbears,
+  candidates,
+  events,
+  sponsors,
+  generalSponsors,
+  generalEvents,
+  bearPrideConfig,
+  posts,
+};
