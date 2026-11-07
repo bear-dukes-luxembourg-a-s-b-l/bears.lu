@@ -127,52 +127,56 @@ const descriptionParagraphs = bearPride.homepage_panel.description
       {bearPride.candidate_list && (
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {candidates.map((candidate) => (
-            <details class="group overflow-hidden rounded-2xl border border-border bg-surface">
-              <summary class="block cursor-pointer list-none">
-                <div class="relative aspect-square overflow-hidden">
-                  <Image
-                    src={candidate.data.photos[0]}
-                    alt={candidate.data.name}
-                    width={600}
-                    height={600}
-                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
-                  />
-                  <div class="absolute inset-0 flex items-center justify-center bg-ink/70 opacity-0 transition-opacity group-hover:opacity-100">
-                    <span class="flex items-center gap-2.5 text-[17px] font-extrabold text-cream">
-                      <Icon name="info" /> View profile
-                    </span>
+            <div class="group overflow-hidden rounded-2xl border border-border bg-surface">
+              <details>
+                <summary class="block cursor-pointer list-none">
+                  <div class="relative aspect-square overflow-hidden">
+                    <Image
+                      src={candidate.data.photos[0]}
+                      alt={candidate.data.name}
+                      width={600}
+                      height={600}
+                      class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 flex items-center justify-center bg-ink/70 opacity-0 transition-opacity group-hover:opacity-100">
+                      <span class="flex items-center gap-2.5 text-[17px] font-extrabold text-cream">
+                        <Icon name="info" /> View profile
+                      </span>
+                    </div>
+                  </div>
+                  <div class="px-4 pt-4">
+                    <div class="flex items-center justify-between">
+                      <div class="font-extrabold">{candidate.data.name}, {candidate.data.age}</div>
+                      <Icon name="chevron-down" class="details-chevron text-gold transition-transform" />
+                    </div>
+                  </div>
+                </summary>
+                <div class="flex flex-col gap-2.5 px-4 pt-2.5">
+                  <div>
+                    <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">About</div>
+                    <p class="text-xs leading-relaxed text-tan-soft">{candidate.data.about}</p>
+                  </div>
+                  <div>
+                    <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">Motivation</div>
+                    <p class="text-xs leading-relaxed text-tan-soft">{candidate.data.motivation}</p>
                   </div>
                 </div>
-                <div class="p-4">
-                  <div class="flex items-center justify-between">
-                    <div class="font-extrabold">{candidate.data.name}, {candidate.data.age}</div>
-                    <Icon name="chevron-down" class="text-gold transition-transform group-open:rotate-180" />
-                  </div>
-                </div>
-              </summary>
-              <div class="flex flex-col gap-2.5 px-4 pb-4">
-                <div>
-                  <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">About</div>
-                  <p class="text-xs leading-relaxed text-tan-soft">{candidate.data.about}</p>
-                </div>
-                <div>
-                  <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">Motivation</div>
-                  <p class="text-xs leading-relaxed text-tan-soft">{candidate.data.motivation}</p>
-                </div>
-                <div class="flex gap-2">
+              </details>
+              {(candidate.data.links?.instagram || candidate.data.links?.facebook) && (
+                <div class="flex gap-2 px-4 pb-4 pt-2.5">
                   {candidate.data.links?.instagram && (
-                    <a href={candidate.data.links.instagram} title="Instagram" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                    <a href={candidate.data.links.instagram} aria-label={`${candidate.data.name} on Instagram`} title="Instagram" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
                       <Icon name="ig" />
                     </a>
                   )}
                   {candidate.data.links?.facebook && (
-                    <a href={candidate.data.links.facebook} title="Facebook" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                    <a href={candidate.data.links.facebook} aria-label={`${candidate.data.name} on Facebook`} title="Facebook" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
                       <Icon name="fb" />
                     </a>
                   )}
                 </div>
-              </div>
-            </details>
+              )}
+            </div>
           ))}
         </div>
       )}
@@ -251,3 +255,9 @@ const descriptionParagraphs = bearPride.homepage_panel.description
     )}
   </section>
 </BaseLayout>
+
+<style>
+  details[open] .details-chevron {
+    transform: rotate(180deg);
+  }
+</style>
