@@ -193,6 +193,11 @@ collections:
       - { name: facebook, label: "Facebook event URL", widget: string, required: false }
       - { name: ticket_url, label: "Tickets URL", widget: string, required: false }
       - { name: rsvp_url, label: "RSVP URL", widget: string, required: false }
+      - name: community
+        label: "Community event (not organized by us)"
+        widget: boolean
+        required: false
+        hint: "Tick this for events we're just relaying — other bear groups' Prides, regional weekends, etc. Leave off for events Bear Dukes itself organizes."
 
   - name: posts
     label: News

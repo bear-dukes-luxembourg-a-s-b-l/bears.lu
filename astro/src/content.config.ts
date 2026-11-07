@@ -128,6 +128,9 @@ const generalEvents = defineCollection({
     facebook: z.string().optional(),
     ticket_url: z.string().optional(),
     rsvp_url: z.string().optional(),
+    // Marks an event we're just relaying (another city's Bear Pride, a
+    // regional weekend…) as opposed to one Bear Dukes itself organizes.
+    community: z.boolean().optional(),
   }),
 });
 

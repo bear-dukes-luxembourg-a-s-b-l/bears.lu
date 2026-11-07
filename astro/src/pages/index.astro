@@ -145,7 +145,14 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
                 <span class="text-[10px] font-bold uppercase tracking-wide text-gold-pale">{monthShort(event.date)}</span>
               </div>
               <div class="min-w-0 flex-1">
-                <div class="truncate text-base font-bold">{event.title}</div>
+                <div class="flex items-center gap-2">
+                  <div class="truncate text-base font-bold">{event.title}</div>
+                  {event.community && (
+                    <span class="flex-none rounded-full border border-slate px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate">
+                      Community
+                    </span>
+                  )}
+                </div>
                 <div class="text-sm text-tan">{event.time} · {event.place}</div>
               </div>
               {event.price && (
