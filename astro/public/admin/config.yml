@@ -44,6 +44,11 @@ collections:
           - { name: facebook, label: Facebook, widget: string, required: false }
           - { name: instagram, label: Instagram, widget: string, required: false }
           - { name: twitter, label: Twitter, widget: string, required: false }
+      - name: spotlight
+        label: "Show as a homepage announcement"
+        widget: boolean
+        required: false
+        hint: "Turns on a temporary \"Congratulations\" banner on the homepage for this titleholder. Turn it back off once it's been up for a while."
 
   - name: candidates
     label: "Mr. Bear candidates"
@@ -73,6 +78,11 @@ collections:
           - { name: instagram, label: Instagram, widget: string, required: false }
           - { name: facebook, label: Facebook, widget: string, required: false }
           - { name: tiktok, label: TikTok, widget: string, required: false }
+      - name: winner
+        label: "Winner — crowned at this year's election"
+        widget: boolean
+        required: false
+        hint: "Set this on the winning candidate once the election's been held. Swaps this page's candidate grid for a winner announcement."
 
   - name: bear_pride_sponsors
     label: "Bear Pride sponsors"

@@ -18,6 +18,8 @@ const eventDays = Object.values(
   .sort((a, b) => a.date.localeCompare(b.date));
 
 const candidates = await getCollection('candidates');
+const winner = candidates.find((candidate) => candidate.data.winner);
+const otherCandidates = candidates.filter((candidate) => candidate !== winner);
 
 // Likewise, each sponsor is its own entry carrying its own tier.
 const allSponsors = (await getCollection('sponsors')).map((entry) => entry.data);
@@ -119,9 +121,53 @@ const descriptionParagraphs = bearPride.homepage_panel.description
     </div>
   </section>
 
-  <!-- Candidates -->
+  <!-- Candidates / winner reveal -->
   <section id="candidats" class="border-y border-border-soft bg-surface-alt py-16">
     <div class="mx-auto max-w-[1240px] px-8">
+      {winner ? (
+        <div class="text-center">
+          <div class="mb-1.5 flex items-center justify-center gap-2 text-xs font-extrabold uppercase tracking-wide text-gold">
+            <Icon name="crown" /> Election results
+          </div>
+          <h2 class="font-display text-2xl">Meet your new Mr. Bear!</h2>
+
+          <div class="mx-auto mt-7 max-w-[480px] rounded-2xl border border-gold bg-surface p-8">
+            <Image
+              src={winner.data.photos[0]}
+              alt={winner.data.name}
+              width={240}
+              height={240}
+              class="mx-auto h-30 w-30 rounded-full border-[3px] border-gold object-cover p-1"
+            />
+            <div class="font-display mt-3.5 text-[26px]">{winner.data.name}, {winner.data.age}</div>
+            <div class="mt-1 text-xs font-bold text-gold">Mr. Bear Luxembourg</div>
+            <a href="/mr-bear" class="mt-4 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-[13px] font-bold text-ink">
+              View full profile →
+            </a>
+          </div>
+
+          {otherCandidates.length > 0 && (
+            <div class="mx-auto mt-9 max-w-[640px] border-t border-dashed border-border pt-7">
+              <div class="mb-4 text-xs font-extrabold uppercase tracking-wide text-tan">Thank you to all our candidates</div>
+              <div class="flex flex-wrap justify-center gap-7">
+                {otherCandidates.map((candidate) => (
+                  <div class="flex flex-col items-center gap-2 opacity-80">
+                    <Image
+                      src={candidate.data.photos[0]}
+                      alt={candidate.data.name}
+                      width={112}
+                      height={112}
+                      class="h-14 w-14 rounded-full object-cover"
+                    />
+                    <div class="text-xs font-bold">{candidate.data.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <>
       <div class="mb-6 flex items-baseline justify-between">
         <h2 class="font-display flex items-center gap-2 text-2xl">
           <Icon name="crown" class="text-gold" /> Mr. Bear candidates
@@ -199,6 +245,8 @@ const descriptionParagraphs = bearPride.homepage_panel.description
           <p class="text-sm text-tan">Applications are closed right now — follow our socials to know when they reopen.</p>
         )}
       </div>
+        </>
+      )}
     </div>
   </section>
 

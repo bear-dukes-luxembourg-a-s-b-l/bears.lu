@@ -20,6 +20,11 @@ const yearNumber = (year: number | string) => parseInt(String(year), 10) || 0;
 const mrbears = (await getCollection('mrbears')).sort(
   (a, b) => yearNumber(b.data.year) - yearNumber(a.data.year)
 );
+// A titleholder with spotlight:true gets a temporary "Congratulations"
+// banner above the hero — turned on by an editor right after the election,
+// then off again later. If more than one is somehow flagged, show the
+// most recent.
+const spotlightMrBear = mrbears.find((mister) => mister.data.spotlight);
 
 // The asbl's own year-round partners — separate from the Bear Pride
 // edition's gold/silver/media sponsors shown on /bear-pride.
@@ -35,6 +40,58 @@ const latestPosts = (await getCollection('posts'))
 const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric', month: 'short', year: 'numeric' });
 ---
 <BaseLayout title="Home" description="The first bear community in Luxembourg.">
+  <!-- Winner spotlight -->
+  {spotlightMrBear && (
+    <section
+      id="winner-spotlight"
+      data-spotlight-id={spotlightMrBear.id}
+      class="relative overflow-hidden border-b border-border-soft"
+    >
+      <div
+        class="absolute inset-0 opacity-20"
+        style="background: repeating-linear-gradient(115deg, var(--color-rust) 0 50px, var(--color-rust-light) 50px 100px, var(--color-gold) 100px 150px, var(--color-slate) 150px 190px, var(--color-black-flag) 190px 230px, var(--color-red-flag) 230px 270px, var(--color-blue-flag) 270px 310px);"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/55 to-ink/92"></div>
+
+      <button
+        id="winner-spotlight-dismiss"
+        aria-label="Dismiss"
+        class="absolute right-6 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-ink/50 text-tan"
+      >
+        <Icon name="x" />
+      </button>
+
+      <div class="relative mx-auto flex max-w-[900px] flex-col items-center gap-3.5 px-8 py-13 text-center">
+        <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wide text-gold">
+          <Icon name="crown" /> New Mr. Bear Luxembourg
+        </div>
+
+        {spotlightMrBear.data.image ? (
+          <Image
+            src={spotlightMrBear.data.image}
+            alt=""
+            width={264}
+            height={264}
+            class="h-[132px] w-[132px] rounded-full border-[3px] border-gold object-cover p-1"
+          />
+        ) : (
+          <div class="flex h-[132px] w-[132px] items-center justify-center rounded-full border-[3px] border-gold text-[11px] text-muted">
+            photo coming
+          </div>
+        )}
+
+        <h2 class="font-display text-[40px] leading-[1.05]">{spotlightMrBear.data.name}</h2>
+        <p class="max-w-[560px] text-sm text-cream-soft">{spotlightMrBear.data.description}</p>
+
+        <div class="mt-1.5 flex flex-wrap justify-center gap-4">
+          <a href="/mr-bear" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
+            View full profile →
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- Hero -->
   <section class="relative overflow-hidden border-b border-border-soft">
     <div
@@ -191,3 +248,20 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
     </section>
   )}
 </BaseLayout>
+
+{spotlightMrBear && (
+  <script>
+    // Lets a visitor dismiss the winner spotlight for themselves; keyed by
+    // the entry's id so a newly spotlighted titleholder shows again even
+    // if an older one was dismissed.
+    const section = document.getElementById('winner-spotlight');
+    const key = `dismissed-spotlight-${section?.dataset.spotlightId}`;
+    if (section && localStorage.getItem(key)) {
+      section.remove();
+    }
+    document.getElementById('winner-spotlight-dismiss')?.addEventListener('click', () => {
+      localStorage.setItem(key, '1');
+      section?.remove();
+    });
+  </script>
+)}

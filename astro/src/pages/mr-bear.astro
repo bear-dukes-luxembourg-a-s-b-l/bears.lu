@@ -8,6 +8,9 @@ const yearNumber = (year: number | string) => parseInt(String(year), 10) || 0;
 const mrbears = (await getCollection('mrbears')).sort(
   (a, b) => yearNumber(b.data.year) - yearNumber(a.data.year)
 );
+// The most recent year always gets the elevated "current titleholder"
+// treatment — no extra field to maintain, it just follows the data.
+const [currentMrBear, ...pastMrBears] = mrbears;
 
 const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 ---
@@ -34,49 +37,108 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
     </section>
   )}
 
-  <section class="mx-auto flex max-w-[1240px] flex-col gap-5 px-8 py-14">
-    {mrbears.map((mister) => (
-      <div class="flex flex-col gap-6 rounded-2xl border border-border bg-surface p-7 sm:flex-row">
-        {mister.data.image ? (
-          <Image
-            src={mister.data.image}
-            alt={mister.data.name}
-            width={320}
-            height={320}
-            class="h-40 w-40 flex-none rounded-full object-cover"
-          />
-        ) : (
-          <div class="flex h-40 w-40 flex-none items-center justify-center rounded-full border-2 border-dashed border-border bg-ink text-center text-xs text-muted">
-            photo coming
-          </div>
-        )}
-        <div class="flex-1">
-          <div class="mb-2 flex items-baseline gap-3">
-            <span class="font-display text-xl">{mister.data.name}</span>
-            <span class="text-xs font-extrabold uppercase tracking-wide text-gold">Mr. Bear {mister.data.year}</span>
-          </div>
-          <p class="text-sm leading-relaxed text-tan-soft">{mister.data.description}</p>
-          {(mister.data.social?.instagram || mister.data.social?.facebook || mister.data.social?.twitter) && (
-            <div class="mt-4 flex gap-2">
-              {mister.data.social?.instagram && (
-                <a href={mister.data.social.instagram} aria-label={`${mister.data.name} on Instagram`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
-                  <Icon name="ig" />
-                </a>
-              )}
-              {mister.data.social?.facebook && (
-                <a href={mister.data.social.facebook} aria-label={`${mister.data.name} on Facebook`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
-                  <Icon name="fb" />
-                </a>
-              )}
-              {mister.data.social?.twitter && (
-                <a href={mister.data.social.twitter} aria-label={`${mister.data.name} on Twitter`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
-                  <Icon name="twitter" />
-                </a>
-              )}
+  {currentMrBear && (
+    <section class="mx-auto max-w-[1240px] px-8 pt-2">
+      <div class="relative overflow-hidden rounded-2xl border border-gold bg-surface">
+        <div
+          class="absolute inset-0 opacity-15"
+          style="background: repeating-linear-gradient(115deg, var(--color-rust) 0 60px, var(--color-rust-light) 60px 120px, var(--color-gold) 120px 180px, var(--color-slate) 180px 230px, var(--color-black-flag) 230px 280px, var(--color-red-flag) 280px 330px, var(--color-blue-flag) 330px 380px);"
+        ></div>
+        <div class="relative flex flex-col items-center gap-7 p-9 sm:flex-row sm:items-center">
+          <div class="relative flex-none">
+            {currentMrBear.data.image ? (
+              <Image
+                src={currentMrBear.data.image}
+                alt={currentMrBear.data.name}
+                width={336}
+                height={336}
+                class="h-42 w-42 rounded-full border-4 border-gold object-cover p-1"
+              />
+            ) : (
+              <div class="flex h-42 w-42 items-center justify-center rounded-full border-4 border-gold text-xs text-muted">
+                photo coming
+              </div>
+            )}
+            <div class="font-display absolute -bottom-1.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-3 py-1 text-[10px] text-ink">
+              Current titleholder
             </div>
-          )}
+          </div>
+          <div class="flex-1 text-center sm:text-left">
+            <div class="mb-1.5 flex flex-wrap items-baseline justify-center gap-3 sm:justify-start">
+              <span class="font-display text-[28px]">{currentMrBear.data.name}</span>
+              <span class="text-xs font-extrabold uppercase tracking-wide text-gold">Mr. Bear {currentMrBear.data.year}</span>
+            </div>
+            <p class="max-w-[560px] text-sm leading-relaxed text-tan-soft">{currentMrBear.data.description}</p>
+            {(currentMrBear.data.social?.instagram || currentMrBear.data.social?.facebook || currentMrBear.data.social?.twitter) && (
+              <div class="mt-4 flex justify-center gap-2 sm:justify-start">
+                {currentMrBear.data.social?.instagram && (
+                  <a href={currentMrBear.data.social.instagram} aria-label={`${currentMrBear.data.name} on Instagram`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                    <Icon name="ig" />
+                  </a>
+                )}
+                {currentMrBear.data.social?.facebook && (
+                  <a href={currentMrBear.data.social.facebook} aria-label={`${currentMrBear.data.name} on Facebook`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                    <Icon name="fb" />
+                  </a>
+                )}
+                {currentMrBear.data.social?.twitter && (
+                  <a href={currentMrBear.data.social.twitter} aria-label={`${currentMrBear.data.name} on Twitter`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                    <Icon name="twitter" />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    ))}
-  </section>
+    </section>
+  )}
+
+  {pastMrBears.length > 0 && (
+    <section class="mx-auto px-8 pb-14 pt-9">
+      <div class="mx-auto mb-5 max-w-[1240px] text-xs font-extrabold uppercase tracking-wide text-tan">Past titleholders</div>
+      <div class="mx-auto flex max-w-[1240px] flex-col gap-3.5">
+        {pastMrBears.map((mister) => (
+          <div class="flex items-center gap-5 rounded-2xl border border-border bg-surface p-4.5">
+            {mister.data.image ? (
+              <Image
+                src={mister.data.image}
+                alt={mister.data.name}
+                width={112}
+                height={112}
+                class="h-14 w-14 flex-none rounded-full object-cover"
+              />
+            ) : (
+              <div class="flex h-14 w-14 flex-none items-center justify-center rounded-full border-2 border-dashed border-border bg-ink text-center text-[9px] text-muted">
+                photo
+              </div>
+            )}
+            <div class="min-w-0 flex-1">
+              <div class="font-display text-base">{mister.data.name}</div>
+              <div class="text-xs text-tan">Mr. Bear {mister.data.year}</div>
+            </div>
+            {(mister.data.social?.instagram || mister.data.social?.facebook || mister.data.social?.twitter) && (
+              <div class="flex flex-none gap-2">
+                {mister.data.social?.instagram && (
+                  <a href={mister.data.social.instagram} aria-label={`${mister.data.name} on Instagram`} class="flex h-8 w-8 items-center justify-center rounded-full border border-border text-tan">
+                    <Icon name="ig" />
+                  </a>
+                )}
+                {mister.data.social?.facebook && (
+                  <a href={mister.data.social.facebook} aria-label={`${mister.data.name} on Facebook`} class="flex h-8 w-8 items-center justify-center rounded-full border border-border text-tan">
+                    <Icon name="fb" />
+                  </a>
+                )}
+                {mister.data.social?.twitter && (
+                  <a href={mister.data.social.twitter} aria-label={`${mister.data.name} on Twitter`} class="flex h-8 w-8 items-center justify-center rounded-full border border-border text-tan">
+                    <Icon name="twitter" />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
 </BaseLayout>

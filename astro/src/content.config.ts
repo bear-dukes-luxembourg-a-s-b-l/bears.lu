@@ -24,6 +24,11 @@ const mrbears = defineCollection({
         twitter: z.string().optional(),
       })
       .optional(),
+    // Shows a temporary celebratory banner for this titleholder on the
+    // homepage — meant to be turned on right after a new Mr. Bear is
+    // crowned, then off again after a while. Not tied to "most recent
+    // year" so an editor keeps manual control of when it appears/disappears.
+    spotlight: z.boolean().optional(),
   }),
 });
 
@@ -44,6 +49,9 @@ const candidates = defineCollection({
         tiktok: z.string().optional(),
       })
       .optional(),
+    // Set on exactly one candidate once the election's been held — swaps
+    // the Bear Pride page's candidate grid for a winner announcement.
+    winner: z.boolean().optional(),
   }),
 });
 
