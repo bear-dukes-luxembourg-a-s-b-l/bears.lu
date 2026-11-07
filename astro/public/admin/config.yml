@@ -24,63 +24,55 @@ collections:
     label: "Mr. Bear titleholders"
     label_singular: "Mr. Bear"
     description: "The yearly Mr. Bear Luxembourg winners, shown on the homepage and the Mr. Bear page."
-    files:
-      - name: mrbears
-        label: "Mr. Bear titleholders"
-        file: _data/mrbears.json
+    folder: astro/src/content/mrbears
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.year}}-{{slug}}"
+    summary: "{{fields.year}} — {{fields.name}}"
+    fields:
+      - { name: year, label: Year, hint: "e.g. 2024 or 2016/2017" }
+      - { name: name, label: Name }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Photo, widget: image, required: false }
+      - name: social
+        label: "Social links"
+        widget: object
+        required: false
+        collapsed: true
         fields:
-          - name: mrbears
-            label: "Titleholders"
-            widget: list
-            root: true
-            summary: "{{fields.year}} — {{fields.name}}"
-            fields:
-              - { name: year, label: Year, hint: "e.g. 2024 or 2016/2017" }
-              - { name: name, label: Name }
-              - { name: description, label: Description, widget: text }
-              - { name: image, label: Photo, widget: image, required: false }
-              - name: social
-                label: "Social links"
-                widget: object
-                required: false
-                collapsed: true
-                fields:
-                  - { name: facebook, label: Facebook, widget: string, required: false }
-                  - { name: instagram, label: Instagram, widget: string, required: false }
-                  - { name: twitter, label: Twitter, widget: string, required: false }
+          - { name: facebook, label: Facebook, widget: string, required: false }
+          - { name: instagram, label: Instagram, widget: string, required: false }
+          - { name: twitter, label: Twitter, widget: string, required: false }
 
   - name: candidates
     label: "Mr. Bear candidates"
     label_singular: Candidate
     description: "This year's Mr. Bear contestants, shown on the Bear Pride page while applications are open."
-    files:
-      - name: candidates
-        label: "Mr. Bear candidates"
-        file: _data/candidates.json
+    folder: astro/src/content/candidates
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.name}}"
+    summary: "{{fields.name}} ({{fields.age}})"
+    fields:
+      - name: photos
+        label: Photos
+        widget: list
+        field: { name: photo, label: Photo, widget: image }
+      - { name: name, label: Name }
+      - { name: age, label: Age, widget: string }
+      - { name: about, label: About, widget: text }
+      - { name: motivation, label: Motivation, widget: text }
+      - name: links
+        label: "Social links"
+        widget: object
+        required: false
+        collapsed: true
         fields:
-          - name: candidates
-            label: Candidates
-            widget: list
-            root: true
-            summary: "{{fields.name}} ({{fields.age}})"
-            fields:
-              - name: photos
-                label: Photos
-                widget: list
-                field: { name: photo, label: Photo, widget: image }
-              - { name: name, label: Name }
-              - { name: age, label: Age, widget: string }
-              - { name: about, label: About, widget: text }
-              - { name: motivation, label: Motivation, widget: text }
-              - name: links
-                label: "Social links"
-                widget: object
-                required: false
-                collapsed: true
-                fields:
-                  - { name: instagram, label: Instagram, widget: string, required: false }
-                  - { name: facebook, label: Facebook, widget: string, required: false }
-                  - { name: tiktok, label: TikTok, widget: string, required: false }
+          - { name: instagram, label: Instagram, widget: string, required: false }
+          - { name: facebook, label: Facebook, widget: string, required: false }
+          - { name: tiktok, label: TikTok, widget: string, required: false }
 
   - name: bear_pride_sponsors
     label: "Bear Pride sponsors"
@@ -110,21 +102,17 @@ collections:
     label: "Home sponsors"
     label_singular: "Home sponsor"
     description: "The asbl's year-round partners, shown on the homepage — separate from the Bear Pride sponsors above."
-    files:
-      - name: general-sponsors
-        label: "Home sponsors"
-        file: _data/general-sponsors.json
-        fields:
-          - name: sponsors
-            label: Sponsors
-            widget: list
-            root: true
-            summary: "{{fields.name}}"
-            fields:
-              - { name: name, label: Name }
-              - { name: title, label: "Link title", widget: string, required: false }
-              - { name: url, label: "Website URL" }
-              - { name: image, label: Logo, widget: image }
+    folder: astro/src/content/general-sponsors
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.name}}"
+    summary: "{{fields.name}}"
+    fields:
+      - { name: name, label: Name }
+      - { name: title, label: "Link title", widget: string, required: false }
+      - { name: url, label: "Website URL" }
+      - { name: image, label: Logo, widget: image }
 
   - name: bear_pride_schedule
     label: "Bear Pride schedule"

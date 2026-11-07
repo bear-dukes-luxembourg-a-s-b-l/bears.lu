@@ -50,8 +50,12 @@ function jsonArrayLoader(fileName: string): Loader {
   };
 }
 
+// One markdown file per titleholder in src/content/mrbears/ — this used to
+// be a single _data/mrbears.json array, switched to Astro's native
+// file-per-entry shape so each entry is its own row in the CMS instead of
+// one big nested form.
 const mrbears = defineCollection({
-  loader: jsonArrayLoader('../_data/mrbears.json'),
+  loader: glob({ pattern: '**/*.md', base: './src/content/mrbears' }),
   schema: z.object({
     year: z.union([z.number(), z.string()]),
     name: z.string(),
@@ -67,8 +71,10 @@ const mrbears = defineCollection({
   }),
 });
 
+// One markdown file per candidate in src/content/candidates/ — same
+// file-per-entry shape as mrbears above, replacing _data/candidates.json.
 const candidates = defineCollection({
-  loader: jsonArrayLoader('../_data/candidates.json'),
+  loader: glob({ pattern: '**/*.md', base: './src/content/candidates' }),
   schema: z.object({
     photos: z.array(z.string()),
     name: z.string(),
@@ -123,10 +129,11 @@ const sponsors = defineCollection({
 
 // The asbl's own year-round partners, shown on the home page — separate
 // from `sponsors` (above), which is specific to the current Bear Pride
-// edition and shown on /bear-pride. Starts empty: fill in
-// _data/general-sponsors.json with the real list when ready.
+// edition and shown on /bear-pride. One markdown file per sponsor in
+// src/content/general-sponsors/. Starts empty: add a .md file per sponsor
+// when ready.
 const generalSponsors = defineCollection({
-  loader: jsonArrayLoader('../_data/general-sponsors.json'),
+  loader: glob({ pattern: '**/*.md', base: './src/content/general-sponsors' }),
   schema: sponsorEntry,
 });
 
