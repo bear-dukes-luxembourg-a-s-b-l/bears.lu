@@ -20,6 +20,17 @@
   --color-black-flag: #1c1c1c;
   --color-red-flag: #d73b30;
   --color-blue-flag: #4fa3dc;
+
+  --color-muted: #6b6254;
+  --color-cream-soft: #ddd2c2;
+  --color-notice-border: #4a3419;
+  --color-notice-bg: #2a1f12;
+  --color-success: #5ec27a;
+  --color-success-border: #2e5a3a;
+  --color-success-bg: #152318;
+  --color-danger: #d16a6a;
+  --color-danger-border: #5a2e2e;
+  --color-danger-bg: #231515;
 }
 
 body {

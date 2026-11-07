@@ -30,12 +30,12 @@ const descriptionParagraphs = bearPride.homepage_panel.description
   <section class="relative overflow-hidden border-b border-border-soft py-20 text-center">
     <div
       class="absolute inset-0"
-      style="background: repeating-linear-gradient(115deg, #8B4A1F 0 70px, #C97830 70px 140px, #E8C25A 140px 200px, #F3E4C4 200px 250px, #9CA3A8 250px 300px, #1C1C1C 300px 350px, #D73B30 350px 400px, #4FA3DC 400px 450px);"
+      style="background: repeating-linear-gradient(115deg, var(--color-rust) 0 70px, var(--color-rust-light) 70px 140px, var(--color-gold) 140px 200px, var(--color-gold-pale) 200px 250px, var(--color-slate) 250px 300px, var(--color-black-flag) 300px 350px, var(--color-red-flag) 350px 400px, var(--color-blue-flag) 400px 450px);"
     ></div>
-    <div class="absolute inset-0 bg-[#0F0D0B]/72"></div>
+    <div class="absolute inset-0 bg-ink/72"></div>
     <div class="relative mx-auto max-w-[1240px] px-8">
       <h1 class="font-display text-[44px] sm:text-[54px]">{bearPride.homepage_panel.title}</h1>
-      <div class="mx-auto mt-5 flex max-w-[640px] flex-col gap-3 text-[17px] text-[#EADFCE]">
+      <div class="mx-auto mt-5 flex max-w-[640px] flex-col gap-3 text-[17px] text-cream-soft">
         {descriptionParagraphs.map((p) => <p>{p}</p>)}
       </div>
       <div class="mt-7 flex flex-wrap justify-center gap-4">

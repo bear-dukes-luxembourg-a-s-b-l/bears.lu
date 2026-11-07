@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 
 const fieldClass =
-  'rounded-lg border border-border bg-ink px-3.5 py-3 text-sm text-cream placeholder:text-[#6B6254] font-sans';
+  'rounded-lg border border-border bg-ink px-3.5 py-3 text-sm text-cream placeholder:text-muted font-sans';
 ---
 <BaseLayout title="Contact" description="Want to send us an email? Have an inquiry? Fill the form below and we'll get back to you as soon as possible.">
   <section class="mx-auto max-w-[1240px] px-8 pb-4 pt-14">
@@ -20,17 +20,17 @@ const fieldClass =
         <input type="hidden" name="form-name" value="contact" />
 
         <div class="flex flex-col gap-1.5">
-          <label for="name" class="text-sm font-bold text-[#D9CFC0]">Your name *</label>
+          <label for="name" class="text-sm font-bold text-cream-soft">Your name *</label>
           <input class={fieldClass} type="text" id="name" name="name" placeholder="John Doe" required />
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label for="email" class="text-sm font-bold text-[#D9CFC0]">Your email *</label>
+          <label for="email" class="text-sm font-bold text-cream-soft">Your email *</label>
           <input class={fieldClass} type="email" id="email" name="email" placeholder="john@doe.net" required />
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label for="subject" class="text-sm font-bold text-[#D9CFC0]">Subject *</label>
+          <label for="subject" class="text-sm font-bold text-cream-soft">Subject *</label>
           <select class={fieldClass} id="subject" name="subject" required>
             <option value="mrbear">Bear Pride / Mr Bear Luxembourg</option>
             <option value="events">An event in Luxembourg</option>
@@ -41,12 +41,12 @@ const fieldClass =
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label for="message" class="text-sm font-bold text-[#D9CFC0]">Your message *</label>
+          <label for="message" class="text-sm font-bold text-cream-soft">Your message *</label>
           <textarea class={`${fieldClass} min-h-[110px] resize-y`} id="message" name="message" placeholder="Type your message here" required></textarea>
         </div>
 
         <div data-netlify-recaptcha="true"></div>
-        <p class="text-xs text-[#6B6254]">* mandatory fields</p>
+        <p class="text-xs text-muted">* mandatory fields</p>
 
         <button type="submit" class="inline-flex w-fit items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
           Send <Icon name="send" />
@@ -88,7 +88,7 @@ const fieldClass =
         <div class="mb-2.5 flex gap-2.5 rounded-lg border border-border bg-ink p-3 text-[12px] leading-relaxed text-tan-soft">
           We're not recognised as a public-interest non-profit, so we can't issue a tax receipt.
         </div>
-        <div class="flex gap-2.5 rounded-lg border border-[#4A3419] bg-[#2A1F12] p-3 text-[12px] leading-relaxed text-gold-pale">
+        <div class="flex gap-2.5 rounded-lg border border-notice-border bg-notice-bg p-3 text-[12px] leading-relaxed text-gold-pale">
           Please include your email address in the wire transfer's communication field so we can send you a confirmation.
         </div>
       </div>

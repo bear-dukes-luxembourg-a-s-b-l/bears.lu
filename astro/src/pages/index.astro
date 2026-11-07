@@ -37,7 +37,7 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
   <section class="relative overflow-hidden border-b border-border-soft">
     <div
       class="absolute inset-0 opacity-15"
-      style="background: repeating-linear-gradient(115deg, #8B4A1F 0 60px, #C97830 60px 120px, #E8C25A 120px 180px, #9CA3A8 180px 230px, #1C1C1C 230px 280px, #D73B30 280px 330px, #4FA3DC 330px 380px);"
+      style="background: repeating-linear-gradient(115deg, var(--color-rust) 0 60px, var(--color-rust-light) 60px 120px, var(--color-gold) 120px 180px, var(--color-slate) 180px 230px, var(--color-black-flag) 230px 280px, var(--color-red-flag) 280px 330px, var(--color-blue-flag) 330px 380px);"
     ></div>
     <div class="relative mx-auto flex max-w-[1240px] flex-col items-center gap-5 px-8 py-20 text-center">
       <Image src={logo} alt="" width={154} height={256} loading="eager" class="h-32 w-auto drop-shadow-xl" />
@@ -155,7 +155,7 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
                 class="h-[150px] w-[150px] rounded-full border-[3px] border-gold object-cover"
               />
             ) : (
-              <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full border-[3px] border-dashed border-border bg-surface text-[11px] text-[#6B6254]">
+              <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full border-[3px] border-dashed border-border bg-surface text-[11px] text-muted">
                 photo coming
               </div>
             )}

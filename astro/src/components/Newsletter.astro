@@ -47,7 +47,7 @@ import Icon from './Icon.astro';
     box-shadow: none !important;
   }
   .newsletter-embed input.form-control::placeholder {
-    color: #6b6254;
+    color: var(--color-muted);
   }
   .newsletter-embed input.form-control:focus {
     outline: none;
@@ -69,7 +69,7 @@ import Icon from './Icon.astro';
     box-shadow: none !important;
   }
   .newsletter-embed input[type='submit'].btn:hover {
-    background: #f3d27a !important;
+    background: color-mix(in srgb, var(--color-gold) 85%, white) !important;
   }
   .newsletter-embed .emailoctopus-form-row-hp {
     display: none;
