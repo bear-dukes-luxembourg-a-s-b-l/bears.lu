@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import logo from '../assets/logo.png';
 
 const nav = [
   { href: '/', label: 'Home' },
@@ -14,7 +16,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 <header class="sticky top-0 z-10 border-b border-border-soft bg-ink/90 backdrop-blur-sm">
   <div class="mx-auto flex h-[76px] max-w-[1240px] items-center justify-between px-8">
     <a href="/" class="flex items-center gap-3">
-      <img src="/images/logo.png" alt="Bear Dukes Luxembourg" class="h-11 w-auto" />
+      <Image src={logo} alt="Bear Dukes Luxembourg" width={88} height={88} loading="eager" class="h-11 w-auto" />
       <span class="font-display text-[18px] leading-none">
         Bear Dukes<br />
         <span class="text-[11px] tracking-[2px] text-tan normal-case font-sans font-normal">LUXEMBOURG</span>

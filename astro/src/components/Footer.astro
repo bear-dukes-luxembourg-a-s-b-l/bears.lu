@@ -1,15 +1,16 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import logo from '../assets/logo.png';
 ---
 <footer class="mt-auto border-t border-border-soft bg-[#110F0D] py-10">
   <div class="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-6 px-8">
     <div class="flex items-center gap-2.5">
-      <img src="/images/logo.png" alt="" class="h-[30px]" />
+      <Image src={logo} alt="" width={60} height={60} loading="eager" class="h-[30px] w-auto" />
       <span class="text-[13px] text-tan">© Bear Dukes Luxembourg a.s.b.l.</span>
     </div>
     <nav class="flex flex-wrap gap-5 text-[13px] text-tan">
       <a href="https://www.facebook.com/groups/beardukes" class="inline-flex items-center gap-1.5"><Icon name="fb" /> Facebook</a>
-      <a href="#" class="inline-flex items-center gap-1.5"><Icon name="ig" /> Instagram</a>
       <a href="https://shop.bears.lu/" class="inline-flex items-center gap-1.5"><Icon name="bag" /> Shop</a>
       <a href="/contact">Contact</a>
       <a href="/legal">Legal</a>
