@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import IconSprite from '../components/IconSprite.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Bear Dukes Luxembourg — the first bear community in Luxembourg.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | Bear Dukes Luxembourg</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${title} | Bear Dukes Luxembourg`} />
+    <meta property="og:description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <IconSprite />
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

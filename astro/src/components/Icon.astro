@@ -1,0 +1,8 @@
+---
+interface Props {
+  name: string;
+  class?: string;
+}
+const { name, class: className = '' } = Astro.props;
+---
+<svg class:list={['inline-block size-[1em] align-[-0.15em] fill-none stroke-current stroke-2', className]}><use href={`#i-${name}`}/></svg>

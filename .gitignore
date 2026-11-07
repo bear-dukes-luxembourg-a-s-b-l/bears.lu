@@ -82,6 +82,9 @@ build/Release
 
 # Dependency directories
 node_modules/
+astro/dist/
+astro/.astro/
+.claude/settings.local.json
 jspm_packages/
 
 # TypeScript v1 declaration files

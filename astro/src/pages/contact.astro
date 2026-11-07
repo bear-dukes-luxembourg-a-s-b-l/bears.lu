@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+
+const fieldClass =
+  'rounded-lg border border-border bg-ink px-3.5 py-3 text-sm text-cream placeholder:text-[#6B6254] font-sans';
+---
+<BaseLayout title="Contact" description="Want to send us an email? Have an inquiry? Fill the form below and we'll get back to you as soon as possible.">
+  <section class="mx-auto max-w-[1240px] px-8 pb-4 pt-14">
+    <div class="font-display text-[13px] font-extrabold tracking-[1.5px] text-gold mb-2">Got a question or want to join us?</div>
+    <h1 class="font-display text-[42px]">Contact</h1>
+    <p class="mt-2 max-w-[640px] text-[15px] text-tan-soft">
+      Fill the form below and we'll get back to you as soon as possible.
+    </p>
+  </section>
+
+  <section class="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-8 pb-20 pt-6 lg:grid-cols-12 lg:items-start">
+    <div class="rounded-2xl border border-border bg-surface p-7 lg:col-span-7">
+      <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="flex flex-col gap-4">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div class="flex flex-col gap-1.5">
+          <label for="name" class="text-sm font-bold text-[#D9CFC0]">Your name *</label>
+          <input class={fieldClass} type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label for="email" class="text-sm font-bold text-[#D9CFC0]">Your email *</label>
+          <input class={fieldClass} type="email" id="email" name="email" placeholder="john@doe.net" required />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label for="subject" class="text-sm font-bold text-[#D9CFC0]">Subject *</label>
+          <select class={fieldClass} id="subject" name="subject" required>
+            <option value="mrbear">Bear Pride / Mr Bear Luxembourg</option>
+            <option value="events">An event in Luxembourg</option>
+            <option value="non-profit">The non-profit's internal work</option>
+            <option value="legal">I'm a lawyer or assimilated</option>
+            <option value="others">Something else</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label for="message" class="text-sm font-bold text-[#D9CFC0]">Your message *</label>
+          <textarea class={`${fieldClass} min-h-[110px] resize-y`} id="message" name="message" placeholder="Type your message here" required></textarea>
+        </div>
+
+        <div data-netlify-recaptcha="true"></div>
+        <p class="text-xs text-[#6B6254]">* mandatory fields</p>
+
+        <button type="submit" class="inline-flex w-fit items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
+          Send <Icon name="send" />
+        </button>
+      </form>
+
+      <div class="mt-5 border-t border-dashed border-border pt-5 text-[13px] text-tan">
+        Looking for sponsoring opportunities?
+        <a class="font-bold text-gold" href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub">Bear Pride sponsoring deck ↗</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="rounded-2xl border border-border bg-surface p-6">
+        <div class="mb-3.5 flex items-center gap-2 text-[16px] font-extrabold">
+          <Icon name="info" class="text-gold" /> Make a donation
+        </div>
+        <p class="mb-4 text-[13px] leading-relaxed text-tan-soft">
+          Your donation helps us organize events and support the community.
+        </p>
+        <dl class="mb-4 flex flex-col gap-2 text-[13px]">
+          <div class="flex justify-between gap-4 border-b border-border-soft pb-1.5">
+            <dt class="text-tan">Account name</dt>
+            <dd class="font-bold text-right">Bear Dukes Luxembourg a.s.b.l.</dd>
+          </div>
+          <div class="flex justify-between gap-4 border-b border-border-soft pb-1.5">
+            <dt class="text-tan">IBAN</dt>
+            <dd class="font-bold text-right">IE54 SUMU 9903 6510 3303 48</dd>
+          </div>
+          <div class="flex justify-between gap-4 border-b border-border-soft pb-1.5">
+            <dt class="text-tan">BIC</dt>
+            <dd class="font-bold text-right">SUMUIE21XXX</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-tan">Bank</dt>
+            <dd class="font-bold text-right">SumUp Payments Limited</dd>
+          </div>
+        </dl>
+        <div class="mb-2.5 flex gap-2.5 rounded-lg border border-border bg-ink p-3 text-[12px] leading-relaxed text-tan-soft">
+          We're not recognised as a public-interest non-profit, so we can't issue a tax receipt.
+        </div>
+        <div class="flex gap-2.5 rounded-lg border border-[#4A3419] bg-[#2A1F12] p-3 text-[12px] leading-relaxed text-gold-pale">
+          Please include your email address in the wire transfer's communication field so we can send you a confirmation.
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "League Spartan", "Inter", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-ink: #141210;
+  --color-surface: #1d1a16;
+  --color-surface-alt: #1a1713;
+  --color-border: #332c23;
+  --color-border-soft: #2a2520;
+  --color-cream: #f3ece1;
+  --color-tan: #afa393;
+  --color-tan-soft: #c9beac;
+  --color-rust: #8b4a1f;
+  --color-rust-light: #c97830;
+  --color-gold: #e8c25a;
+  --color-gold-pale: #f3e4c4;
+  --color-slate: #9ca3a8;
+  --color-black-flag: #1c1c1c;
+  --color-red-flag: #d73b30;
+  --color-blue-flag: #4fa3dc;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
