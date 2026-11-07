@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-{%- if site.bearpride.enabled -%}
+{%- if site.data.bearpride.enabled -%}
 <section class="ui piled segment">
     <h2 class="ui centered align header">Bear Pride Luxembourg {{ 'now' | date: "%Y" }}</h2>
-    <p>{{site.bearpride.homepage_panel.description | markdownify }}</p>
+    <p>{{site.data.bearpride.homepage_panel.description | markdownify }}</p>
     <a href="/luxembourg-bear-pride" class="ui fluid brown button">Checkout Bear Pride Page</a>
 </section>
 {%- endif -%}

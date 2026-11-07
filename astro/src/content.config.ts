@@ -158,10 +158,11 @@ const generalEvents = defineCollection({
 });
 
 /**
- * Reads just the `bearpride:` block out of the Jekyll site's _config.yml,
- * as a single entry with id "bearpride". Everything else in that file
- * (title, social links, pagination…) is irrelevant to the Astro site and
- * left out.
+ * Reads the Bear Pride edition's own settings, as a single entry with id
+ * "bearpride". Used to live nested under `bearpride:` in the Jekyll site's
+ * _config.yml; split into its own file so it can be a standalone Sveltia
+ * CMS file collection without risking a CMS save rewriting the rest of
+ * _config.yml (title, social links, pagination…).
  */
 function bearPrideConfigLoader(fileName: string): Loader {
   return {
@@ -179,7 +180,7 @@ function bearPrideConfigLoader(fileName: string): Loader {
         const parsed = parseYaml(raw) as Record<string, unknown>;
         store.clear();
         const id = 'bearpride';
-        const data = await parseData({ id, data: parsed.bearpride as Record<string, unknown> });
+        const data = await parseData({ id, data: parsed });
         store.set({ id, data });
       }
 
@@ -196,7 +197,7 @@ function bearPrideConfigLoader(fileName: string): Loader {
 }
 
 const bearPrideConfig = defineCollection({
-  loader: bearPrideConfigLoader('../_config.yml'),
+  loader: bearPrideConfigLoader('../_data/bearpride.yml'),
   schema: z.object({
     enabled: z.boolean(),
     homepage_panel: z.object({

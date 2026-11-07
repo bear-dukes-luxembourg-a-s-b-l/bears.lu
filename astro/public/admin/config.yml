@@ -1,0 +1,217 @@
+backend:
+  name: github
+  repo: bear-dukes-luxembourg-a-s-b-l/bears.lu
+  branch: master
+
+# New media uploaded from the CMS lands in /uploads, matching the convention
+# already used by most existing content (candidate photos, sponsor logos…).
+media_folder: uploads
+public_folder: /uploads
+
+# Sveltia omits an optional field entirely when it's left empty, instead of
+# writing an empty string/null — keeps the JSON/YAML/frontmatter files clean
+# and matches what the Astro content schemas (zod `.optional()`) expect.
+output:
+  omit_empty_optional_fields: true
+
+collections:
+  - name: mrbears
+    label: "Mr. Bear titleholders"
+    label_singular: "Mr. Bear"
+    files:
+      - name: mrbears
+        label: "Mr. Bear titleholders"
+        file: _data/mrbears.json
+        fields:
+          - name: mrbears
+            label: "Titleholders"
+            widget: list
+            root: true
+            summary: "{{fields.year}} — {{fields.name}}"
+            fields:
+              - { name: year, label: Year, hint: "e.g. 2024 or 2016/2017" }
+              - { name: name, label: Name }
+              - { name: description, label: Description, widget: text }
+              - { name: image, label: Photo, widget: image, required: false }
+              - name: social
+                label: "Social links"
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: facebook, label: Facebook, widget: string, required: false }
+                  - { name: instagram, label: Instagram, widget: string, required: false }
+                  - { name: twitter, label: Twitter, widget: string, required: false }
+
+  - name: candidates
+    label: "Mr. Bear candidates"
+    label_singular: Candidate
+    files:
+      - name: candidates
+        label: "Mr. Bear candidates"
+        file: _data/candidates.json
+        fields:
+          - name: candidates
+            label: Candidates
+            widget: list
+            root: true
+            summary: "{{fields.name}} ({{fields.age}})"
+            fields:
+              - name: photos
+                label: Photos
+                widget: list
+                field: { name: photo, label: Photo, widget: image }
+              - { name: name, label: Name }
+              - { name: age, label: Age, widget: string }
+              - { name: about, label: About, widget: text }
+              - { name: motivation, label: Motivation, widget: text }
+              - name: links
+                label: "Social links"
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: instagram, label: Instagram, widget: string, required: false }
+                  - { name: facebook, label: Facebook, widget: string, required: false }
+                  - { name: tiktok, label: TikTok, widget: string, required: false }
+
+  - name: bear_pride_sponsors
+    label: "Bear Pride sponsors"
+    label_singular: "Bear Pride sponsor tier"
+    files:
+      - name: sponsors
+        label: "Bear Pride sponsors"
+        file: _data/sponsors.json
+        fields:
+          - name: gold
+            label: Gold
+            widget: list
+            field: &sponsor_fields
+              name: sponsor
+              label: Sponsor
+              widget: object
+              fields:
+                - { name: name, label: Name }
+                - { name: title, label: "Link title", widget: string, required: false }
+                - { name: url, label: "Website URL" }
+                - { name: image, label: Logo, widget: image }
+          - { name: silver, label: Silver, widget: list, field: *sponsor_fields }
+          - { name: media, label: "Media partners", widget: list, field: *sponsor_fields }
+
+  - name: general_sponsors
+    label: "Home sponsors"
+    label_singular: "Home sponsor"
+    files:
+      - name: general-sponsors
+        label: "Home sponsors"
+        file: _data/general-sponsors.json
+        fields:
+          - name: sponsors
+            label: Sponsors
+            widget: list
+            root: true
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Name }
+              - { name: title, label: "Link title", widget: string, required: false }
+              - { name: url, label: "Website URL" }
+              - { name: image, label: Logo, widget: image }
+
+  - name: bear_pride_schedule
+    label: "Bear Pride schedule"
+    label_singular: "Day"
+    files:
+      - name: events
+        label: "Bear Pride schedule"
+        file: _data/events.json
+        fields:
+          - name: days
+            label: Days
+            widget: list
+            root: true
+            summary: "{{fields.date}}"
+            fields:
+              - { name: date, label: Date, widget: date, date_format: "yyyy-MM-dd" }
+              - name: events
+                label: Events
+                widget: list
+                summary: "{{fields.title}} — {{fields.time}}"
+                fields:
+                  - { name: title, label: Title }
+                  - { name: time, label: Time, hint: "e.g. 7:00 PM" }
+                  - { name: place, label: Venue }
+                  - { name: place_url, label: "Venue map URL", widget: string, required: false }
+                  - { name: price, label: Price, widget: string, required: false, hint: "e.g. Free, 15€" }
+                  - { name: description, label: Description, widget: text, required: false }
+                  - { name: facebook, label: "Facebook event URL", widget: string, required: false }
+                  - { name: ticket_url, label: "Tickets URL", widget: string, required: false }
+                  - { name: rsvp_url, label: "RSVP URL", widget: string, required: false }
+
+  - name: bear_pride_config
+    label: "Bear Pride edition settings"
+    label_singular: "Bear Pride edition"
+    files:
+      - name: bearpride
+        label: "Bear Pride edition settings"
+        file: _data/bearpride.yml
+        fields:
+          - { name: enabled, label: "Show the Bear Pride panel on the homepage", widget: boolean }
+          - name: homepage_panel
+            label: "Homepage panel"
+            widget: object
+            fields:
+              - { name: title, label: Title }
+              - { name: description, label: Description, widget: text }
+          - { name: facebook_main_event, label: "Main event Facebook URL", widget: string, required: false }
+          - { name: combo_ticket_url, label: "Combo ticket URL", widget: string, required: false }
+          - { name: application_open, label: "Mr. Bear applications open", widget: boolean }
+          - { name: candidate_list, label: "Show the candidate list", widget: boolean }
+          - name: hotel_cta
+            label: "Hotel call-to-action"
+            widget: object
+            fields:
+              - { name: display, label: Show, widget: boolean }
+              - { name: content, label: Content, widget: text }
+              - { name: url, label: "Booking URL" }
+
+  - name: general_events
+    label: "Home events"
+    label_singular: Event
+    folder: astro/src/content/general-events
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.date}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: date, date_format: "yyyy-MM-dd" }
+      - { name: time, label: Time, hint: "e.g. 7:00 PM" }
+      - { name: place, label: Venue }
+      - { name: place_url, label: "Venue map URL", widget: string, required: false }
+      - { name: price, label: Price, widget: string, required: false, hint: "e.g. Free, 15€" }
+      - { name: facebook, label: "Facebook event URL", widget: string, required: false }
+      - { name: ticket_url, label: "Tickets URL", widget: string, required: false }
+      - { name: rsvp_url, label: "RSVP URL", widget: string, required: false }
+
+  - name: posts
+    label: News
+    label_singular: "News post"
+    folder: _posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { name: layout, label: Layout, widget: hidden, default: post }
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DD HH:mm:ss Z" }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: author, label: Author, widget: string, required: false }
+      - name: categories
+        label: Categories
+        widget: list
+        required: false
+        field: { name: category, label: Category, widget: string }
+      - { name: body, label: Body, widget: markdown }

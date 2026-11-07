@@ -5,14 +5,14 @@ subtitle: 8th to 12th Oct.
 permalink: luxembourg-bear-pride
 
 ---
-{{site.bearpride.homepage_panel.description | markdownify }}
+{{site.data.bearpride.homepage_panel.description | markdownify }}
 
-{% if site.bearpride.facebook_main_event %}
-<a href="{{site.bearpride.facebook_main_event}}" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
+{% if site.data.bearpride.facebook_main_event %}
+<a href="{{site.data.bearpride.facebook_main_event}}" class="ui facebook button"><i class="facebook icon"></i> Entire weekend event</a>
 {% endif %}
 
-{% if site.bearpride.combo_ticket_url %}
-<a href="{{site.bearpride.combo_ticket_url}}" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a>
+{% if site.data.bearpride.combo_ticket_url %}
+<a href="{{site.data.bearpride.combo_ticket_url}}" class="ui brown button"><i class="ticket alternate  icon"></i> Entire weekend pass (with discount)</a>
 {% endif %}
 
 
@@ -30,11 +30,11 @@ permalink: luxembourg-bear-pride
 {% endfor %}
 </div>
 
-{% if site.bearpride.hotel_cta.display %}
+{% if site.data.bearpride.hotel_cta.display %}
 <div class="ui floating message">
   <div class="header"><i class="icon hotel"></i> Need an hotel?</div>
-  {{ site.bearpride.hotel_cta.content | markdownify}}
-  <p>Use <a href="{{site.bearpride.hotel_cta.url}}">this form</a> to make your booking and they'll get back to you ASAP.
+  {{ site.data.bearpride.hotel_cta.content | markdownify}}
+  <p>Use <a href="{{site.data.bearpride.hotel_cta.url}}">this form</a> to make your booking and they'll get back to you ASAP.
   </p>
 </div>
 {% endif %}
@@ -59,7 +59,7 @@ So, don't delay! Start your journey today and apply to become the face of Bear D
 
 {% include _bearpride_applications.html content=application_content %}
 
-{%- if site.bearpride.candidate_list -%}
+{%- if site.data.bearpride.candidate_list -%}
 
 ## Mr Bear Election Candidates
 
