@@ -1,16 +1,174 @@
 ---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import logo from '../assets/logo.png';
+
+const eventDays = await getCollection('events');
+const upcoming = eventDays
+  .flatMap((day) => day.data.events.map((event) => ({ ...event, date: day.data.date })))
+  .sort((a, b) => a.date.localeCompare(b.date))
+  .slice(0, 3);
+
+const yearNumber = (year: number | string) => parseInt(String(year), 10) || 0;
+const mrbears = (await getCollection('mrbears')).sort(
+  (a, b) => yearNumber(b.data.year) - yearNumber(a.data.year)
+);
+
+const sponsorTiers = await getCollection('sponsors');
+const silver = sponsorTiers.find((tier) => tier.id === 'silver')?.data ?? [];
+const media = sponsorTiers.find((tier) => tier.id === 'media')?.data ?? [];
+const sponsorLogos = [...silver, ...media].slice(0, 6);
+
+const monthShort = (iso: string) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString('en', { month: 'short' });
+const dayNumber = (iso: string) => new Date(`${iso}T00:00:00`).getDate();
 ---
-<BaseLayout title="Home" description="The bear community of Luxembourg.">
-  <section class="mx-auto max-w-[1240px] px-8 py-20 text-center text-tan-soft">
-    <p class="font-display text-2xl">Homepage coming in step 2 of the migration.</p>
-    <p class="mt-3 text-sm">
-      See <a class="text-gold font-semibold" href="/contact">/contact</a>,
-      <a class="text-gold font-semibold" href="/legal">/legal</a>,
-      <a class="text-gold font-semibold" href="/legals">/legals</a>,
-      <a class="text-gold font-semibold" href="/safer-sex">/safer-sex</a>,
-      <a class="text-gold font-semibold" href="/payment/success">/payment/success</a> and
-      <a class="text-gold font-semibold" href="/payment/cancelled">/payment/cancelled</a> for now.
-    </p>
+<BaseLayout title="Home" description="The first bear community in Luxembourg.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border-soft">
+    <div
+      class="absolute inset-0 opacity-15"
+      style="background: repeating-linear-gradient(115deg, #8B4A1F 0 60px, #C97830 60px 120px, #E8C25A 120px 180px, #9CA3A8 180px 230px, #1C1C1C 230px 280px, #D73B30 280px 330px, #4FA3DC 330px 380px);"
+    ></div>
+    <div class="relative mx-auto flex max-w-[1240px] flex-col items-center gap-5 px-8 py-20 text-center">
+      <Image src={logo} alt="" width={256} height={256} loading="eager" class="h-32 w-auto drop-shadow-xl" />
+      <div class="font-display text-xs tracking-[1.5px] text-gold">LGBTQ+ Bear community · since 2015</div>
+      <h1 class="font-display max-w-[760px] text-[44px] leading-[1.05] sm:text-[56px]">
+        The bear community of Luxembourg
+      </h1>
+      <p class="max-w-[560px] text-lg text-tan-soft">
+        Monthly get-togethers, bear events and the annual Bear Pride in Luxembourg City.
+        Grab your boots, join the pack.
+      </p>
+      <div class="mt-2 flex flex-wrap justify-center gap-4">
+        <a href="/bear-pride" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
+          Bear Pride 2026 →
+        </a>
+        <a href="#events" class="inline-flex items-center gap-2 rounded-full border-2 border-cream px-6 py-3.5 text-[15px] font-bold text-cream">
+          See upcoming events
+        </a>
+      </div>
+    </div>
   </section>
+
+  <!-- Hub: events + news -->
+  <section id="events" class="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-8 py-16 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      <div class="mb-5 flex items-baseline justify-between">
+        <h2 class="font-display flex items-center gap-2 text-2xl">
+          <Icon name="paw" class="text-gold" /> Upcoming events
+        </h2>
+        <a href="/bear-pride" class="text-sm font-bold text-gold">Full calendar →</a>
+      </div>
+      <div class="flex flex-col gap-3.5">
+        {upcoming.map((event) => (
+          <div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
+            <div class="flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl bg-rust">
+              <span class="text-xl font-extrabold leading-none">{dayNumber(event.date)}</span>
+              <span class="text-[10px] font-bold uppercase tracking-wide text-gold-pale">{monthShort(event.date)}</span>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="truncate text-base font-bold">{event.title}</div>
+              <div class="text-sm text-tan">{event.time} · {event.place}</div>
+            </div>
+            {event.price && (
+              <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
+                {event.price}
+              </span>
+            )}
+          </div>
+        ))}
+        <a href="/bear-pride" class="rounded-xl border border-dashed border-border p-2.5 text-center text-sm font-bold text-tan">
+          + see the full programme
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-7 lg:col-span-5">
+      <div>
+        <h2 class="font-display mb-5 flex items-center gap-2 text-2xl">
+          <Icon name="newspaper" class="text-gold" /> Latest news
+        </h2>
+        <a href="/news" class="flex gap-3.5">
+          <Image
+            src="/uploads/2024/11/Photo Google Photos.JPG"
+            alt=""
+            width={144}
+            height={144}
+            class="h-[72px] w-[72px] flex-none rounded-lg object-cover"
+          />
+          <div>
+            <div class="text-sm font-bold leading-tight">From a Christmas Party to a Community Pillar</div>
+            <div class="mt-1 text-xs text-tan">3 Nov 2024</div>
+          </div>
+        </a>
+        <a href="/news" class="mt-3.5 block rounded-xl border border-dashed border-border p-2.5 text-center text-sm font-bold text-tan">
+          All the news
+        </a>
+      </div>
+
+      <div class="rounded-2xl border border-border bg-surface p-6">
+        <div class="mb-1 flex items-center gap-2 font-extrabold">
+          <Icon name="mail" class="text-gold" /> Newsletter
+        </div>
+        <div class="mb-3.5 text-sm text-tan">Events and news, straight to your inbox.</div>
+        <div class="flex gap-2">
+          <div class="h-[42px] flex-1 rounded-lg border border-border bg-ink px-3.5 text-sm text-[#6B6254] flex items-center">
+            you@email.lu
+          </div>
+          <button class="h-[42px] flex-none rounded-lg bg-gold px-5 text-sm font-extrabold text-ink">OK</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mr Bear mosaic -->
+  <section class="border-y border-border-soft bg-surface-alt py-16">
+    <div class="mx-auto max-w-[1240px] px-8">
+      <div class="mb-7 flex items-baseline justify-between">
+        <div>
+          <div class="mb-2 text-xs font-extrabold uppercase tracking-wide text-gold">Since 2015</div>
+          <h2 class="font-display text-2xl">The Mr. Bear Luxembourg titleholders</h2>
+        </div>
+        <a href="/mr-bear" class="text-sm font-bold text-gold">See every Mister →</a>
+      </div>
+      <div class="flex gap-7 overflow-x-auto pb-2">
+        {mrbears.map((mister) => (
+          <div class="w-[150px] flex-none text-center">
+            {mister.data.image ? (
+              <Image
+                src={mister.data.image}
+                alt={mister.data.name}
+                width={300}
+                height={300}
+                class="h-[150px] w-[150px] rounded-full border-[3px] border-gold object-cover"
+              />
+            ) : (
+              <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full border-[3px] border-dashed border-border bg-surface text-[11px] text-[#6B6254]">
+                photo coming
+              </div>
+            )}
+            <div class="mt-2.5 text-sm font-bold">{mister.data.name}</div>
+            <div class="text-xs text-tan">Mr. Bear {mister.data.year}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  {sponsorLogos.length > 0 && (
+    <section class="mx-auto max-w-[1240px] px-8 py-14 text-center">
+      <div class="mb-5 text-xs font-extrabold uppercase tracking-wide text-gold">With the support of</div>
+      <div class="flex flex-wrap items-center justify-center gap-9 opacity-80">
+        {sponsorLogos.map((sponsor) => (
+          <a href={sponsor.url} class="flex h-[34px] items-center rounded-lg bg-surface px-5 text-sm font-bold text-tan">
+            {sponsor.name}
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 </BaseLayout>
