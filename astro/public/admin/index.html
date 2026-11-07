@@ -74,7 +74,17 @@
         min-width: 0;
         height: var(--sui-textbox-height, 36px) !important;
         margin: 0 !important;
-        padding: 0 var(--sui-textbox-singleline-padding, 10px) !important;
+        /*
+         * --sui-textbox-singleline-padding is itself a shorthand value
+         * ("0 8px"), not a single length, so it can't be plugged into a
+         * longhand padding-left/-right (the whole declaration becomes
+         * invalid and falls back to 0) — hardcode the 8px side value it
+         * resolves to instead.
+         */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
         border-radius: var(--sui-textbox-border-radius, var(--sui-control-medium-border-radius)) !important;
         border: 1px solid var(--sui-textbox-border-color, var(--sui-control-border-color)) !important;
         background: var(--sui-textbox-background-color, var(--sui-control-background-color)) !important;
