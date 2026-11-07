@@ -27,7 +27,16 @@
            the accent below is set explicitly to the exact site gold. */
         --sui-base-hue: 28 !important;
 
-        --sui-primary-accent-color-text: #141210 !important;
+        /*
+         * -text is accent-COLORED text for use on the app's dark background
+         * (links, outlined/secondary buttons, selected-state icons) — keep
+         * it light. -inverted is the text color placed ON TOP OF a solid
+         * accent (gold) background, e.g. the primary Save button — that one
+         * needs to be dark for contrast. Mixing these two up (as an earlier
+         * version of this file did) made the GitHub sign-in button's text
+         * nearly invisible: dark ink on its dark, not-gold-filled background.
+         */
+        --sui-primary-accent-color-text: #f3e4c4 !important;
         --sui-primary-accent-color-light: #f3e4c4 !important;
         --sui-primary-accent-color: #e8c25a !important;
         --sui-primary-accent-color-dark: #c9a042 !important;
