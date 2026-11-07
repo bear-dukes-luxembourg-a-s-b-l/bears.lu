@@ -14,6 +14,9 @@ export default defineConfig({
     },
   },
   integrations: [sitemap()],
+  redirects: {
+    '/legals': '/legal',
+  },
   vite: {
     plugins: [tailwindcss()],
   },
