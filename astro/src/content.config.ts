@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { file } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 import type { Loader } from 'astro/loaders';
 import { existsSync, promises as fs } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -130,27 +130,31 @@ const generalSponsors = defineCollection({
   schema: sponsorEntry,
 });
 
-const generalEventEntry = z.object({
-  title: z.string(),
-  date: z.string(),
-  time: z.string(),
-  place: z.string(),
-  place_url: z.string().optional(),
-  price: z.union([z.string(), z.number()]).optional(),
-  description: z.string().optional(),
-  facebook: z.string().optional(),
-  ticket_url: z.string().optional(),
-  rsvp_url: z.string().optional(),
-});
-
 // General community events shown on the home page — separate from
 // `events` (below), which is the Bear Pride week's own programme and
 // shown on /bear-pride. The Jekyll site used an Airtable embed for this;
-// this is the "manage it ourselves" replacement. Starts empty: fill in
-// _data/general-events.json with real upcoming events when ready.
+// this is the "manage it ourselves" replacement.
+//
+// One markdown file per event in src/content/general-events/ (the
+// frontmatter has the list-view fields below; the body, if any, is a
+// longer description rendered with `render()` where needed) — this content
+// is new, not migrated from Jekyll, so it uses Astro's native file-per-entry
+// collection shape instead of a single JSON array: friendlier to edit by
+// hand, and the shape Sveltia CMS (planned for a later step) expects.
+// Starts empty: add a .md file per event when ready.
 const generalEvents = defineCollection({
-  loader: jsonArrayLoader('../_data/general-events.json'),
-  schema: generalEventEntry,
+  loader: glob({ pattern: '**/*.md', base: './src/content/general-events' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.string(),
+    time: z.string(),
+    place: z.string(),
+    place_url: z.string().optional(),
+    price: z.union([z.string(), z.number()]).optional(),
+    facebook: z.string().optional(),
+    ticket_url: z.string().optional(),
+    rsvp_url: z.string().optional(),
+  }),
 });
 
 /**
