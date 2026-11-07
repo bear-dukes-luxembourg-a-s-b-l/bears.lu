@@ -138,27 +138,38 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
       </div>
       <div class="flex flex-col gap-3.5">
         {upcoming.length > 0 ? (
-          upcoming.map((event) => (
+          upcoming.map((event, i) => (
             <div class="flex items-center gap-4 rounded-2xl border border-border bg-surface p-4">
-              <div class="flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl bg-rust">
+              <div
+                class:list={[
+                  'flex h-[60px] w-[60px] flex-none flex-col items-center justify-center rounded-xl',
+                  event.community || i % 2 === 1 ? 'border border-border bg-ink' : 'bg-rust',
+                ]}
+              >
                 <span class="text-xl font-extrabold leading-none">{dayNumber(event.date)}</span>
-                <span class="text-[10px] font-bold uppercase tracking-wide text-gold-pale">{monthShort(event.date)}</span>
+                <span
+                  class:list={[
+                    'text-[10px] font-bold uppercase tracking-wide',
+                    event.community || i % 2 === 1 ? 'text-tan' : 'text-gold-pale',
+                  ]}
+                >
+                  {monthShort(event.date)}
+                </span>
               </div>
               <div class="min-w-0 flex-1">
-                <div class="flex items-center gap-2">
-                  <div class="truncate text-base font-bold">{event.title}</div>
-                  {event.community && (
-                    <span class="flex-none rounded-full border border-slate px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate">
-                      Community
-                    </span>
-                  )}
-                </div>
+                <div class="truncate text-base font-bold">{event.title}</div>
                 <div class="text-sm text-tan">{event.time} · {event.place}</div>
               </div>
-              {event.price && (
-                <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
-                  {event.price}
+              {event.community ? (
+                <span class="flex-none rounded-full border border-tan px-2.5 py-1 text-xs font-bold text-tan">
+                  Community
                 </span>
+              ) : (
+                event.price && (
+                  <span class="flex-none rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
+                    {event.price}
+                  </span>
+                )
               )}
             </div>
           ))
