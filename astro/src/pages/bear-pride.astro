@@ -215,7 +215,7 @@ const descriptionParagraphs = bearPride.homepage_panel.description
       <Icon name="crown" class="text-gold" /> Our sponsors
     </h2>
 
-    {gold.length > 0 && (
+    {(gold.length > 0 || bearPride.application_open) && (
       <div class="mb-7">
         <div class="mb-3.5 text-xs font-extrabold uppercase tracking-wide text-gold">Gold</div>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -224,11 +224,19 @@ const descriptionParagraphs = bearPride.homepage_panel.description
               <Image src={sponsor.image} alt={sponsor.name} width={300} height={110} class="max-h-[60px] w-auto object-contain" />
             </a>
           ))}
+          {gold.length === 0 && bearPride.application_open && (
+            <a
+              href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub"
+              class="flex min-h-[110px] items-center justify-center rounded-2xl border-2 border-dashed border-gold/60 p-7 text-center text-sm font-bold text-gold"
+            >
+              Become our Gold sponsor →
+            </a>
+          )}
         </div>
       </div>
     )}
 
-    {silver.length > 0 && (
+    {(silver.length > 0 || bearPride.application_open) && (
       <div class="mb-7">
         <div class="mb-3.5 text-xs font-extrabold uppercase tracking-wide text-tan-soft">Silver</div>
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -237,11 +245,19 @@ const descriptionParagraphs = bearPride.homepage_panel.description
               <Image src={sponsor.image} alt={sponsor.name} width={200} height={84} class="max-h-[44px] w-auto object-contain" />
             </a>
           ))}
+          {silver.length === 0 && bearPride.application_open && (
+            <a
+              href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub"
+              class="flex min-h-[84px] items-center justify-center rounded-2xl border border-dashed border-border p-4.5 text-center text-xs font-bold text-tan"
+            >
+              Become a sponsor →
+            </a>
+          )}
         </div>
       </div>
     )}
 
-    {media.length > 0 && (
+    {(media.length > 0 || bearPride.application_open) && (
       <div>
         <div class="mb-3.5 text-xs font-extrabold uppercase tracking-wide text-tan">Partners</div>
         <div class="flex flex-wrap items-center gap-4.5 opacity-85">
@@ -250,6 +266,14 @@ const descriptionParagraphs = bearPride.homepage_panel.description
               {sponsor.name}
             </a>
           ))}
+          {media.length === 0 && bearPride.application_open && (
+            <a
+              href="https://docs.google.com/document/d/e/2PACX-1vQJip54iVy5ryeDAR_27EH07-7hl0aUwIReRTd1Er0H7XNZhpztbgDvcnUJ3OLxNnvq-OxXTm6JtjRf/pub"
+              class="flex h-7 items-center rounded-lg border border-dashed border-border px-3.5 text-xs font-bold text-tan"
+            >
+              Become a partner →
+            </a>
+          )}
         </div>
       </div>
     )}
