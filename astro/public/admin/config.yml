@@ -112,7 +112,7 @@ collections:
       - { name: name, label: Name }
       - { name: title, label: "Link title", widget: string, required: false }
       - { name: url, label: "Website URL" }
-      - { name: image, label: Logo, widget: image }
+      - { name: image, label: Logo, widget: image, required: false }
 
   - name: bear_pride_schedule
     label: "Bear Pride schedule"

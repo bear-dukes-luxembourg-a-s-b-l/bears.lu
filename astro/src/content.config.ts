@@ -134,7 +134,10 @@ const sponsors = defineCollection({
 // when ready.
 const generalSponsors = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/general-sponsors' }),
-  schema: sponsorEntry,
+  // Unlike the Bear Pride sponsors above, the home page only shows the
+  // sponsor's name as a text link (no logo rendered), so a logo isn't
+  // required here.
+  schema: sponsorEntry.extend({ image: z.string().optional() }),
 });
 
 // General community events shown on the home page — separate from
