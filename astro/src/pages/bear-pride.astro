@@ -6,15 +6,24 @@ import Icon from '../components/Icon.astro';
 
 const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 
-const eventDays = (await getCollection('events')).sort((a, b) =>
-  a.data.date.localeCompare(b.data.date)
-);
+// Each event is its own entry (one markdown file per event, in the CMS and
+// on disk), carrying its own date — grouped back into day buckets here for
+// the schedule's day-by-day layout.
+const allEvents = (await getCollection('events')).map((entry) => entry.data);
+const eventDays = Object.values(
+  Object.groupBy(allEvents, (event) => event.date)
+)
+  .filter((events) => events !== undefined)
+  .map((events) => ({ date: events[0].date, events }))
+  .sort((a, b) => a.date.localeCompare(b.date));
+
 const candidates = await getCollection('candidates');
 
-const sponsorTiers = await getCollection('sponsors');
-const gold = sponsorTiers.find((tier) => tier.id === 'gold')?.data ?? [];
-const silver = sponsorTiers.find((tier) => tier.id === 'silver')?.data ?? [];
-const media = sponsorTiers.find((tier) => tier.id === 'media')?.data ?? [];
+// Likewise, each sponsor is its own entry carrying its own tier.
+const allSponsors = (await getCollection('sponsors')).map((entry) => entry.data);
+const gold = allSponsors.filter((sponsor) => sponsor.tier === 'gold');
+const silver = allSponsors.filter((sponsor) => sponsor.tier === 'silver');
+const media = allSponsors.filter((sponsor) => sponsor.tier === 'media');
 
 const weekday = (iso: string) =>
   new Date(`${iso}T00:00:00`).toLocaleDateString('en', { weekday: 'long' });
@@ -68,11 +77,11 @@ const descriptionParagraphs = bearPride.homepage_panel.description
       {eventDays.map((day) => (
         <div class="rounded-2xl border border-border bg-surface p-4.5">
           <div class="mb-3.5 font-extrabold text-gold">
-            {weekday(day.data.date)} {dayNumber(day.data.date)}
+            {weekday(day.date)} {dayNumber(day.date)}
           </div>
           <div class="flex flex-col gap-2.5">
-            {day.data.events.map((event, i) => (
-              <details class="group" open={day.data.events.length === 1}>
+            {day.events.map((event, i) => (
+              <details class="group" open={day.events.length === 1}>
                 <summary class={`flex cursor-pointer list-none items-start justify-between gap-2 ${i > 0 ? 'border-t border-border-soft pt-2.5' : ''}`}>
                   <div>
                     <div class="text-sm font-bold">{event.title}</div>

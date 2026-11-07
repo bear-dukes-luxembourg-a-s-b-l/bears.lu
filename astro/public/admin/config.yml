@@ -78,25 +78,24 @@ collections:
     label: "Bear Pride sponsors"
     label_singular: "Bear Pride sponsor tier"
     description: "Sponsors for this year's Bear Pride edition only — not the year-round home page sponsors below."
-    files:
-      - name: sponsors
-        label: "Bear Pride sponsors"
-        file: _data/sponsors.json
-        fields:
-          - name: gold
-            label: Gold
-            widget: list
-            field: &sponsor_fields
-              name: sponsor
-              label: Sponsor
-              widget: object
-              fields:
-                - { name: name, label: Name }
-                - { name: title, label: "Link title", widget: string, required: false }
-                - { name: url, label: "Website URL" }
-                - { name: image, label: Logo, widget: image }
-          - { name: silver, label: Silver, widget: list, field: *sponsor_fields }
-          - { name: media, label: "Media partners", widget: list, field: *sponsor_fields }
+    folder: astro/src/content/bear-pride-sponsors
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.tier}}-{{fields.name}}"
+    summary: "{{fields.name}} ({{fields.tier}})"
+    fields:
+      - name: tier
+        label: Tier
+        widget: select
+        options:
+          - { label: Gold, value: gold }
+          - { label: Silver, value: silver }
+          - { label: "Media partner", value: media }
+      - { name: name, label: Name }
+      - { name: title, label: "Link title", widget: string, required: false }
+      - { name: url, label: "Website URL" }
+      - { name: image, label: Logo, widget: image }
 
   - name: general_sponsors
     label: "Home sponsors"
@@ -117,33 +116,24 @@ collections:
   - name: bear_pride_schedule
     label: "Bear Pride schedule"
     label_singular: "Day"
-    description: "The full programme for this year's Bear Pride, grouped by day."
-    files:
-      - name: events
-        label: "Bear Pride schedule"
-        file: _data/events.json
-        fields:
-          - name: days
-            label: Days
-            widget: list
-            root: true
-            summary: "{{fields.date}}"
-            fields:
-              - { name: date, label: Date, widget: datetime, type: date }
-              - name: events
-                label: Events
-                widget: list
-                summary: "{{fields.title}} — {{fields.time}}"
-                fields:
-                  - { name: title, label: Title }
-                  - { name: time, label: Time, hint: "e.g. 7:00 PM" }
-                  - { name: place, label: Venue }
-                  - { name: place_url, label: "Venue map URL", widget: string, required: false }
-                  - { name: price, label: Price, widget: string, required: false, hint: "e.g. Free, 15€" }
-                  - { name: description, label: Description, widget: text, required: false }
-                  - { name: facebook, label: "Facebook event URL", widget: string, required: false }
-                  - { name: ticket_url, label: "Tickets URL", widget: string, required: false }
-                  - { name: rsvp_url, label: "RSVP URL", widget: string, required: false }
+    description: "The full programme for this year's Bear Pride — every event is its own entry; entries on the same date are grouped into one day on the page."
+    folder: astro/src/content/bear-pride-events
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.date}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { name: date, label: Date, widget: datetime, type: date }
+      - { name: title, label: Title }
+      - { name: time, label: Time, hint: "e.g. 7:00 PM" }
+      - { name: place, label: Venue }
+      - { name: place_url, label: "Venue map URL", widget: string, required: false }
+      - { name: price, label: Price, widget: string, required: false, hint: "e.g. Free, 15€" }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: facebook, label: "Facebook event URL", widget: string, required: false }
+      - { name: ticket_url, label: "Tickets URL", widget: string, required: false }
+      - { name: rsvp_url, label: "RSVP URL", widget: string, required: false }
 
   - name: bear_pride_config
     label: "Bear Pride edition settings"

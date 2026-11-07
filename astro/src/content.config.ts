@@ -1,54 +1,10 @@
 import { defineCollection, z } from 'astro:content';
-import { file, glob } from 'astro/loaders';
+import { glob } from 'astro/loaders';
 import type { Loader } from 'astro/loaders';
 import { existsSync, promises as fs } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
 import matter from 'gray-matter';
-
-// These collections read straight from the Jekyll site's _data/*.json files
-// (one directory up), so content stays single-sourced while both sites are
-// live during the migration. Once the Jekyll site is retired, these files
-// move into src/content/ and the loaders become glob()/local JSON imports.
-
-/**
- * Astro's built-in `file()` loader requires each array item to carry its own
- * `id`/`slug` field, which none of the Jekyll data files have. This loader
- * is the same thing but keys entries by their array index instead.
- */
-function jsonArrayLoader(fileName: string): Loader {
-  return {
-    name: 'json-array-loader',
-    load: async ({ config, store, parseData, logger, watcher }) => {
-      const url = new URL(fileName, config.root);
-      const filePath = fileURLToPath(url);
-
-      async function sync() {
-        if (!existsSync(filePath)) {
-          logger.error(`File not found: ${fileName}`);
-          return;
-        }
-        const raw = await fs.readFile(filePath, 'utf-8');
-        const items = JSON.parse(raw) as unknown[];
-        store.clear();
-        for (const [index, item] of items.entries()) {
-          const id = String(index);
-          const data = await parseData({ id, data: item as Record<string, unknown> });
-          store.set({ id, data });
-        }
-      }
-
-      await sync();
-      watcher?.add(filePath);
-      watcher?.on('change', async (changedPath) => {
-        if (changedPath === filePath) {
-          logger.info(`Reloading data from ${fileName}`);
-          await sync();
-        }
-      });
-    },
-  };
-}
 
 // One markdown file per titleholder in src/content/mrbears/ — this used to
 // be a single _data/mrbears.json array, switched to Astro's native
@@ -91,23 +47,23 @@ const candidates = defineCollection({
   }),
 });
 
+// One markdown file per event in src/content/bear-pride-events/, each
+// carrying its own `date` — used to be _data/events.json's days-with-
+// nested-events shape (one giant form per day in the CMS); flattened so
+// every event is its own row, grouped by date again at render time.
 const events = defineCollection({
-  loader: jsonArrayLoader('../_data/events.json'),
+  loader: glob({ pattern: '**/*.md', base: './src/content/bear-pride-events' }),
   schema: z.object({
     date: z.string(),
-    events: z.array(
-      z.object({
-        title: z.string(),
-        time: z.string(),
-        place: z.string(),
-        place_url: z.string().optional(),
-        price: z.union([z.string(), z.number()]).optional(),
-        description: z.string().optional(),
-        facebook: z.string().optional(),
-        ticket_url: z.string().optional(),
-        rsvp_url: z.string().optional(),
-      })
-    ),
+    title: z.string(),
+    time: z.string(),
+    place: z.string(),
+    place_url: z.string().optional(),
+    price: z.union([z.string(), z.number()]).optional(),
+    description: z.string().optional(),
+    facebook: z.string().optional(),
+    ticket_url: z.string().optional(),
+    rsvp_url: z.string().optional(),
   }),
 });
 
@@ -118,13 +74,13 @@ const sponsorEntry = z.object({
   image: z.string(),
 });
 
+// One markdown file per sponsor in src/content/bear-pride-sponsors/, each
+// carrying its own `tier` — used to be _data/sponsors.json's gold/silver/
+// media keys (one entry per tier in the CMS); flattened so every sponsor
+// is its own row, grouped by tier again at render time.
 const sponsors = defineCollection({
-  // Bear Pride-specific sponsors for the current edition. Top-level keys
-  // (gold / silver / media) become entry ids; each value is that tier's
-  // list of sponsors. Object-shaped data doesn't need an `id` field, so the
-  // built-in file() loader works fine here.
-  loader: file('../_data/sponsors.json'),
-  schema: sponsorEntry.array(),
+  loader: glob({ pattern: '**/*.md', base: './src/content/bear-pride-sponsors' }),
+  schema: sponsorEntry.extend({ tier: z.enum(['gold', 'silver', 'media']) }),
 });
 
 // The asbl's own year-round partners, shown on the home page — separate
