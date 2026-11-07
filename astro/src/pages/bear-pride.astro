@@ -1,0 +1,253 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+
+const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
+
+const eventDays = (await getCollection('events')).sort((a, b) =>
+  a.data.date.localeCompare(b.data.date)
+);
+const candidates = await getCollection('candidates');
+
+const sponsorTiers = await getCollection('sponsors');
+const gold = sponsorTiers.find((tier) => tier.id === 'gold')?.data ?? [];
+const silver = sponsorTiers.find((tier) => tier.id === 'silver')?.data ?? [];
+const media = sponsorTiers.find((tier) => tier.id === 'media')?.data ?? [];
+
+const weekday = (iso: string) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString('en', { weekday: 'long' });
+const dayNumber = (iso: string) => new Date(`${iso}T00:00:00`).getDate();
+
+const descriptionParagraphs = bearPride.homepage_panel.description
+  .split(/\n\s*\n/)
+  .map((p) => p.trim())
+  .filter(Boolean);
+---
+<BaseLayout title="Bear Pride" description={bearPride.homepage_panel.title}>
+  <!-- Hero band: full flag-stripe treatment -->
+  <section class="relative overflow-hidden border-b border-border-soft py-20 text-center">
+    <div
+      class="absolute inset-0"
+      style="background: repeating-linear-gradient(115deg, #8B4A1F 0 70px, #C97830 70px 140px, #E8C25A 140px 200px, #F3E4C4 200px 250px, #9CA3A8 250px 300px, #1C1C1C 300px 350px, #D73B30 350px 400px, #4FA3DC 400px 450px);"
+    ></div>
+    <div class="absolute inset-0 bg-[#0F0D0B]/72"></div>
+    <div class="relative mx-auto max-w-[1240px] px-8">
+      <h1 class="font-display text-[44px] sm:text-[54px]">{bearPride.homepage_panel.title}</h1>
+      <div class="mx-auto mt-5 flex max-w-[640px] flex-col gap-3 text-[17px] text-[#EADFCE]">
+        {descriptionParagraphs.map((p) => <p>{p}</p>)}
+      </div>
+      <div class="mt-7 flex flex-wrap justify-center gap-4">
+        {bearPride.facebook_main_event && (
+          <a
+            href={bearPride.facebook_main_event}
+            class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink"
+          >
+            <Icon name="fb" /> Main event
+          </a>
+        )}
+        {bearPride.combo_ticket_url && (
+          <a
+            href={bearPride.combo_ticket_url}
+            class="inline-flex items-center gap-2 rounded-full border-2 border-cream px-6 py-3.5 text-[15px] font-bold text-cream"
+          >
+            Combo pass (discounted)
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="programme" class="mx-auto max-w-[1240px] px-8 py-16">
+    <h2 class="font-display mb-6 flex items-center gap-2 text-2xl">
+      <Icon name="calendar" class="text-gold" /> Programme
+    </h2>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {eventDays.map((day) => (
+        <div class="rounded-2xl border border-border bg-surface p-4.5">
+          <div class="mb-3.5 font-extrabold text-gold">
+            {weekday(day.data.date)} {dayNumber(day.data.date)}
+          </div>
+          <div class="flex flex-col gap-2.5">
+            {day.data.events.map((event, i) => (
+              <details class="group" open={day.data.events.length === 1}>
+                <summary class={`flex cursor-pointer list-none items-start justify-between gap-2 ${i > 0 ? 'border-t border-border-soft pt-2.5' : ''}`}>
+                  <div>
+                    <div class="text-sm font-bold">{event.title}</div>
+                    <div class="text-xs text-tan">{event.time} · {event.place}</div>
+                  </div>
+                  <Icon name="chevron-down" class="mt-0.5 flex-none text-gold transition-transform group-open:rotate-180" />
+                </summary>
+                <div class="mt-2.5 flex flex-col gap-2.5 border-t border-dashed border-border pt-2.5">
+                  {event.description && <p class="text-xs leading-relaxed text-tan-soft">{event.description}</p>}
+                  {event.price && (
+                    <span class="w-fit rounded-full border border-blue-flag px-2.5 py-1 text-xs font-bold text-blue-flag">
+                      {event.price}
+                    </span>
+                  )}
+                  <div class="flex gap-2">
+                    {event.rsvp_url && (
+                      <a href={event.rsvp_url} class="flex-1 rounded-lg bg-gold py-2 text-center text-xs font-bold text-ink">RSVP</a>
+                    )}
+                    {event.ticket_url && (
+                      <a href={event.ticket_url} class="flex-1 rounded-lg border border-cream py-2 text-center text-xs font-bold text-cream">Tickets ↗</a>
+                    )}
+                    {event.facebook && (
+                      <a href={event.facebook} class="flex-1 rounded-lg border border-cream py-2 text-center text-xs font-bold text-cream">Facebook ↗</a>
+                    )}
+                    {event.place_url && (
+                      <a href={event.place_url} class="flex-1 rounded-lg border border-border py-2 text-center text-xs font-bold text-tan">Map ↗</a>
+                    )}
+                  </div>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Candidates -->
+  <section id="candidats" class="border-y border-border-soft bg-surface-alt py-16">
+    <div class="mx-auto max-w-[1240px] px-8">
+      <div class="mb-6 flex items-baseline justify-between">
+        <h2 class="font-display flex items-center gap-2 text-2xl">
+          <Icon name="crown" class="text-gold" /> Mr. Bear candidates
+        </h2>
+        {bearPride.application_open ? (
+          <span class="rounded-full border border-blue-flag px-3 py-1.5 text-xs font-bold text-blue-flag">Applications open</span>
+        ) : (
+          <span class="rounded-full border border-border px-3 py-1.5 text-xs font-bold text-tan">Applications closed</span>
+        )}
+      </div>
+
+      {bearPride.candidate_list && (
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {candidates.map((candidate) => (
+            <details class="group overflow-hidden rounded-2xl border border-border bg-surface">
+              <summary class="block cursor-pointer list-none">
+                <div class="relative aspect-square overflow-hidden">
+                  <Image
+                    src={candidate.data.photos[0]}
+                    alt={candidate.data.name}
+                    width={600}
+                    height={600}
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105"
+                  />
+                  <div class="absolute inset-0 flex items-center justify-center bg-ink/70 opacity-0 transition-opacity group-hover:opacity-100">
+                    <span class="flex items-center gap-2.5 text-[17px] font-extrabold text-cream">
+                      <Icon name="info" /> View profile
+                    </span>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-center justify-between">
+                    <div class="font-extrabold">{candidate.data.name}, {candidate.data.age}</div>
+                    <Icon name="chevron-down" class="text-gold transition-transform group-open:rotate-180" />
+                  </div>
+                </div>
+              </summary>
+              <div class="flex flex-col gap-2.5 px-4 pb-4">
+                <div>
+                  <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">About</div>
+                  <p class="text-xs leading-relaxed text-tan-soft">{candidate.data.about}</p>
+                </div>
+                <div>
+                  <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">Motivation</div>
+                  <p class="text-xs leading-relaxed text-tan-soft">{candidate.data.motivation}</p>
+                </div>
+                <div class="flex gap-2">
+                  {candidate.data.links?.instagram && (
+                    <a href={candidate.data.links.instagram} title="Instagram" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                      <Icon name="ig" />
+                    </a>
+                  )}
+                  {candidate.data.links?.facebook && (
+                    <a href={candidate.data.links.facebook} title="Facebook" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
+                      <Icon name="fb" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </details>
+          ))}
+        </div>
+      )}
+
+      <div class="mt-7 text-center">
+        {bearPride.application_open ? (
+          <a href="https://f.bears.lu/mrbear" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
+            <Icon name="crown" /> Apply now
+          </a>
+        ) : (
+          <p class="text-sm text-tan">Applications are closed right now — follow our socials to know when they reopen.</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  {bearPride.hotel_cta.display && (
+    <section class="mx-auto max-w-[1240px] px-8 py-14">
+      <div class="flex flex-wrap items-center justify-between gap-5 rounded-2xl border border-border bg-surface p-7">
+        <div>
+          <div class="flex items-center gap-2 text-base font-extrabold">
+            <Icon name="info" class="text-gold" /> Need a hotel?
+          </div>
+          <p class="mt-1 text-sm text-tan">{bearPride.hotel_cta.content}</p>
+        </div>
+        <a href={bearPride.hotel_cta.url} class="inline-flex items-center gap-2 rounded-full border-2 border-cream px-6 py-3.5 text-[15px] font-bold text-cream">
+          Book now →
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- Sponsors -->
+  <section class="mx-auto max-w-[1240px] px-8 py-14">
+    <h2 class="font-display mb-7 flex items-center gap-2 text-2xl">
+      <Icon name="crown" class="text-gold" /> Our sponsors
+    </h2>
+
+    {gold.length > 0 && (
+      <div class="mb-7">
+        <div class="mb-3.5 text-xs font-extrabold uppercase tracking-wide text-gold">Gold</div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {gold.map((sponsor) => (
+            <a href={sponsor.url} class="flex min-h-[110px] items-center justify-center rounded-2xl border-2 border-gold bg-surface p-7">
+              <Image src={sponsor.image} alt={sponsor.name} width={300} height={110} class="max-h-[60px] w-auto object-contain" />
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {silver.length > 0 && (
+      <div class="mb-7">
+        <div class="mb-3.5 text-xs font-extrabold uppercase tracking-wide text-tan-soft">Silver</div>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {silver.map((sponsor) => (
+            <a href={sponsor.url} class="flex min-h-[84px] items-center justify-center rounded-2xl border border-border bg-surface p-4.5">
+              <Image src={sponsor.image} alt={sponsor.name} width={200} height={84} class="max-h-[44px] w-auto object-contain" />
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {media.length > 0 && (
+      <div>
+        <div class="mb-3.5 text-xs font-extrabold uppercase tracking-wide text-tan">Partners</div>
+        <div class="flex flex-wrap items-center gap-4.5 opacity-85">
+          {media.map((sponsor) => (
+            <a href={sponsor.url} class="flex h-7 items-center rounded-lg bg-surface px-3.5 text-xs font-bold text-tan">
+              {sponsor.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</BaseLayout>

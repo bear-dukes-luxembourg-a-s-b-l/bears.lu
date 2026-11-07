@@ -3,6 +3,7 @@ import { file } from 'astro/loaders';
 import type { Loader } from 'astro/loaders';
 import { existsSync, promises as fs } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { parse as parseYaml } from 'yaml';
 
 // These collections read straight from the Jekyll site's _data/*.json files
 // (one directory up), so content stays single-sourced while both sites are
@@ -118,4 +119,62 @@ const sponsors = defineCollection({
   schema: sponsorEntry.array(),
 });
 
-export const collections = { mrbears, candidates, events, sponsors };
+/**
+ * Reads just the `bearpride:` block out of the Jekyll site's _config.yml,
+ * as a single entry with id "bearpride". Everything else in that file
+ * (title, social links, pagination…) is irrelevant to the Astro site and
+ * left out.
+ */
+function bearPrideConfigLoader(fileName: string): Loader {
+  return {
+    name: 'bearpride-config-loader',
+    load: async ({ config, store, parseData, logger, watcher }) => {
+      const url = new URL(fileName, config.root);
+      const filePath = fileURLToPath(url);
+
+      async function sync() {
+        if (!existsSync(filePath)) {
+          logger.error(`File not found: ${fileName}`);
+          return;
+        }
+        const raw = await fs.readFile(filePath, 'utf-8');
+        const parsed = parseYaml(raw) as Record<string, unknown>;
+        store.clear();
+        const id = 'bearpride';
+        const data = await parseData({ id, data: parsed.bearpride as Record<string, unknown> });
+        store.set({ id, data });
+      }
+
+      await sync();
+      watcher?.add(filePath);
+      watcher?.on('change', async (changedPath) => {
+        if (changedPath === filePath) {
+          logger.info(`Reloading data from ${fileName}`);
+          await sync();
+        }
+      });
+    },
+  };
+}
+
+const bearPrideConfig = defineCollection({
+  loader: bearPrideConfigLoader('../_config.yml'),
+  schema: z.object({
+    enabled: z.boolean(),
+    homepage_panel: z.object({
+      title: z.string(),
+      description: z.string(),
+    }),
+    facebook_main_event: z.string().optional(),
+    combo_ticket_url: z.string().nullable().optional(),
+    application_open: z.boolean(),
+    candidate_list: z.boolean(),
+    hotel_cta: z.object({
+      display: z.boolean(),
+      content: z.string(),
+      url: z.string(),
+    }),
+  }),
+});
+
+export const collections = { mrbears, candidates, events, sponsors, bearPrideConfig };
