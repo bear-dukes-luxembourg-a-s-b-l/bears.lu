@@ -61,33 +61,48 @@
        * The geocoder custom field (below) is plain HTML we style by hand —
        * reusing Sveltia's own control/button/listbox tokens instead of
        * fixed colors, so it keeps matching the rest of the admin if the
-       * theme above ever changes.
+       * theme above ever changes. Sveltia injects its own generic
+       * button/input rules after this stylesheet (same reason the :root
+       * block above needs !important), which was overriding just *some*
+       * properties — e.g. padding-left only — and throwing off alignment.
+       * Every property that a bare <button>/<input> might inherit from
+       * Sveltia's own styles is !important here for that reason.
        */
       .geocoder-input {
+        box-sizing: border-box !important;
         flex: 1;
         min-width: 0;
-        height: var(--sui-textbox-height, 36px);
-        padding-inline: var(--sui-textbox-singleline-padding, 10px);
-        border-radius: var(--sui-textbox-border-radius, var(--sui-control-medium-border-radius));
-        border: 1px solid var(--sui-textbox-border-color, var(--sui-control-border-color));
-        background: var(--sui-textbox-background-color, var(--sui-control-background-color));
-        color: var(--sui-textbox-foreground-color, var(--sui-control-foreground-color));
-        font-family: var(--sui-textbox-font-family, var(--sui-control-font-family));
-        font-size: var(--sui-textbox-font-size, var(--sui-control-font-size));
+        height: var(--sui-textbox-height, 36px) !important;
+        margin: 0 !important;
+        padding: 0 var(--sui-textbox-singleline-padding, 10px) !important;
+        border-radius: var(--sui-textbox-border-radius, var(--sui-control-medium-border-radius)) !important;
+        border: 1px solid var(--sui-textbox-border-color, var(--sui-control-border-color)) !important;
+        background: var(--sui-textbox-background-color, var(--sui-control-background-color)) !important;
+        color: var(--sui-textbox-foreground-color, var(--sui-control-foreground-color)) !important;
+        font-family: var(--sui-textbox-font-family, var(--sui-control-font-family)) !important;
+        font-size: var(--sui-textbox-font-size, var(--sui-control-font-size)) !important;
+        line-height: normal !important;
       }
       .geocoder-input:focus-visible {
-        outline: 2px solid var(--sui-primary-accent-color);
+        outline: 2px solid var(--sui-primary-accent-color) !important;
         outline-offset: -1px;
       }
       .geocoder-search-btn {
-        height: var(--sui-button-medium-height, var(--sui-textbox-height, 36px));
-        padding-inline: var(--sui-button-medium-padding, 16px);
-        border-radius: var(--sui-button-medium-border-radius);
-        border: none;
-        background: var(--sui-primary-accent-color);
-        color: var(--sui-primary-accent-color-inverted);
-        font-weight: 700;
-        font-size: var(--sui-control-font-size);
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: none;
+        height: var(--sui-button-medium-height, var(--sui-textbox-height, 36px)) !important;
+        margin: 0 !important;
+        padding: 0 16px !important;
+        border-radius: var(--sui-button-medium-border-radius) !important;
+        border: none !important;
+        background: var(--sui-primary-accent-color) !important;
+        color: var(--sui-primary-accent-color-inverted) !important;
+        font-weight: 700 !important;
+        font-size: var(--sui-control-font-size) !important;
+        line-height: normal !important;
         cursor: pointer;
       }
       .geocoder-search-btn:disabled {
@@ -109,19 +124,22 @@
         background: var(--sui-listbox-background-color, var(--sui-control-background-color));
       }
       .geocoder-result-btn {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 8px 10px;
-        background: none;
-        border: none;
+        box-sizing: border-box !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 8px 10px !important;
+        margin: 0 !important;
+        background: none !important;
+        border: none !important;
         cursor: pointer;
-        font-size: var(--sui-font-size-small, 13px);
-        color: var(--sui-listbox-foreground-color, var(--sui-control-foreground-color));
+        font-size: var(--sui-font-size-small, 13px) !important;
+        color: var(--sui-listbox-foreground-color, var(--sui-control-foreground-color)) !important;
+        line-height: normal !important;
       }
       .geocoder-result-btn:hover,
       .geocoder-result-btn:focus-visible {
-        background: var(--sui-hover-background-color);
+        background: var(--sui-hover-background-color) !important;
       }
       .geocoder-current {
         display: flex;
@@ -131,18 +149,24 @@
         color: var(--sui-secondary-foreground-color, var(--sui-tertiary-foreground-color));
       }
       .geocoder-clear-btn {
-        height: 26px;
-        padding-inline: 10px;
-        border-radius: var(--sui-button-small-border-radius);
-        border: 1px solid var(--sui-control-border-color);
-        background: none;
-        color: inherit;
-        font-size: var(--sui-font-size-small, 12px);
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 26px !important;
+        margin: 0 !important;
+        padding: 0 10px !important;
+        border-radius: var(--sui-button-small-border-radius) !important;
+        border: 1px solid var(--sui-control-border-color) !important;
+        background: none !important;
+        color: inherit !important;
+        font-size: var(--sui-font-size-small, 12px) !important;
+        line-height: normal !important;
         cursor: pointer;
       }
       .geocoder-clear-btn:hover,
       .geocoder-clear-btn:focus-visible {
-        background: var(--sui-hover-background-color);
+        background: var(--sui-hover-background-color) !important;
       }
     </style>
   </head>
@@ -190,7 +214,7 @@
 
         return html`
           <div class=${classNameWrapper} style="display: flex; flex-direction: column; gap: 8px;">
-            <div style="display: flex; gap: 8px;">
+            <div style="display: flex; gap: 8px; align-items: center;">
               <input
                 id=${forID}
                 class="geocoder-input"
