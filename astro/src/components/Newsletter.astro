@@ -23,13 +23,16 @@ import Icon from './Icon.astro';
    * this is deliberately global, scoped by the .newsletter-embed wrapper.
    */
   .newsletter-embed .main-form {
-    display: flex;
+    display: flex !important;
     gap: 8px;
-    align-items: flex-start;
+    align-items: center !important;
   }
-  .newsletter-embed .emailoctopus-form-row {
+  .newsletter-embed .main-form .emailoctopus-form-row {
     flex: 1;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
+  }
+  .newsletter-embed .main-form input[type='submit'] {
+    margin: 0 !important;
   }
   .newsletter-embed input.form-control {
     height: 42px;
