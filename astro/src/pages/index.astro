@@ -1,11 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import logo from '../assets/logo.png';
 import { postUrl } from '../lib/posts';
 import Newsletter from '../components/Newsletter.astro';
+
+const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 
 // General community events (not the Bear Pride week's own programme, which
 // lives on /bear-pride and comes from the `events` collection).
@@ -50,10 +52,18 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
         Grab your boots, join the pack.
       </p>
       <div class="mt-2 flex flex-wrap justify-center gap-4">
-        <a href="/bear-pride" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
-          Bear Pride 2026 →
-        </a>
-        <a href="#events" class="inline-flex items-center gap-2 rounded-full border-2 border-cream px-6 py-3.5 text-[15px] font-bold text-cream">
+        {bearPride.enabled && (
+          <a href="/bear-pride" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">
+            Bear Pride 2026 →
+          </a>
+        )}
+        <a
+          href="#events"
+          class:list={[
+            'inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-bold',
+            bearPride.enabled ? 'border-2 border-cream text-cream' : 'bg-gold text-ink',
+          ]}
+        >
           See upcoming events
         </a>
       </div>

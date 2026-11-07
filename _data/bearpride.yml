@@ -1,6 +1,6 @@
-enabled: true #that will display the bear pride panel on homepage
+enabled: false
 homepage_panel:
-  title: "Bear Pride Luxembourg 2025 - Cowboy Edition"
+  title: Bear Pride Luxembourg 2025 - Cowboy Edition
   description: |-
     Saddle up for Bear Pride Luxembourg 2025! This year we're embracing our wild side with a Cowboy Edition theme from October 8-12, 2025.
 
@@ -10,7 +10,6 @@ homepage_panel:
 
     This Pride, we ride together! 🤠🌈
 facebook_main_event: https://fb.me/e/6bl4Inya6
-combo_ticket_url:
 application_open: false
 candidate_list: true
 hotel_cta:
