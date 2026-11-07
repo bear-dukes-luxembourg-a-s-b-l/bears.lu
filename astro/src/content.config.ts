@@ -4,6 +4,7 @@ import type { Loader } from 'astro/loaders';
 import { existsSync, promises as fs } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
+import matter from 'gray-matter';
 
 // These collections read straight from the Jekyll site's _data/*.json files
 // (one directory up), so content stays single-sourced while both sites are
@@ -177,4 +178,84 @@ const bearPrideConfig = defineCollection({
   }),
 });
 
-export const collections = { mrbears, candidates, events, sponsors, bearPrideConfig };
+/**
+ * Astro's built-in glob() loader has two problems with this directory:
+ * - it only recognizes .md/.mdx by extension, so the ~25 posts still using
+ *   Jekyll's old .markdown extension get skipped ("No entry type found");
+ * - when a post's front matter has its own `slug:` field, glob() uses that
+ *   as the entry id instead of the filename, which breaks the
+ *   YYYY-MM-DD-slug filename pattern every post's URL is derived from.
+ *
+ * This loader reads both extensions, keys every entry by filename (never
+ * by a `slug` field), and keeps the raw markdown body as a string to be
+ * rendered with `marked` at display time instead of Astro's content
+ * render pipeline.
+ */
+function postsLoader(dir: string): Loader {
+  return {
+    name: 'posts-loader',
+    load: async ({ config, store, parseData, logger, watcher }) => {
+      const dirUrl = new URL(dir, config.root);
+      const dirPath = fileURLToPath(dirUrl);
+
+      async function sync() {
+        if (!existsSync(dirPath)) {
+          logger.error(`Directory not found: ${dir}`);
+          return;
+        }
+        const filenames = (await fs.readdir(dirPath)).filter((f) => /\.(md|markdown)$/.test(f));
+        store.clear();
+        for (const filename of filenames) {
+          const filePath = `${dirPath}/${filename}`;
+          const raw = await fs.readFile(filePath, 'utf-8');
+          const { data: frontmatter, content } = matter(raw);
+          const id = filename.replace(/\.(md|markdown)$/, '');
+          // Jekyll builds a post's URL from the literal YYYY-MM-DD written in
+          // its `date:` front matter (falling back to the filename's date
+          // only when there's no front matter date). Extracted from the raw
+          // text, not the gray-matter-parsed value, so YAML's own date
+          // parsing and timezone handling never shift it by a day.
+          const dateMatch = /^date:\s*['"]?(\d{4}-\d{2}-\d{2})/m.exec(raw);
+          const filenameDateMatch = /^(\d{4}-\d{2}-\d{2})-/.exec(filename);
+          const urlDate = dateMatch?.[1] ?? filenameDateMatch?.[1];
+          const data = await parseData({ id, data: { ...frontmatter, body: content, urlDate } });
+          store.set({ id, data });
+        }
+      }
+
+      await sync();
+      watcher?.add(dirPath);
+      watcher?.on('all', async (_event, changedPath) => {
+        if (changedPath.startsWith(dirPath)) {
+          logger.info(`Reloading posts from ${dir}`);
+          await sync();
+        }
+      });
+    },
+  };
+}
+
+// Blog posts. Jekyll front matter is inconsistent across 10 years of posts
+// (categories as a comma-string, an array, or a single string; dates in a
+// few different formats), so the schema stays permissive and normalizes
+// `categories` into an array.
+const posts = defineCollection({
+  loader: postsLoader('../_posts'),
+  schema: z.object({
+    body: z.string(),
+    title: z.string(),
+    date: z.coerce.date(),
+    urlDate: z.string(),
+    image: z.string().optional(),
+    author: z.string().optional(),
+    categories: z
+      .union([z.string(), z.array(z.string())])
+      .optional()
+      .transform((value) => {
+        if (!value) return [];
+        return Array.isArray(value) ? value : value.split(',').map((c) => c.trim());
+      }),
+  }),
+});
+
+export const collections = { mrbears, candidates, events, sponsors, bearPrideConfig, posts };

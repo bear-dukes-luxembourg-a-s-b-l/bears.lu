@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import { marked } from 'marked';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import Icon from '../../../../../components/Icon.astro';
+import { postUrlParts } from '../../../../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: postUrlParts(post),
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const postHtml = await marked.parse(post.data.body);
+
+const formatDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<BaseLayout title={post.data.title} description={post.data.title}>
+  <div class="mx-auto max-w-[760px] px-8 pt-8">
+    <a href="/news" class="inline-flex items-center gap-2 text-sm font-bold text-tan">
+      <Icon name="arrow-left" /> All the news
+    </a>
+  </div>
+
+  <article class="mx-auto max-w-[760px] px-8 pb-20 pt-6">
+    {post.data.categories[0] && (
+      <span class="rounded-full bg-gold px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide text-ink">
+        {post.data.categories[0]}
+      </span>
+    )}
+    <h1 class="font-display mb-4 mt-4 text-[34px] normal-case leading-tight">{post.data.title}</h1>
+    <div class="mb-7 flex gap-5 text-sm text-tan">
+      {post.data.author && (
+        <span class="flex items-center gap-1.5"><Icon name="user" /> {post.data.author}</span>
+      )}
+      <span class="flex items-center gap-1.5"><Icon name="calendar" /> {formatDate(post.data.date)}</span>
+    </div>
+
+    {post.data.image && (
+      <Image
+        src={post.data.image}
+        alt=""
+        width={1200}
+        height={675}
+        class="mb-8 block w-full rounded-2xl object-cover"
+      />
+    )}
+
+    <div class="prose-post text-[16px] leading-[1.75] text-tan-soft">
+      <Fragment set:html={postHtml} />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-post :global(h2) {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--color-cream);
+    text-transform: uppercase;
+    margin: 36px 0 12px;
+  }
+  .prose-post :global(h3) {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-cream);
+    margin: 28px 0 10px;
+  }
+  .prose-post :global(p) {
+    margin-bottom: 16px;
+  }
+  .prose-post :global(a) {
+    color: var(--color-gold);
+    font-weight: 600;
+  }
+  .prose-post :global(ul),
+  .prose-post :global(ol) {
+    margin: 0 0 16px 20px;
+  }
+  .prose-post :global(ul) {
+    list-style: disc;
+  }
+  .prose-post :global(ol) {
+    list-style: decimal;
+  }
+  .prose-post :global(img) {
+    border-radius: 16px;
+    margin: 20px 0;
+  }
+  .prose-post :global(blockquote) {
+    border-left: 3px solid var(--color-gold);
+    padding-left: 16px;
+    color: var(--color-tan);
+    font-style: italic;
+  }
+</style>
