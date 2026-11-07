@@ -4,9 +4,52 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Content Manager | Bear Dukes Luxembourg</title>
-    <link rel="icon" href="data:," />
+    <link rel="icon" type="image/png" href="/admin/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+       * Sveltia's own UI kit (Sveltia UI / "sui") exposes its whole palette
+       * as HSL custom properties, driven mostly by one base hue — so the
+       * easiest way to make the admin feel like the rest of the site is to
+       * retune those instead of overriding individual components.
+       * See https://sveltiacms.app/en/docs/customization
+       */
+      /*
+       * Sveltia injects its own :root rule at runtime, after this one in
+       * document order, so without !important it would win every tie.
+       */
+      :root {
+        /* Site's border/background tones sit around hue 25-30 (warm brown);
+           the accent below is set explicitly to the exact site gold. */
+        --sui-base-hue: 28 !important;
+
+        --sui-primary-accent-color-text: #141210 !important;
+        --sui-primary-accent-color-light: #f3e4c4 !important;
+        --sui-primary-accent-color: #e8c25a !important;
+        --sui-primary-accent-color-dark: #c9a042 !important;
+        --sui-primary-accent-color-inverted: #141210 !important;
+        --sui-primary-accent-color-translucent: rgb(232 194 90 / 25%) !important;
+
+        --sui-font-family-default: 'Inter', system-ui, sans-serif !important;
+
+        /* Site uses soft, consistently rounded corners (10-16px) rather
+           than Sveltia's default tight 4px — echo that here. */
+        --sui-control-small-border-radius: 8px !important;
+        --sui-control-medium-border-radius: 10px !important;
+        --sui-control-large-border-radius: 12px !important;
+        --sui-button-small-border-radius: 8px !important;
+        --sui-button-medium-border-radius: 10px !important;
+        --sui-button-large-border-radius: 12px !important;
+        --sui-listbox-border-radius: 12px !important;
+        --sui-option-border-radius: 8px !important;
+      }
+    </style>
   </head>
   <body>
-    <script src="https://unpkg.com/@sveltia/cms@0.100.0/dist/sveltia-cms.js" type="module"></script>
+    <script src="https://unpkg.com/@sveltia/cms@0.261.0/dist/sveltia-cms.js" type="module"></script>
   </body>
 </html>

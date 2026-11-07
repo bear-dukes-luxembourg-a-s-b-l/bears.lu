@@ -3,6 +3,11 @@ backend:
   repo: bear-dukes-luxembourg-a-s-b-l/bears.lu
   branch: master
 
+site_url: https://bears.lu
+logo:
+  src: /admin/logo.png
+app_title: "Bear Dukes Luxembourg"
+
 # New media uploaded from the CMS lands in /uploads, matching the convention
 # already used by most existing content (candidate photos, sponsor logos…).
 media_folder: uploads
@@ -18,6 +23,7 @@ collections:
   - name: mrbears
     label: "Mr. Bear titleholders"
     label_singular: "Mr. Bear"
+    description: "The yearly Mr. Bear Luxembourg winners, shown on the homepage and the Mr. Bear page."
     files:
       - name: mrbears
         label: "Mr. Bear titleholders"
@@ -46,6 +52,7 @@ collections:
   - name: candidates
     label: "Mr. Bear candidates"
     label_singular: Candidate
+    description: "This year's Mr. Bear contestants, shown on the Bear Pride page while applications are open."
     files:
       - name: candidates
         label: "Mr. Bear candidates"
@@ -78,6 +85,7 @@ collections:
   - name: bear_pride_sponsors
     label: "Bear Pride sponsors"
     label_singular: "Bear Pride sponsor tier"
+    description: "Sponsors for this year's Bear Pride edition only — not the year-round home page sponsors below."
     files:
       - name: sponsors
         label: "Bear Pride sponsors"
@@ -101,6 +109,7 @@ collections:
   - name: general_sponsors
     label: "Home sponsors"
     label_singular: "Home sponsor"
+    description: "The asbl's year-round partners, shown on the homepage — separate from the Bear Pride sponsors above."
     files:
       - name: general-sponsors
         label: "Home sponsors"
@@ -120,6 +129,7 @@ collections:
   - name: bear_pride_schedule
     label: "Bear Pride schedule"
     label_singular: "Day"
+    description: "The full programme for this year's Bear Pride, grouped by day."
     files:
       - name: events
         label: "Bear Pride schedule"
@@ -131,7 +141,7 @@ collections:
             root: true
             summary: "{{fields.date}}"
             fields:
-              - { name: date, label: Date, widget: date, date_format: "yyyy-MM-dd" }
+              - { name: date, label: Date, widget: datetime, type: date }
               - name: events
                 label: Events
                 widget: list
@@ -150,6 +160,7 @@ collections:
   - name: bear_pride_config
     label: "Bear Pride edition settings"
     label_singular: "Bear Pride edition"
+    description: "Switches and text for the current Bear Pride edition — the homepage banner, applications toggle and hotel offer."
     files:
       - name: bearpride
         label: "Bear Pride edition settings"
@@ -177,6 +188,7 @@ collections:
   - name: general_events
     label: "Home events"
     label_singular: Event
+    description: "Regular community events shown on the homepage — not the Bear Pride programme."
     folder: astro/src/content/general-events
     create: true
     extension: md
@@ -185,7 +197,7 @@ collections:
     summary: "{{title}} — {{date}}"
     fields:
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: date, date_format: "yyyy-MM-dd" }
+      - { name: date, label: Date, widget: datetime, type: date }
       - { name: time, label: Time, hint: "e.g. 7:00 PM" }
       - { name: place, label: Venue }
       - { name: place_url, label: "Venue map URL", widget: string, required: false }
@@ -197,6 +209,7 @@ collections:
   - name: posts
     label: News
     label_singular: "News post"
+    description: "Blog posts shown on the News page."
     folder: _posts
     create: true
     extension: md
