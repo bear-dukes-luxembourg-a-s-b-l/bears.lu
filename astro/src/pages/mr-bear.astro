@@ -95,50 +95,50 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
   )}
 
   {pastMrBears.length > 0 && (
-    <section class="mx-auto px-8 pb-14 pt-9">
-      <div class="mx-auto mb-5 max-w-[1240px] text-xs font-extrabold uppercase tracking-wide text-tan">Past titleholders</div>
-      <div class="mx-auto flex max-w-[1240px] flex-col gap-3.5">
-        {pastMrBears.map((mister) => (
-          <div class="flex items-center gap-5 rounded-2xl border border-border bg-surface p-4.5">
-            {mister.data.image ? (
-              <Image
-                src={mister.data.image}
-                alt={mister.data.name}
-                width={112}
-                height={112}
-                class="h-14 w-14 flex-none rounded-full object-cover"
-              />
-            ) : (
-              <div class="flex h-14 w-14 flex-none items-center justify-center rounded-full border-2 border-dashed border-border bg-ink text-center text-[9px] text-muted">
-                photo
-              </div>
-            )}
-            <div class="min-w-0 flex-1">
-              <div class="font-display text-base">{mister.data.name}</div>
-              <div class="text-xs text-tan">Mr. Bear {mister.data.year}</div>
+    <section class="mx-auto flex max-w-[1240px] flex-col gap-5 px-8 pb-14 pt-9">
+      {pastMrBears.map((mister) => (
+        <div class="flex flex-col gap-6 rounded-2xl border border-border bg-surface p-7 sm:flex-row">
+          {mister.data.image ? (
+            <Image
+              src={mister.data.image}
+              alt={mister.data.name}
+              width={320}
+              height={320}
+              class="h-40 w-40 flex-none rounded-full object-cover"
+            />
+          ) : (
+            <div class="flex h-40 w-40 flex-none items-center justify-center rounded-full border-2 border-dashed border-border bg-ink text-center text-xs text-muted">
+              photo coming
             </div>
+          )}
+          <div class="flex-1">
+            <div class="mb-2 flex items-baseline gap-3">
+              <span class="font-display text-xl">{mister.data.name}</span>
+              <span class="text-xs font-extrabold uppercase tracking-wide text-gold">Mr. Bear {mister.data.year}</span>
+            </div>
+            <p class="text-sm leading-relaxed text-tan-soft">{mister.data.description}</p>
             {(mister.data.social?.instagram || mister.data.social?.facebook || mister.data.social?.twitter) && (
-              <div class="flex flex-none gap-2">
+              <div class="mt-4 flex gap-2">
                 {mister.data.social?.instagram && (
-                  <a href={mister.data.social.instagram} aria-label={`${mister.data.name} on Instagram`} class="flex h-8 w-8 items-center justify-center rounded-full border border-border text-tan">
+                  <a href={mister.data.social.instagram} aria-label={`${mister.data.name} on Instagram`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
                     <Icon name="ig" />
                   </a>
                 )}
                 {mister.data.social?.facebook && (
-                  <a href={mister.data.social.facebook} aria-label={`${mister.data.name} on Facebook`} class="flex h-8 w-8 items-center justify-center rounded-full border border-border text-tan">
+                  <a href={mister.data.social.facebook} aria-label={`${mister.data.name} on Facebook`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
                     <Icon name="fb" />
                   </a>
                 )}
                 {mister.data.social?.twitter && (
-                  <a href={mister.data.social.twitter} aria-label={`${mister.data.name} on Twitter`} class="flex h-8 w-8 items-center justify-center rounded-full border border-border text-tan">
+                  <a href={mister.data.social.twitter} aria-label={`${mister.data.name} on Twitter`} class="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-cream">
                     <Icon name="twitter" />
                   </a>
                 )}
               </div>
             )}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
   )}
 </BaseLayout>
