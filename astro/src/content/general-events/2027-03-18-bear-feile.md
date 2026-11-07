@@ -1,7 +1,7 @@
 ---
 title: Béar Féile
 date: "2027-03-18"
-time: 18–21 Mar
+end_date: "2027-03-21"
 place: 🇮🇪 Dublin, Ireland
 community: true
 coordinates:

@@ -14,6 +14,21 @@ const monthShort = (iso: string) =>
   new Date(`${iso}T00:00:00`).toLocaleDateString('en', { month: 'short' });
 const dayNumber = (iso: string) => new Date(`${iso}T00:00:00`).getDate();
 
+// A single-day event with a fixed start time shows that time. A multi-day
+// one (most community events) shows its date span instead, derived from
+// end_date rather than stored as free text.
+const dateRange = (startIso: string, endIso: string) => {
+  const start = new Date(`${startIso}T00:00:00`);
+  const end = new Date(`${endIso}T00:00:00`);
+  const sameMonth = start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
+  return sameMonth
+    ? `${start.getDate()}–${end.getDate()} ${monthShort(startIso)}`
+    : `${start.getDate()} ${monthShort(startIso)} – ${end.getDate()} ${monthShort(endIso)}`;
+};
+
+const when =
+  event.time ?? (event.end_date && event.end_date !== event.date ? dateRange(event.date, event.end_date) : null);
+
 const dark = event.community || index % 2 === 1;
 ---
 <div
@@ -35,7 +50,7 @@ const dark = event.community || index % 2 === 1;
   <div class="min-w-0 flex-1">
     <div class="truncate text-base font-bold">{event.title}</div>
     <div class="text-sm text-tan">
-      {event.time} · {event.place}
+      {when && <>{when} · </>}{event.place}
       {event.coordinates && <span data-distance></span>}
     </div>
   </div>

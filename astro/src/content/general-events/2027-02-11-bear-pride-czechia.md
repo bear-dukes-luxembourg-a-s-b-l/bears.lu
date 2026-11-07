@@ -1,7 +1,7 @@
 ---
 title: Bear Pride Czechia
 date: "2027-02-11"
-time: 11–14 Feb
+end_date: "2027-02-14"
 place: 🇨🇿 Prague, Czechia
 community: true
 coordinates:

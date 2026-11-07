@@ -1,7 +1,7 @@
 ---
 title: BearScotFest
 date: "2027-09-30"
-time: 30 Sep – 3 Oct
+end_date: "2027-10-03"
 place: 🇬🇧 Edinburgh, United Kingdom
 community: true
 coordinates:

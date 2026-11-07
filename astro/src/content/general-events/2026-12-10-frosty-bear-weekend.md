@@ -1,7 +1,7 @@
 ---
 title: Frosty Bear Weekend
 date: "2026-12-10"
-time: 10–13 Dec
+end_date: "2026-12-13"
 place: 🇦🇹 Vienna, Austria
 community: true
 coordinates:

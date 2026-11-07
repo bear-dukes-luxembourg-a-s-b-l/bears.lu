@@ -1,7 +1,7 @@
 ---
 title: Lisbon Bear Pride
 date: "2027-05-24"
-time: 24–30 May
+end_date: "2027-05-30"
 place: 🇵🇹 Lisbon, Portugal
 community: true
 coordinates:

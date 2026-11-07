@@ -121,7 +121,11 @@ const generalEvents = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.string(),
-    time: z.string(),
+    // A fixed start time (e.g. "7:00 PM") for a single-day event we or
+    // someone else is running at a set hour. A multi-day event (most
+    // community ones) leaves this blank and sets end_date instead.
+    time: z.string().optional(),
+    end_date: z.string().optional(),
     place: z.string(),
     place_url: z.string().optional(),
     price: z.union([z.string(), z.number()]).optional(),

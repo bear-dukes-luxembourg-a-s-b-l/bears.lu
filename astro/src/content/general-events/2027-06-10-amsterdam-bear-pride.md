@@ -1,7 +1,7 @@
 ---
 title: Amsterdam Bear Pride
 date: "2027-06-10"
-time: 10–13 Jun
+end_date: "2027-06-13"
 place: 🇳🇱 Amsterdam, Netherlands
 community: true
 coordinates:

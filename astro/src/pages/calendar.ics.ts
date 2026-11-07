@@ -16,10 +16,10 @@ const slugify = (s: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 
-// Our own events' `time` field holds a real clock time like "7:00 PM"
-// (see the CMS hint); community events hold a free-text date range like
-// "17–22 Nov" instead — anything that doesn't parse as a time becomes an
-// all-day entry instead of a timed one.
+// A single-day event with a fixed start time (our own, "7:00 PM" style)
+// becomes a timed VEVENT; a multi-day one (most community events, which
+// set end_date instead of time) becomes an all-day entry spanning its
+// real date range.
 const TIME_RE = /^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i;
 
 export const GET: APIRoute = async () => {
@@ -41,7 +41,7 @@ export const GET: APIRoute = async () => {
 
   for (const { data: event } of events) {
     const [year, month, day] = event.date.split('-').map(Number);
-    const timeMatch = TIME_RE.exec(event.time.trim());
+    const timeMatch = event.time ? TIME_RE.exec(event.time.trim()) : null;
 
     lines.push('BEGIN:VEVENT');
     lines.push(`UID:${event.date}-${slugify(event.title)}@bears.lu`);
@@ -64,8 +64,16 @@ export const GET: APIRoute = async () => {
       lines.push(`DTSTART;TZID=Europe/Luxembourg:${fmt(start)}`);
       lines.push(`DTEND;TZID=Europe/Luxembourg:${fmt(end)}`);
     } else {
-      const endDate = new Date(Date.UTC(year, month - 1, day + 1));
       const fmtDate = (d: Date) => `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}`;
+      // DTEND is exclusive in iCalendar, so an end_date of the 22nd needs
+      // the 23rd here; a single-day event (no end_date) just spans one day.
+      let endDate: Date;
+      if (event.end_date) {
+        const [endYear, endMonth, endDay] = event.end_date.split('-').map(Number);
+        endDate = new Date(Date.UTC(endYear, endMonth - 1, endDay + 1));
+      } else {
+        endDate = new Date(Date.UTC(year, month - 1, day + 1));
+      }
       lines.push(`DTSTART;VALUE=DATE:${fmtDate(new Date(Date.UTC(year, month - 1, day)))}`);
       lines.push(`DTEND;VALUE=DATE:${fmtDate(endDate)}`);
     }

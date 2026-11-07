@@ -1,7 +1,7 @@
 ---
 title: Belgium Bear Pride
 date: "2027-09-28"
-time: 28 Sep – 3 Oct
+end_date: "2027-10-03"
 place: 🇧🇪 Brussels, Belgium
 community: true
 coordinates:

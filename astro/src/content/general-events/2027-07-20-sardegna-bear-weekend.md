@@ -1,7 +1,7 @@
 ---
 title: Sardegna Bear Weekend
 date: "2027-07-20"
-time: 20–25 Jul
+end_date: "2027-07-25"
 place: 🇮🇹 Cagliari, Italy
 community: true
 coordinates:

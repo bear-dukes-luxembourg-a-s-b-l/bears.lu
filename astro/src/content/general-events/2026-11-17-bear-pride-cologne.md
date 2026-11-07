@@ -1,7 +1,7 @@
 ---
 title: Bear Pride Cologne
 date: "2026-11-17"
-time: 17–22 Nov
+end_date: "2026-11-22"
 place: 🇩🇪 Cologne, Germany
 community: true
 coordinates:

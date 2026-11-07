@@ -136,7 +136,7 @@ collections:
     fields:
       - { name: date, label: Date, widget: datetime, type: date }
       - { name: title, label: Title }
-      - { name: time, label: Time, hint: "e.g. 7:00 PM" }
+      - { name: time, label: Time, widget: datetime, type: time, format: "h:mm A" }
       - { name: place, label: Venue }
       - { name: place_url, label: "Venue map URL", widget: string, required: false }
       - { name: price, label: Price, widget: string, required: false, hint: "e.g. Free, 15€" }
@@ -185,8 +185,20 @@ collections:
     summary: "{{title}} — {{date}}"
     fields:
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: datetime, type: date }
-      - { name: time, label: Time, hint: "e.g. 7:00 PM" }
+      - { name: date, label: "Start date", widget: datetime, type: date }
+      - name: time
+        label: "Start time"
+        widget: datetime
+        type: time
+        format: "h:mm A"
+        required: false
+        hint: "Only for a single-day event with a fixed start time. For a multi-day event (most community ones), leave this blank and set an end date below instead."
+      - name: end_date
+        label: "End date"
+        widget: datetime
+        type: date
+        required: false
+        hint: "Only for a multi-day event — leave blank for a single-day one."
       - { name: place, label: Venue }
       - { name: place_url, label: "Venue map URL", widget: string, required: false }
       - { name: price, label: Price, widget: string, required: false, hint: "e.g. Free, 15€" }

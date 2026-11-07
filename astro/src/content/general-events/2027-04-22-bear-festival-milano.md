@@ -1,7 +1,7 @@
 ---
 title: Bear Festival Milano
 date: "2027-04-22"
-time: 22 Apr – 2 May
+end_date: "2027-05-02"
 place: 🇮🇹 Milan, Italy
 community: true
 coordinates:
