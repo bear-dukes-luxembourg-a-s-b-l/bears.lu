@@ -7,6 +7,7 @@ import logo from '../assets/logo.png';
 import { postUrl } from '../lib/posts';
 import Newsletter from '../components/Newsletter.astro';
 import EventCard from '../components/EventCard.astro';
+import SubscribeCalendarModal from '../components/SubscribeCalendarModal.astro';
 
 const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 
@@ -143,12 +144,13 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
             to know when the next one's up.
           </div>
         )}
-        <a
-          href="/calendar.ics"
+        <button
+          type="button"
+          data-open-subscribe-modal
           class="rounded-xl border border-dashed border-border p-2.5 text-center text-sm font-bold text-tan"
         >
           + Add this calendar to my agenda
-        </a>
+        </button>
       </div>
     </div>
 
@@ -235,6 +237,8 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
     </section>
   )}
 </BaseLayout>
+
+<SubscribeCalendarModal />
 
 {spotlightMrBear && (
   <script>

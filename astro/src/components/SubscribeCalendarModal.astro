@@ -1,0 +1,98 @@
+---
+import Icon from './Icon.astro';
+---
+<dialog
+  id="subscribe-modal"
+  class="m-auto w-[min(440px,calc(100vw-2rem))] rounded-2xl border border-border bg-surface p-0 text-cream backdrop:bg-ink/80"
+>
+  <div class="flex items-center justify-between border-b border-border-soft p-5">
+    <div class="flex items-center gap-2 font-bold">
+      <Icon name="calendar" class="text-gold" /> Subscribe to this calendar
+    </div>
+    <button type="button" id="subscribe-modal-close" aria-label="Close" class="flex h-8 w-8 items-center justify-center rounded-full text-tan">
+      <Icon name="x" />
+    </button>
+  </div>
+
+  <div class="flex flex-col gap-4 p-5">
+    <p class="text-sm leading-relaxed text-tan-soft">
+      Paste this link into your calendar app's "subscribe by URL" option and it'll stay up to date automatically —
+      new and changed events show up on their own.
+    </p>
+
+    <div class="flex gap-2">
+      <input
+        id="subscribe-modal-url"
+        type="text"
+        readonly
+        class="h-11 min-w-0 flex-1 rounded-lg border border-border bg-ink px-3.5 text-sm text-cream"
+      />
+      <button
+        type="button"
+        id="subscribe-modal-copy"
+        class="flex-none rounded-lg bg-gold px-4 text-sm font-bold text-ink"
+      >
+        <span class="flex items-center gap-1.5">
+          <Icon name="copy" /> <span id="subscribe-modal-copy-label">Copy</span>
+        </span>
+      </button>
+    </div>
+
+    <a
+      id="subscribe-modal-webcal"
+      href="#"
+      class="inline-flex items-center gap-2 text-sm font-bold text-gold"
+    >
+      <Icon name="calendar" /> Open directly in my calendar app
+    </a>
+
+    <div class="border-t border-dashed border-border-soft pt-4">
+      <a href="/calendar.ics" class="inline-flex items-center gap-2 text-xs font-bold text-tan">
+        <Icon name="download" /> Download a one-time snapshot (.ics file) instead
+      </a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  const modal = document.getElementById('subscribe-modal') as HTMLDialogElement | null;
+  const urlInput = document.getElementById('subscribe-modal-url') as HTMLInputElement | null;
+  const webcalLink = document.getElementById('subscribe-modal-webcal') as HTMLAnchorElement | null;
+  const copyButton = document.getElementById('subscribe-modal-copy');
+  const copyLabel = document.getElementById('subscribe-modal-copy-label');
+
+  function openSubscribeModal() {
+    if (!modal || !urlInput || !webcalLink) return;
+    const icsUrl = `${window.location.origin}/calendar.ics`;
+    urlInput.value = icsUrl;
+    webcalLink.href = icsUrl.replace(/^https?:/, 'webcal:');
+    modal.showModal();
+    urlInput.focus();
+    urlInput.select();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-open-subscribe-modal]').forEach((trigger) => {
+    trigger.addEventListener('click', openSubscribeModal);
+  });
+
+  document.getElementById('subscribe-modal-close')?.addEventListener('click', () => modal?.close());
+  modal?.addEventListener('click', (event) => {
+    if (event.target === modal) modal.close();
+  });
+
+  copyButton?.addEventListener('click', async () => {
+    if (!urlInput) return;
+    try {
+      await navigator.clipboard.writeText(urlInput.value);
+    } catch {
+      urlInput.select();
+      document.execCommand('copy');
+    }
+    if (copyLabel) {
+      copyLabel.textContent = 'Copied!';
+      setTimeout(() => {
+        copyLabel.textContent = 'Copy';
+      }, 2000);
+    }
+  });
+</script>

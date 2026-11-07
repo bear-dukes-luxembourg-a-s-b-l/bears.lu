@@ -1,7 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
 import EventCard from '../components/EventCard.astro';
+import SubscribeCalendarModal from '../components/SubscribeCalendarModal.astro';
 
 const events = (await getCollection('generalEvents'))
   .map((entry) => entry.data)
@@ -33,12 +35,13 @@ for (const event of events) {
         Everything coming up — ours, and the wider bear scene around us.
       </p>
     </div>
-    <a
-      href="/calendar.ics"
+    <button
+      type="button"
+      data-open-subscribe-modal
       class="inline-flex items-center gap-2 rounded-full border border-gold px-5 py-2.5 text-sm font-bold text-gold"
     >
-      ⤓ Subscribe (.ics)
-    </a>
+      <Icon name="calendar" /> Subscribe
+    </button>
   </section>
 
   <section class="mx-auto flex flex-wrap gap-2.5 px-8 pt-4">
@@ -88,6 +91,8 @@ for (const event of events) {
     )}
   </section>
 </BaseLayout>
+
+<SubscribeCalendarModal />
 
 <script>
   const pills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
