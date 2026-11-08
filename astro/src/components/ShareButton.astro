@@ -24,6 +24,8 @@ const { title } = Astro.props;
     button.addEventListener('click', async () => {
       const shareData = { title: button.dataset.title, url: window.location.href };
 
+      // Prefer the native share sheet; browsers without it (desktop Chrome/
+      // Firefox) fall back to copying the link instead of doing nothing.
       if (navigator.share) {
         try {
           await navigator.share(shareData);
