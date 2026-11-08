@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Say Hello to the New bears.lu"
+title: "Waking Up From Hibernation"
 date: 2026-11-08T17:20:00.000Z
 image: /uploads/2026/11/new-site-homepage.jpg
 categories:
@@ -9,11 +9,11 @@ author: clawfire
 fmContentType: Post
 slug: bears-lu-new-look
 ---
-If you're reading this, you're already looking at it: bears.lu just got rebuilt from the ground up. Same community, same events, same bears — new engine under the hood, and a few things we've wanted to add for a while.
+It's been quiet around here, we know. Bears hibernate — it's kind of our thing — but we're stirring, stretching, and poking our heads out of the den again. Things have started moving behind the scenes, and over the coming weeks you'll see more of it. This is just the first thing out.
 
-## Why a rebuild
+## First things first: a new site
 
-The old site had served us well for years, but it was starting to show its age — slow to update, awkward to maintain, and missing a few things our community kept asking for. So instead of patching around it, we rebuilt the whole thing: faster pages, a cleaner look that actually matches our branding, and a backend that's much easier for us to keep up to date.
+The old bears.lu had served us well for years, but it was starting to show its age — slow to update, awkward to maintain, and missing a few things our community kept asking for. So instead of patching around it while we were waking up anyway, we rebuilt the whole thing: faster pages, a cleaner look that actually matches our branding, and a backend that's much easier for us to keep up to date.
 
 ![The new bears.lu homepage](/uploads/2026/11/new-site-homepage.jpg)
 
@@ -38,4 +38,4 @@ A few things that are easy to miss but were worth doing right:
 - Our news feed is back at the same address it's always been, so if you were subscribed, nothing breaks.
 - Even the favicon in your browser tab is finally our own bear, not a generic placeholder.
 
-That's it, really — same bears.lu, just one we're a lot happier maintaining. If something looks broken or missing, [let us know](/contact).
+That's where we're starting. Same bears.lu, just one we're a lot happier maintaining — and a better foundation for what's coming next. Keep an eye out, there's more waking up to do. If something looks broken or missing on the new site in the meantime, [let us know](/contact).
