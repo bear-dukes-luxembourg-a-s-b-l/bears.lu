@@ -38,4 +38,8 @@ Every titleholder since José in 2015 has their own page now on [/mr-bear](/mr-b
 - The news feed is still at the same address as before, so nothing breaks if you were subscribed.
 - Even the favicon is our bear now instead of whatever default placeholder it was before.
 
+## We could use some help
+
+Keeping the calendar up to date and writing stuff for the news section takes time, and it's mostly been one or two of us doing it between everything else. If you'd be up for helping out with either — adding events as you hear about them, or writing the odd post — [get in touch](/contact). Doesn't have to be a big commitment.
+
 That's the first thing. More to come. If you spot something broken on the new site, [tell us](/contact).
