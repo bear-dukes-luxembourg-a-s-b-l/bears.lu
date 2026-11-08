@@ -68,7 +68,7 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
               <span class="font-display text-[28px]">{currentMrBear.data.name}</span>
               <span class="text-xs font-extrabold uppercase tracking-wide text-gold">Mr. Bear {currentMrBear.data.year}</span>
             </div>
-            <p class="max-w-[560px] text-sm leading-relaxed text-tan-soft">{currentMrBear.data.description}</p>
+            <p class="max-w-[760px] text-sm leading-relaxed text-tan-soft">{currentMrBear.data.description}</p>
             {(currentMrBear.data.social?.instagram || currentMrBear.data.social?.facebook || currentMrBear.data.social?.twitter) && (
               <div class="mt-4 flex justify-center gap-2 sm:justify-start">
                 {currentMrBear.data.social?.instagram && (
