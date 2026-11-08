@@ -1,7 +1,11 @@
 [build]
   base = "astro"
   command = "npm install && npm run build"
-  publish = "dist"
+  # Resolved against the repo root, not against `base`, despite the name —
+  # Astro itself builds into astro/dist (confirmed in the build log), so
+  # without the astro/ prefix Netlify looked for a repo-root dist/ that
+  # never existed and failed at the deploy stage with a passing build.
+  publish = "astro/dist"
 
 [build.environment]
   # The site's default Node on Netlify is a leftover from the Jekyll days
