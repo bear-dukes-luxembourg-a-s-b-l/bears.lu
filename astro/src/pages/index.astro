@@ -199,26 +199,29 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
         </div>
         <a href="/mr-bear" class="text-sm font-bold text-gold">See every Mister →</a>
       </div>
-      <div class="flex gap-7 overflow-x-auto pb-2">
-        {mrbears.map((mister) => (
-          <div class="w-[150px] flex-none text-center">
-            {mister.data.image ? (
-              <Image
-                src={mister.data.image}
-                alt={mister.data.name}
-                width={300}
-                height={300}
-                class="h-[150px] w-[150px] rounded-full border-[3px] border-gold object-cover"
-              />
-            ) : (
-              <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full border-[3px] border-dashed border-border bg-surface text-[11px] text-muted">
-                photo coming
-              </div>
-            )}
-            <div class="mt-2.5 text-sm font-bold">{mister.data.name}</div>
-            <div class="text-xs text-tan">Mr. Bear {mister.data.year}</div>
-          </div>
-        ))}
+      <div class="relative -mx-8">
+        <div class="mrbear-scroll flex snap-x snap-mandatory gap-7 overflow-x-auto px-8 pb-2">
+          {mrbears.map((mister) => (
+            <div class="w-[150px] flex-none snap-start text-center">
+              {mister.data.image ? (
+                <Image
+                  src={mister.data.image}
+                  alt={mister.data.name}
+                  width={300}
+                  height={300}
+                  class="h-[150px] w-[150px] rounded-full border-[3px] border-gold object-cover"
+                />
+              ) : (
+                <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full border-[3px] border-dashed border-border bg-surface text-[11px] text-muted">
+                  photo coming
+                </div>
+              )}
+              <div class="mt-2.5 text-sm font-bold">{mister.data.name}</div>
+              <div class="text-xs text-tan">Mr. Bear {mister.data.year}</div>
+            </div>
+          ))}
+        </div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-alt to-transparent"></div>
       </div>
     </div>
   </section>
@@ -256,3 +259,12 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
     });
   </script>
 )}
+
+<style>
+  .mrbear-scroll {
+    scrollbar-width: none;
+  }
+  .mrbear-scroll::-webkit-scrollbar {
+    display: none;
+  }
+</style>
