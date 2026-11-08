@@ -9,33 +9,33 @@ author: clawfire
 fmContentType: Post
 slug: bears-lu-new-look
 ---
-It's been quiet around here, we know. Bears hibernate — it's kind of our thing — but we're stirring, stretching, and poking our heads out of the den again. Things have started moving behind the scenes, and over the coming weeks you'll see more of it. This is just the first thing out.
+Yeah, it's been quiet. Almost two years without a post. Bears hibernate though, so we'll say that's what we were doing. We're waking up now and a few things are getting put back in motion. You'll see more of it over the coming weeks. First up: the site.
 
-## First things first: a new site
+## A new bears.lu
 
-The old bears.lu had served us well for years, but it was starting to show its age — slow to update, awkward to maintain, and missing a few things our community kept asking for. So instead of patching around it while we were waking up anyway, we rebuilt the whole thing: faster pages, a cleaner look that actually matches our branding, and a backend that's much easier for us to keep up to date.
+The old site was starting to show its age. Updating it was a pain, it wasn't easy to maintain, and a few things people kept asking us for just weren't possible with how it was built. So we rebuilt it from scratch instead of patching it up: faster, closer to our actual branding, and a lot easier for us to update ourselves.
 
 ![The new bears.lu homepage](/uploads/2026/11/new-site-homepage.jpg)
 
-## A real calendar, not just a Facebook group
+## An actual calendar
 
-Events were always scattered — some on Facebook, some only announced at parties. The new [/calendar](/calendar) page brings everything together in one place: our own events, Bear Prides and weekends happening around Europe, filterable by type, with an optional "how far is this from me" distance line if you share your location.
+Events used to live wherever: Facebook, word of mouth at a party, whatever. There's now a proper [/calendar](/calendar) page with everything in one place, ours and other bear events happening around Europe, with filters. If you let it use your location it'll also tell you how far each one is.
 
 ![The new calendar page, with filter pills and upcoming events](/uploads/2026/11/new-site-calendar.jpg)
 
-You can also subscribe to it directly from your phone or computer's own calendar app — hit "Subscribe" and it'll stay up to date on its own, no more checking back manually.
+You can subscribe to it from your phone or computer's calendar app too. Hit "Subscribe" once and it updates itself from then on.
 
-## The Mr. Bear hall of fame, properly
+## Every Mister Bear, finally in one place
 
-Every titleholder since José in 2015 now has their own spot on [/mr-bear](/mr-bear), photo and bio included, with the current Mister front and center. It's a small thing, but it felt wrong having ten years of titleholders buried in an old page nobody linked to anymore.
+Every titleholder since José in 2015 has their own page now on [/mr-bear](/mr-bear), with the current one front and center. Small thing, but it bugged us that ten years of Misters were sitting on a page nobody could find anymore.
 
 ![The Mr. Bear Luxembourg hall of fame page](/uploads/2026/11/new-site-mrbear.jpg)
 
-## The small stuff
+## Other bits
 
-A few things that are easy to miss but were worth doing right:
-- Comments are back on articles, and we added a proper "Share" button that hands off to your phone's native share sheet.
-- Our news feed is back at the same address it's always been, so if you were subscribed, nothing breaks.
-- Even the favicon in your browser tab is finally our own bear, not a generic placeholder.
+- Comments work again on articles.
+- There's a Share button on articles now that just opens your phone's normal share sheet.
+- The news feed is still at the same address as before, so nothing breaks if you were subscribed.
+- Even the favicon is our bear now instead of whatever default placeholder it was before.
 
-That's where we're starting. Same bears.lu, just one we're a lot happier maintaining — and a better foundation for what's coming next. Keep an eye out, there's more waking up to do. If something looks broken or missing on the new site in the meantime, [let us know](/contact).
+That's the first thing. More to come. If you spot something broken on the new site, [tell us](/contact).
