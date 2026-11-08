@@ -12,9 +12,17 @@ const posts = (await getCollection('posts')).sort(
 const formatDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric', month: 'short', year: 'numeric' });
 ---
 <BaseLayout title="News" description="All the news we posted so far.">
-  <section class="mx-auto max-w-[1240px] px-8 py-14">
-    <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">The community's journal</div>
-    <h1 class="font-display text-[42px]">News</h1>
+  <section class="mx-auto flex w-full max-w-[1240px] flex-wrap items-end justify-between gap-5 px-8 py-14">
+    <div>
+      <div class="mb-1 text-xs font-extrabold uppercase tracking-wide text-gold">The community's journal</div>
+      <h1 class="font-display text-[42px]">News</h1>
+    </div>
+    <a
+      href="/feed.xml"
+      class="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-bold text-tan transition-colors hover:border-gold hover:text-gold"
+    >
+      <Icon name="rss" /> Subscribe
+    </a>
   </section>
 
   <section class="mx-auto grid max-w-[1240px] grid-cols-1 gap-6 px-8 pb-20 sm:grid-cols-2 lg:grid-cols-3">
