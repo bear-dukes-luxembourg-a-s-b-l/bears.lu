@@ -5,7 +5,7 @@ photos:
   - /uploads/2025/09/3-Yannick-00002.jpg
   - /uploads/2025/09/3-Yannick-00003.jpg
 name: Yannick K.
-age: "27"
+age: '27'
 about: |-
   Since my candidacy last year, I am now working in the meantime for a trade union and I’m also involved in several committees, where I also actively advocate for the LGBTQIA+ community 
    🏳️‍🌈My hobbies include drawing, gaming (though my other commitments unfortunately don’t always leave me as much time for it as I’d like🥲🎮), spending time in nature (hence my tattoos 🍃😏), and enjoying time with friends. And as Olaf would say; I love warm hugs 😉
@@ -15,4 +15,5 @@ motivation: |-
 links:
   instagram: https://www.instagram.com/yakk_97
   facebook: https://www.facebook.com/share/1E4Q8PkvsR/
+winner: true
 ---
