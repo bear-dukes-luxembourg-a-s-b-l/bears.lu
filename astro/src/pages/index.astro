@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+import { marked } from 'marked';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import logo from '../assets/logo.png';
@@ -27,6 +28,8 @@ const mrbears = (await getCollection('mrbears')).sort(
 // then off again later. If more than one is somehow flagged, show the
 // most recent.
 const spotlightMrBear = mrbears.find((mister) => mister.data.spotlight);
+// Description is markdown (links, etc.) stored as a plain string.
+const spotlightMrBearHtml = spotlightMrBear ? await marked.parse(spotlightMrBear.data.description) : '';
 
 // The asbl's own year-round partners — separate from the Bear Pride
 // edition's gold/silver/media sponsors shown on /bear-pride.
@@ -79,7 +82,9 @@ const formatPostDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric',
         )}
 
         <h2 class="font-display text-[40px] leading-[1.05]">{spotlightMrBear.data.name}</h2>
-        <p class="max-w-[560px] text-sm text-cream-soft">{spotlightMrBear.data.description}</p>
+        <div class="max-w-[560px] text-sm text-cream-soft [&_a]:font-semibold [&_a]:text-gold [&_p:not(:last-child)]:mb-3">
+          <Fragment set:html={spotlightMrBearHtml} />
+        </div>
 
         <div class="mt-1.5 flex flex-wrap justify-center gap-4">
           <a href="/mr-bear" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink">

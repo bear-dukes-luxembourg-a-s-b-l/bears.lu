@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+import { marked } from 'marked';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 
@@ -11,6 +12,12 @@ const mrbears = (await getCollection('mrbears')).sort(
 // The most recent year always gets the elevated "current titleholder"
 // treatment — no extra field to maintain, it just follows the data.
 const [currentMrBear, ...pastMrBears] = mrbears;
+
+// Descriptions are written in markdown (links, etc.) but stored as plain
+// strings in the schema, so they need parsing before being dropped in as
+// HTML rather than shown as raw text.
+const currentMrBearHtml = currentMrBear ? await marked.parse(currentMrBear.data.description) : '';
+const pastMrBearsHtml = await Promise.all(pastMrBears.map((mister) => marked.parse(mister.data.description)));
 
 const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 ---
@@ -68,7 +75,9 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
               <span class="font-display text-[28px]">{currentMrBear.data.name}</span>
               <span class="text-xs font-extrabold uppercase tracking-wide text-gold">Mr. Bear {currentMrBear.data.year}</span>
             </div>
-            <p class="max-w-[760px] text-sm leading-relaxed text-tan-soft">{currentMrBear.data.description}</p>
+            <div class="max-w-[760px] text-sm leading-relaxed text-tan-soft [&_a]:font-semibold [&_a]:text-gold [&_p:not(:last-child)]:mb-3">
+              <Fragment set:html={currentMrBearHtml} />
+            </div>
             {(currentMrBear.data.social?.instagram || currentMrBear.data.social?.facebook || currentMrBear.data.social?.twitter) && (
               <div class="mt-4 flex justify-center gap-2 sm:justify-start">
                 {currentMrBear.data.social?.instagram && (
@@ -96,7 +105,7 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 
   {pastMrBears.length > 0 && (
     <section class="mx-auto flex w-full max-w-[1240px] flex-col gap-5 px-8 pb-14 pt-9">
-      {pastMrBears.map((mister) => (
+      {pastMrBears.map((mister, i) => (
         <div class="flex flex-col gap-6 rounded-2xl border border-border bg-surface p-7 sm:flex-row">
           {mister.data.image ? (
             <Image
@@ -116,7 +125,9 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
               <span class="font-display text-xl">{mister.data.name}</span>
               <span class="text-xs font-extrabold uppercase tracking-wide text-gold">Mr. Bear {mister.data.year}</span>
             </div>
-            <p class="text-sm leading-relaxed text-tan-soft">{mister.data.description}</p>
+            <div class="text-sm leading-relaxed text-tan-soft [&_a]:font-semibold [&_a]:text-gold [&_p:not(:last-child)]:mb-3">
+              <Fragment set:html={pastMrBearsHtml[i]} />
+            </div>
             {(mister.data.social?.instagram || mister.data.social?.facebook || mister.data.social?.twitter) && (
               <div class="mt-4 flex gap-2">
                 {mister.data.social?.instagram && (
