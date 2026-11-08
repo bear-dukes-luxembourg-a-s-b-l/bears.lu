@@ -1,0 +1,53 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<button
+  type="button"
+  class="share-button inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm font-bold text-tan transition-colors hover:border-gold hover:text-gold"
+  data-title={title}
+>
+  <Icon name="share" />
+  <span class="share-button-label">Share</span>
+</button>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.share-button').forEach((button) => {
+    const label = button.querySelector<HTMLElement>('.share-button-label');
+
+    button.addEventListener('click', async () => {
+      const shareData = { title: button.dataset.title, url: window.location.href };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (error) {
+          // AbortError just means the user closed the native share sheet.
+          if (error instanceof Error && error.name !== 'AbortError') {
+            console.error(error);
+          }
+        }
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(shareData.url);
+      } catch {
+        return;
+      }
+      if (label) {
+        const original = label.textContent;
+        label.textContent = 'Link copied!';
+        setTimeout(() => {
+          label.textContent = original;
+        }, 2000);
+      }
+    });
+  });
+</script>

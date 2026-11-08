@@ -4,6 +4,8 @@ import { Image } from 'astro:assets';
 import { marked } from 'marked';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import Icon from '../../../../../components/Icon.astro';
+import ShareButton from '../../../../../components/ShareButton.astro';
+import CommentsWidget from '../../../../../components/CommentsWidget.astro';
 import { postUrlParts } from '../../../../../lib/posts';
 
 export async function getStaticPaths() {
@@ -33,11 +35,14 @@ const formatDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric', mon
       </span>
     )}
     <h1 class="font-display mb-4 mt-4 text-[34px] normal-case leading-tight">{post.data.title}</h1>
-    <div class="mb-7 flex gap-5 text-sm text-tan">
-      {post.data.author && (
-        <span class="flex items-center gap-1.5"><Icon name="user" /> {post.data.author}</span>
-      )}
-      <span class="flex items-center gap-1.5"><Icon name="calendar" /> {formatDate(post.data.date)}</span>
+    <div class="mb-7 flex flex-wrap items-center justify-between gap-4 text-sm text-tan">
+      <div class="flex gap-5">
+        {post.data.author && (
+          <span class="flex items-center gap-1.5"><Icon name="user" /> {post.data.author}</span>
+        )}
+        <span class="flex items-center gap-1.5"><Icon name="calendar" /> {formatDate(post.data.date)}</span>
+      </div>
+      <ShareButton title={post.data.title} />
     </div>
 
     {post.data.image && (
@@ -53,6 +58,8 @@ const formatDate = (d: Date) => d.toLocaleDateString('en', { day: 'numeric', mon
     <div class="prose-post text-[16px] leading-[1.75] text-tan-soft">
       <Fragment set:html={postHtml} />
     </div>
+
+    <CommentsWidget />
   </article>
 </BaseLayout>
 
