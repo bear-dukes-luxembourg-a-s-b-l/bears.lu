@@ -4,9 +4,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import EventCard from '../components/EventCard.astro';
 import SubscribeCalendarModal from '../components/SubscribeCalendarModal.astro';
+import { isUpcoming, todayIso } from '../lib/events';
 
+const today = todayIso();
 const events = (await getCollection('generalEvents'))
   .map((entry) => entry.data)
+  .filter((event) => isUpcoming(event, today))
   .sort((a, b) => a.date.localeCompare(b.date));
 
 const monthLabel = (iso: string) =>
