@@ -6,6 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import logo from '../assets/logo.png';
 import { postUrl } from '../lib/posts';
+import { isUpcoming, todayIso } from '../lib/events';
 import Newsletter from '../components/Newsletter.astro';
 import EventCard from '../components/EventCard.astro';
 import SubscribeCalendarModal from '../components/SubscribeCalendarModal.astro';
@@ -14,8 +15,10 @@ const bearPride = (await getEntry('bearPrideConfig', 'bearpride'))!.data;
 
 // General community events (not the Bear Pride week's own programme, which
 // lives on /bear-pride and comes from the `events` collection).
+const today = todayIso();
 const upcoming = (await getCollection('generalEvents'))
   .map((entry) => entry.data)
+  .filter((event) => isUpcoming(event, today))
   .sort((a, b) => a.date.localeCompare(b.date))
   .slice(0, 3);
 
